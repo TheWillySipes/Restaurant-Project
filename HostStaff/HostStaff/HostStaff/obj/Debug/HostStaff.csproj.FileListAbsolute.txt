@@ -1,0 +1,6 @@
+C:\Users\programmer\Downloads\HostStaff\HostStaff\HostStaff\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\programmer\Downloads\HostStaff\HostStaff\HostStaff\obj\Debug\ConsoleApplication1.exe
+C:\Users\programmer\Downloads\HostStaff\HostStaff\HostStaff\obj\Debug\ConsoleApplication1.pdb
+C:\Users\programmer\Documents\GitHub\Restaurant-Project\HostStaff\HostStaff\HostStaff\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\programmer\Documents\GitHub\Restaurant-Project\HostStaff\HostStaff\HostStaff\obj\Debug\ConsoleApplication1.exe
+C:\Users\programmer\Documents\GitHub\Restaurant-Project\HostStaff\HostStaff\HostStaff\obj\Debug\ConsoleApplication1.pdb
