@@ -1,0 +1,10 @@
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\bin\Debug\Restaurant.exe.config
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\obj\Debug\Restaurant.csprojResolveAssemblyReference.cache
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.Cache
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\bin\Debug\Restaurant.exe
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\bin\Debug\Restaurant.pdb
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\bin\Debug\BusinessLayer.dll
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\bin\Debug\BusinessLayer.pdb
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\obj\Debug\Restaurant.exe
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Restaurant\obj\Debug\Restaurant.pdb
