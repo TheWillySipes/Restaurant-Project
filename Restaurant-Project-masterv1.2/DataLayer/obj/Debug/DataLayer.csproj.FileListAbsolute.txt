@@ -1,0 +1,5 @@
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\bin\Debug\DataLayer.dll
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\bin\Debug\DataLayer.pdb
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.dll
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.pdb

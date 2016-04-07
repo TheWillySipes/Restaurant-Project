@@ -1,0 +1,5 @@
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\bin\Debug\BusinessLayer.dll
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\bin\Debug\BusinessLayer.pdb
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.dll
+c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.pdb
