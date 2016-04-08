@@ -37,3 +37,6 @@ C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Projec
 C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
 C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
 C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
