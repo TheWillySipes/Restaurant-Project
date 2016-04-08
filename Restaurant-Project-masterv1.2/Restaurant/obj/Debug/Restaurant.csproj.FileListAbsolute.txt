@@ -24,3 +24,13 @@ E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\D
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.csprojResolveAssemblyReference.cache
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.Cache
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\bin\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.csprojResolveAssemblyReference.cache
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.Cache

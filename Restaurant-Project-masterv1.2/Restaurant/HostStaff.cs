@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,24 @@ namespace Restaurant
     {
         TableStatus tableStatus = TableStatus.Open;
 
+        int trackCustomers = 0;
+
         public void SeatCustomers()
         {
+            Application.Run(new Form1());
+            int currentCustomers = Form1.currentCustomers;
+            trackCustomers += currentCustomers;
+
+            if(currentCustomers >= 4)
+            {
+                //large table
+                MessageBox.Show("The customers will be seated at a large table.");
+            }
+            else if (currentCustomers >= 1 && currentCustomers <= 2)
+            {
+                //small table
+                MessageBox.Show("The customers will be seated at a small table.");
+            }
             if (tableStatus == TableStatus.Open)
             {
                 DialogResult result1 = MessageBox.Show("This table is avaliable, seat customer here?", "Seat customer?", MessageBoxButtons.YesNoCancel);
@@ -34,13 +51,6 @@ namespace Restaurant
             {
                 MessageBox.Show("Customers are currently sitting at this table, please choose a different table");
             }
-        }
-
-        enum TableStatus
-        {
-            Open = 0,
-            Occupied = 1,
-            Dirty = 2
         }
     }
 }

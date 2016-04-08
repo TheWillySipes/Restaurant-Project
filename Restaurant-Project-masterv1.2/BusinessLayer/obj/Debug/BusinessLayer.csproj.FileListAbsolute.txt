@@ -8,3 +8,8 @@ E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bi
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.pdb
