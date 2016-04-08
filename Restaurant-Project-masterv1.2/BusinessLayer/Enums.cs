@@ -27,5 +27,11 @@ namespace BusinessLayer
         TicketOpen = 0,
         TicketClose = 1
     }
+
+    public enum OrderStatus
+    {
+        Delivered = 0,
+        NotDelivered = 1
+    }
 }
 

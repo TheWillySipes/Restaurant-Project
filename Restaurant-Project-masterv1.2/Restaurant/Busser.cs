@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,12 @@ namespace Restaurant
 {
     public class Busser : Employee
     {
-
-        TableStatus tableStatus = TableStatus.Open;
+        public TableStatus tableStatus { get; set; }
 
 
         public void CheckTableMap()
         {
-            throw new System.NotImplementedException();
+            //Button to open the floor status map
         }
 
 
@@ -41,30 +41,8 @@ namespace Restaurant
                 //}
             }
 
-            //switch (tableStatus)
-            //{
-            //    case TableStatus.Open: MessageBox.Show("The table is already clean.");
-            //        break;
-            //    case TableStatus.Occupied: MessageBox.Show("The table is still occupied.");
-            //        break;
-            //    case TableStatus.Dirty: SetTableStatus();
-            //        break;
-            //}
 
         }
 
-        //public void SetTableStatus(TableStatus status)
-        //{
-
-
-
-        //}
-
-        enum TableStatus
-        {
-            Open = 0,
-            Occupied = 1,
-            Dirty = 2
-        }
     }
 }
