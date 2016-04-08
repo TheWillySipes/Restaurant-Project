@@ -12,9 +12,15 @@ namespace Restaurant
 {
     public partial class Form1 : Form
     {
+        public static int currentCustomers { get; set; }
         public Form1()
         {
             InitializeComponent();
+        }
+        private void submitCustomers_Click(object sender, EventArgs e)
+        {
+            currentCustomers = int.Parse(customerNumber.Text);
+            this.Close();
         }
     }
 }

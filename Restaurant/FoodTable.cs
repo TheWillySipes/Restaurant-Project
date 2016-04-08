@@ -15,6 +15,13 @@ namespace Restaurant
         public TableStatus TableStatus { get; set; }
 
         /// <summary>
+        /// Set ticket Status
+        /// </summary>
+        /// <param name="status"></param>
+
+        public Ticket Ticket { get; set; }
+
+        /// <summary>
         /// Set Table Status
         /// </summary>
         /// <param name="status"></param>
@@ -39,6 +46,26 @@ namespace Restaurant
                 Console.WriteLine("Table is dirty");
             }
             return TableStatus;
+        }
+
+        //Get Ticket status
+        public void TicketStatus(Ticket status)
+        {
+            Ticket = status;
+        }
+
+        public Ticket GetTicketStatus()
+        {
+            if (Ticket == Ticket.TicketOpen)
+            {
+                Console.WriteLine("The ticket is open");
+            }
+            else if (Ticket == Ticket.TicketClose)
+            {
+                Console.WriteLine("The ticket is closed");
+            }
+           
+            return Ticket;
         }
     }
 }

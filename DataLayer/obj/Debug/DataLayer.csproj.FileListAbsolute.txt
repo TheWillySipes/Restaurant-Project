@@ -3,3 +3,8 @@ c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Data
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.dll
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\DataLayer\obj\Debug\DataLayer.pdb
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\bin\Debug\DataLayer.dll
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\bin\Debug\DataLayer.pdb
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.dll
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.pdb

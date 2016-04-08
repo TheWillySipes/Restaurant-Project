@@ -21,5 +21,17 @@ namespace BusinessLayer
         BusBoy = 3,
         Host = 4
     }
+
+    public enum Ticket
+    {
+        TicketOpen = 0,
+        TicketClose = 1
+    }
+
+    public enum OrderStatus
+    {
+        Delivered = 0,
+        NotDelivered = 1
+    }
 }
 

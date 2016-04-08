@@ -3,3 +3,13 @@ c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\Busi
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.dll
 c:\users\julius\documents\visual studio 2013\Projects\RestaurantApplication\BusinessLayer\obj\Debug\BusinessLayer.pdb
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\RepositoryClone\Restaurant-Project\Restaurant-Project-masterv1.2\BusinessLayer\obj\Debug\BusinessLayer.pdb
