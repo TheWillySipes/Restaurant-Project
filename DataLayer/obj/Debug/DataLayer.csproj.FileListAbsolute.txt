@@ -8,3 +8,8 @@ E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\bin\De
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.dll
 E:\SPRING 2016\Restaurant-Project\Restaurant-Project-masterv1.2\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\DataLayer\obj\Debug\DataLayer.pdb

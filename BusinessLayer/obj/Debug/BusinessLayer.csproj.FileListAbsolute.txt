@@ -18,3 +18,8 @@ C:\Users\programmer\Desktop\Restaurant-Project\BusinessLayer\bin\Debug\BusinessL
 C:\Users\programmer\Desktop\Restaurant-Project\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\programmer\Desktop\Restaurant-Project\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\programmer\Desktop\Restaurant-Project\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restaurant-Project-master\BusinessLayer\obj\Debug\BusinessLayer.pdb

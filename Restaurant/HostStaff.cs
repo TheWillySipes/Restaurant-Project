@@ -8,16 +8,20 @@ using System.Windows.Forms;
 
 namespace Restaurant
 {
+    
     public class HostStaff : Employee
     {
+        public int CurrentCustomers { get; set; }
         TableStatus tableStatus = TableStatus.Open;
 
         int trackCustomers = 0;
 
-        public void SeatCustomers()
+        public void SeatCustomers(int customers)
         {
-            Application.Run(new Form1());
-            int currentCustomers = Form1.currentCustomers;
+
+            //Application.Run(new HostForm());
+            //int currentCustomers = HostForm.currentCustomers;
+            int currentCustomers = customers;
             trackCustomers += currentCustomers;
 
             if(currentCustomers >= 4)
