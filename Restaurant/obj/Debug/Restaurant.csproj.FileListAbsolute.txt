@@ -60,3 +60,14 @@ E:\Restaurant V4.8.16\Restaurant\obj\Debug\Restaurant.pdb
 C:\temp\repo\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
 C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
 C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\bin\Debug\BusinessLayer.dll
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\bin\Debug\BusinessLayer.pdb
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.csprojResolveAssemblyReference.cache
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.HostForm.resources
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.LoginForm.resources
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.TicketForm.resources
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.WaitStaffForm.resources
+C:\Users\programmer\Desktop\Restaurant-Project\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.Cache
