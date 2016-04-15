@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Restaurant
 {
-    public class Busser : Employee
+    public class BusStaff : Employee
     {
         public TableStatus tableStatus { get; set; }
 
@@ -23,12 +25,12 @@ namespace Restaurant
         {
             if (tableStatus == TableStatus.Open)
             {
-                Console.WriteLine("Occupied");
+                MessageBox.Show("The table is Occupied");
                 tableStatus = TableStatus.Occupied;
             }
             else if (tableStatus == TableStatus.Occupied)
             {
-                Console.WriteLine("Dirty");
+                MessageBox.Show("The table is Dirty");
                 tableStatus = TableStatus.Dirty;
             }
             else

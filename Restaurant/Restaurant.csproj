@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Busser.cs" />
+    <Compile Include="BusStaff.cs" />
+    <Compile Include="CookStaff.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FoodTable.cs" />
     <Compile Include="HostForm.cs">
@@ -96,6 +97,7 @@
     <EmbeddedResource Include="WaitStaffForm.resx">
       <DependentUpon>WaitStaffForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -30,8 +30,14 @@ namespace BusinessLayer
 
     public enum OrderStatus
     {
+        //delivered to table
         Delivered = 0,
-        NotDelivered = 1
+        //still being prepared
+        NotDelivered = 1,
+        //order received by CookStaff
+        CooksReceived = 2,
+        //order cooking complete, ready for delivery
+        CooksComplete = 3
     }
 }
 
