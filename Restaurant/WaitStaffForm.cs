@@ -77,5 +77,13 @@ namespace Restaurant
             loginForm.Show();
             this.Hide();
         }
+
+        private void btnFloorStatus_Click(object sender, EventArgs e)
+        {
+            
+            FloorStatus floorForm = new FloorStatus();
+            floorForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.btnRemoveSingleItem = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -79,7 +80,7 @@
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(171, 57);
+            this.btnAddItem.Location = new System.Drawing.Point(171, 42);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(75, 23);
             this.btnAddItem.TabIndex = 2;
@@ -89,7 +90,7 @@
             // 
             // btnRemoveSingleItem
             // 
-            this.btnRemoveSingleItem.Location = new System.Drawing.Point(171, 98);
+            this.btnRemoveSingleItem.Location = new System.Drawing.Point(171, 71);
             this.btnRemoveSingleItem.Name = "btnRemoveSingleItem";
             this.btnRemoveSingleItem.Size = new System.Drawing.Size(75, 38);
             this.btnRemoveSingleItem.TabIndex = 3;
@@ -109,7 +110,7 @@
             // 
             // btnClearAll
             // 
-            this.btnClearAll.Location = new System.Drawing.Point(172, 195);
+            this.btnClearAll.Location = new System.Drawing.Point(171, 149);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(75, 23);
             this.btnClearAll.TabIndex = 5;
@@ -117,11 +118,22 @@
             this.btnClearAll.UseVisualStyleBackColor = true;
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(171, 250);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.TabIndex = 6;
+            this.btnPrevious.Text = "< Previous";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 285);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnPlaceOrder);
             this.Controls.Add(this.btnRemoveSingleItem);
@@ -145,5 +157,6 @@
         private System.Windows.Forms.Button btnRemoveSingleItem;
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Button btnClearAll;
+        private System.Windows.Forms.Button btnPrevious;
     }
 }

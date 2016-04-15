@@ -15,6 +15,7 @@ namespace Restaurant
         public TicketForm()
         {
             InitializeComponent();
+
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -38,6 +39,13 @@ namespace Restaurant
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
             //Creating ticket to be sent to cooks
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WaitStaffForm waitForm = new WaitStaffForm();
+            waitForm.Show();
         }
     }
 }

@@ -58,6 +58,7 @@
             this.btnFloorStatus.TabIndex = 1;
             this.btnFloorStatus.Text = "Check Floor Status";
             this.btnFloorStatus.UseVisualStyleBackColor = true;
+            this.btnFloorStatus.Click += new System.EventHandler(this.btnFloorStatus_Click);
             // 
             // btnCheckOrder
             // 

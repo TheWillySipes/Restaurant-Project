@@ -47,6 +47,12 @@
     <Compile Include="BusStaff.cs" />
     <Compile Include="CookStaff.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="FloorStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorStatus.Designer.cs">
+      <DependentUpon>FloorStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodTable.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +82,9 @@
     <Compile Include="WaitStaffForm.Designer.cs">
       <DependentUpon>WaitStaffForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FloorStatus.resx">
+      <DependentUpon>FloorStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HostForm.resx">
       <DependentUpon>HostForm.cs</DependentUpon>
     </EmbeddedResource>
