@@ -57,3 +57,6 @@ C:\Users\jean bargas\Desktop\WORKING COPY\Restaurant-Project-master(1)\Restauran
 E:\Restaurant V4.8.16\Restaurant\bin\Debug\Restaurant.exe.config
 E:\Restaurant V4.8.16\Restaurant\obj\Debug\Restaurant.exe
 E:\Restaurant V4.8.16\Restaurant\obj\Debug\Restaurant.pdb
+C:\temp\repo\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
+C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
+C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
