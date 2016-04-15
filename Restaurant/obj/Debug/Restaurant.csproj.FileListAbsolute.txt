@@ -60,3 +60,6 @@ E:\Restaurant V4.8.16\Restaurant\obj\Debug\Restaurant.pdb
 C:\temp\repo\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
 C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
 C:\temp\repo\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\Julius\Documents\GitHub\Restaurant-Project\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\Julius\Documents\GitHub\Restaurant-Project\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\Julius\Documents\GitHub\Restaurant-Project\Restaurant\obj\Debug\Restaurant.pdb
