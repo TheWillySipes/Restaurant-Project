@@ -80,6 +80,7 @@
             this.btnCashOut.TabIndex = 3;
             this.btnCashOut.Text = "Cash Out Customer";
             this.btnCashOut.UseVisualStyleBackColor = true;
+            this.btnCashOut.Click += new System.EventHandler(this.btnCashOut_Click);
             // 
             // label1
             // 

@@ -58,6 +58,9 @@ namespace Restaurant
         private void btnCheckOrder_Click(object sender, EventArgs e)
         {
            //Checking status of an order
+            OrderStatusForm orderStatus = new OrderStatusForm();
+            orderStatus.Show();
+            this.Hide();
         }
 
         private void btnEnterOrder_Click(object sender, EventArgs e)
@@ -83,6 +86,14 @@ namespace Restaurant
             
             FloorStatus floorForm = new FloorStatus();
             floorForm.Show();
+            this.Hide();
+        }
+
+        private void btnCashOut_Click(object sender, EventArgs e)
+        {
+            //Select table and cash out customers
+            CashOutForm cashout = new CashOutForm();
+            cashout.Show();
             this.Hide();
         }
     }
