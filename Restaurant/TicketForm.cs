@@ -17,8 +17,11 @@ namespace Restaurant
             InitializeComponent();
 
         }
+        //remove with database
+        
         public string ticket { get; set; }
         public string ticketA = "";
+        List<string> tickets = new List<string>();
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             //Adding items to the ticket
@@ -42,9 +45,9 @@ namespace Restaurant
             //Creating ticket to be sent to cooks
             ticketA = listBox2.Text.ToString();
             MessageBox.Show(ticketA+" \n SENT TO COOKS");
-            ticket = ticketA;
-            
 
+            //send to database instead of list
+            ticket.Add(ticketA);
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
