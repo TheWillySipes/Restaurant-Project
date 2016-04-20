@@ -52,7 +52,7 @@
   <Class Name="Restaurant.TicketForm" Collapsed="true">
     <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAACEAAAAAAACACAACgAAAAAIDAAAAJAEAAAA=</HashCode>
+      <HashCode>AAAAAAEAACEAAEAAAACACAACgAAAAAIDAAAAJAEAAAA=</HashCode>
       <FileName>TicketForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,7 +66,7 @@
   <Class Name="Restaurant.WaitStaffForm" Collapsed="true">
     <Position X="9.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAYEDgAABAAAACAEAACACAAAAABAQAAAAEADAA=</HashCode>
+      <HashCode>AAAAAAAYEDgAABAAAACQEAACACAAAAABAQAAAAGADAA=</HashCode>
       <FileName>WaitStaffForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,12 +82,47 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Restaurant.CookStaff">
+  <Class Name="Restaurant.CookStaff" Collapsed="true">
     <Position X="1.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAgAAAAAAAAAgAAAAAAEBAAQAAAA=</HashCode>
       <FileName>CookStaff.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="Restaurant.IBusStaff" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAA=</HashCode>
+      <FileName>IBusStaff.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Restaurant.ICookStaff" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAgAAAAAAAAAgAAAAAAEBAAQAAAA=</HashCode>
+      <FileName>ICookStaff.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Restaurant.IHostStaff" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>IHostStaff.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Restaurant.IWaitStaff" Collapsed="true">
+    <Position X="1.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAEAAAAAAAAAgAAAAAAAAAAAAAAAAAFAAAAAIA=</HashCode>
+      <FileName>IWaitStaff.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Restaurant.IManageStaff" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IManageStaff.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
