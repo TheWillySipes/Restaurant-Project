@@ -16,16 +16,34 @@ namespace Restaurant
         public WaitStaffForm()
         {
             InitializeComponent();
+            checkclockin1();
         }
-        
+        public bool checkclockin { get; set; }
         WaitStaff waitStaff = new WaitStaff();
         bool clockedIn = false;
 
+
+        private void checkclockin1()
+        {
+            clockedIn = checkclockin;
+            if (clockedIn == true)
+            {
+                //Enabling all buttons once wait staff has clocked in
+                btnEnterOrder.Enabled = true;
+                btnCheckOrder.Enabled = true;
+                btnCashOut.Enabled = true;
+                btnClockOut.Enabled = true;
+                btnFloorStatus.Enabled = true;
+            }
+
+        }
         private void btnClockIn_Click(object sender, EventArgs e)
         {
             //Disable multiple clock ins
             btnClockIn.Enabled = false;
             clockedIn = true;
+
+
 
             if (clockedIn == true)
             {
@@ -36,12 +54,15 @@ namespace Restaurant
                 btnClockOut.Enabled = true;
                 btnFloorStatus.Enabled = true;
 
+
                 //Clocking in wait staff
                 DateTime clockedInTime = DateTime.Now;
                 MessageBox.Show("Wait Staff Clocked in: " + clockedInTime);
             }
 
         }
+
+
 
         private void btnClockOut_Click(object sender, EventArgs e)
         {
@@ -95,6 +116,11 @@ namespace Restaurant
             CashOutForm cashout = new CashOutForm();
             cashout.Show();
             this.Hide();
+        }
+
+        private void WaitStaffForm_Load(object sender, EventArgs e)
+        {
+            checkclockin1();
         }
     }
 }

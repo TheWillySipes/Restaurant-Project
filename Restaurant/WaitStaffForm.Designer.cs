@@ -139,6 +139,7 @@
             this.Name = "WaitStaffForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WaitStaffForm";
+            this.Load += new System.EventHandler(this.WaitStaffForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

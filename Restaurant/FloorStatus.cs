@@ -77,8 +77,15 @@ namespace Restaurant
         private void button1_Click(object sender, EventArgs e)
         {
             WaitStaffForm waitForm = new WaitStaffForm();
+            waitForm.checkclockin = true;
             waitForm.Show();
             this.Hide();
+        }
+
+        private void FloorStatus_Load(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

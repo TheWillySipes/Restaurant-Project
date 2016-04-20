@@ -20,6 +20,7 @@ namespace Restaurant
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
+            waitStaff.checkclockin = true;
             waitStaff.Show();
             this.Hide();
         }

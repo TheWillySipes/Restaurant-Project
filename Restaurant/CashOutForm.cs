@@ -20,7 +20,8 @@ namespace Restaurant
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            //WaitStaffForm waitStaff = new WaitStaffForm();
+           // WaitStaffForm waitStaff = new WaitStaffForm();
+            waitStaff.checkclockin = true;
             waitStaff.Show();
             this.Hide();
         }
