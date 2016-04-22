@@ -67,11 +67,6 @@
       <DependentUpon>HostForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HostStaff.cs" />
-    <Compile Include="IBusStaff.cs" />
-    <Compile Include="ICookStaff.cs" />
-    <Compile Include="IHostStaff.cs" />
-    <Compile Include="IManageStaff.cs" />
-    <Compile Include="IWaitStaff.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
