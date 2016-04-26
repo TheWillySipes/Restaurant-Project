@@ -52,6 +52,12 @@
       <DependentUpon>CashOutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CookStaff.cs" />
+    <Compile Include="CookStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CookStaffForm.Designer.cs">
+      <DependentUpon>CookStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="FloorStatus.cs">
       <SubType>Form</SubType>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="CashOutForm.resx">
       <DependentUpon>CashOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CookStaffForm.resx">
+      <DependentUpon>CookStaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FloorStatus.resx">
       <DependentUpon>FloorStatus.cs</DependentUpon>

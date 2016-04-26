@@ -25,6 +25,7 @@ namespace Restaurant
 
         HostForm hostForm = new HostForm();
         WaitStaffForm waitForm = new WaitStaffForm();
+        CookStaffForm cookForm = new CookStaffForm();
 
         //Password
         public char PasswordChar { get; set; }
@@ -56,6 +57,21 @@ namespace Restaurant
                     MessageBox.Show("WaitStaff Login Successful!");
                     waitForm.Show();
                     this.Hide();
+                }
+                //Example to open CookStaff Form
+                //Employee ID: 11111 PIN: 2222
+                else if(idParsed == 11111 && pinParsed == 2222)
+                {
+                    MessageBox.Show("CookStaff Login Successful!");
+                    cookForm.Show();
+                    this.Hide();
+
+                }
+                //Example to open Manager Form
+                //Employee ID:00000 PIN: 1111
+                else if (idParsed == 00000 && pinParsed == 1111)
+                {
+                    MessageBox.Show("Manager Login Successful!");
                 }
                 else
                 {
