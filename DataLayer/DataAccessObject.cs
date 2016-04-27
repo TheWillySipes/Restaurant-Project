@@ -8,9 +8,6 @@ namespace DataLayer
 {
     public class DataAccessObject
     {
-        //Connection string stored statically (bad practice...)
-        private readonly string CONNECTION_STRING = "metadata=res://*/RestaurantEntities.csdl|res://*/RestaurantEntities.ssdl|res://*/RestaurantEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=cis1.actx.edu;initial catalog=RestaurantApplication;user id=db2;password=db20;MultipleActiveResultSets=True;App=EntityFramework&quot;";
-        
         //Singleton
         private static DataAccessObject instance;
         private DataAccessObject() { }
@@ -27,6 +24,7 @@ namespace DataLayer
         }
         //End of singleton
 
+        //User data access
         public List<User> GetEmployees()
         {
             using(RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -39,8 +37,21 @@ namespace DataLayer
         {
             using(RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
-                var user = context.Users.Where(e => e.ID == employeeId && e.Password == e.Password);
+                var user = context.Users.Where(e => e.ID == employeeId && e.Password == password).FirstOrDefault();
                 if (user == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        public bool AuthenticateEmployee(string employeeUserName, string password)
+        {
+            using(RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                var user = context.Users.Where(e => e.UserName == employeeUserName && e.Password == password).FirstOrDefault();
+                if(user == null)
                 {
                     return false;
                 }

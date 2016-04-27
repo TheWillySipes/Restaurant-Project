@@ -1,4 +1,5 @@
-﻿using BusinessLayer.ViewModels;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +18,15 @@ namespace RestaurantTests
 
         static void TestBusinessLayer()
         {
-            var test = EmployeeVM.GetEmployees();
+            List<EmployeeVM> test = EmployeeLogic.GetEmployees();
             if (test.Count > 0)
             {
-                foreach (var e in test)
+                foreach (EmployeeVM employeeVM in test)
                 {
-                    Console.WriteLine("ID: " + e.ID);
-                    Console.WriteLine("UserName: " + e.UserName);
-                    Console.WriteLine("Firstname: " + e.FirstName);
-                    Console.WriteLine("LastName: " + e.LastName);
+                    Console.WriteLine("ID: " + employeeVM.ID);
+                    Console.WriteLine("UserName: " + employeeVM.UserName);
+                    Console.WriteLine("Firstname: " + employeeVM.FirstName);
+                    Console.WriteLine("LastName: " + employeeVM.LastName);
                 }
             }
         }
