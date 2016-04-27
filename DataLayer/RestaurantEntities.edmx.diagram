@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6ffceaff2ab472e92ce6276be5f7c7b" Name="Diagram1">
+        <EntityTypeShape EntityType="RestaurantApplicationModel.FoodTable" Width="1.5" PointX="1.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.MenuItem" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.Ticket" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.TicketsMenuItem" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.User" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.UsersFoodTable" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.UsersRole" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.v_TicketsMenuItems" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.v_UsersRoles" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_Tickets_FoodTables" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_UsersFoodTables_FoodTables" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_TicketsMenuItems_MenuItems" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_UsersRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_TicketsMenuItems_Tickets" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_TicketsMenuItems_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_UsersFoodTables_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_UsersRoles_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
