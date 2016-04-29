@@ -15,11 +15,11 @@ namespace BusinessLayer
 
     public enum Roles
     {
-        Manager = 0,
-        WaitStaff = 1,
-        Cook = 2,
-        BusBoy = 3,
-        Host = 4
+        Host = 1,
+        WaitStaff = 2,
+        Cook = 3,
+        BusBoy = 4,
+        Manager = 5
     }
 
     public enum Ticket
