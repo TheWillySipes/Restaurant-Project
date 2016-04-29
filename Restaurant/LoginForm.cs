@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,74 +17,22 @@ namespace Restaurant
         public LoginForm()
         {
             InitializeComponent();
-            //Employee ID set to 5 numbers
-            txtBxID.MaxLength = 5;
-
-            //Pin Number length set to 4 numbers
-            txtBxPIN.MaxLength = 4;
-            txtBxPIN.PasswordChar = '*';
         }
-
-        HostForm hostForm = new HostForm();
-        WaitStaffForm waitForm = new WaitStaffForm();
-        CookStaffForm cookForm = new CookStaffForm();
-
-        //Password
-        public char PasswordChar { get; set; }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string idString = txtBxID.Text;
-            string pinString = txtBxPIN.Text;
-            int idParsed = 0;
-            int pinParsed = 0;
 
-            if (int.TryParse(idString, out idParsed) && int.TryParse(pinString, out pinParsed))
+            if(EmployeeLogic.AuthenticateEmployee(txtUserName.Text, txtPassword.Text))
             {
-                //Just an example to open up to the HOST form. 
-                //Employee ID:12345 PIN:1234
-
-                if (idParsed == 12345 && pinParsed == 1234)
-                {
-                    //This message box can be deleted, just showing progression to Host Form
-                    MessageBox.Show("Host login successful!");
-                    hostForm.Show();
-                    this.Hide();
-                }
-
-                //Example to open WaitStaff Form
-                //Employee ID:98765 PIN:9876
-                else if (idParsed == 98765 && pinParsed == 9876)
-                {
-                    MessageBox.Show("WaitStaff Login Successful!");
-                    waitForm.Show();
-                    this.Hide();
-                }
-                //Example to open CookStaff Form
-                //Employee ID: 11111 PIN: 2222
-                else if(idParsed == 11111 && pinParsed == 2222)
-                {
-                    MessageBox.Show("CookStaff Login Successful!");
-                    cookForm.Show();
-                    this.Hide();
-
-                }
-                //Example to open Manager Form
-                //Employee ID:00000 PIN: 1111
-                else if (idParsed == 00000 && pinParsed == 1111)
-                {
-                    MessageBox.Show("Manager Login Successful!");
-                }
-                else
-                {
-                    MessageBox.Show("User Not Yet Created.");
-                }
-
+                EmployeeVM employee = EmployeeLogic.GetEmployee(txtUserName.Text);
+                MessageBox.Show(txtUserName.Text + " Login Successful!");
+                EmployeeActionSelector employeeActionSelector = new EmployeeActionSelector(employee);
+                employeeActionSelector.Show();
+                this.Hide();
             }
             else
             {
-                //Parse unsucessful
-                MessageBox.Show("Invalid credentials.");
+                MessageBox.Show("Invalid Credentials");
             }
 
         }

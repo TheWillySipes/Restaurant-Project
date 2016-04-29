@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,19 @@ namespace DataLayer
             }
         }
 
+        public bool IsInRole(int employeeId, int role)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                var usersRoles = context.UsersRoles.Where(e => e.UserID == employeeId && e.RoleID == role).FirstOrDefault();
+                if(usersRoles == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+
         public bool AuthenticateEmployee(int employeeId, string password)
         {
             using(RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -56,6 +70,24 @@ namespace DataLayer
                     return false;
                 }
                 return true;
+            }
+        }
+
+        public User GetEmployee(string employeeUserName)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                return context.Users.Where(e => e.UserName == employeeUserName).FirstOrDefault();
+            }
+        }
+
+        public void UpdateEmployee(User employee)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                context.Users.Attach(employee);
+                context.Entry(employee).State = EntityState.Modified;
+                context.SaveChanges();
             }
         }
     }
