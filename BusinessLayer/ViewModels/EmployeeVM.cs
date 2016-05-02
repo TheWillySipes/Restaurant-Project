@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ViewModels
 {
+    /// <summary>
+    /// Employee View Model Object
+    /// </summary>
     public class EmployeeVM
     {
         public int ID { get; set; }
