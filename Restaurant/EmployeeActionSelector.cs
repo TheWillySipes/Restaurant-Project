@@ -39,10 +39,13 @@ namespace Restaurant
             if (EmployeeLogic.IsInRole(Employee, Roles.WaitStaff))
             {
                 MessageBox.Show("You are in the Waiter role!");
+                FloorStatus floor = new FloorStatus();
+                floor.Show();
             }
             else
             {
                 MessageBox.Show("You are NOT in the Waiter role!");
+                
             }
         }
 

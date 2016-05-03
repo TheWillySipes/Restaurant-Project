@@ -48,7 +48,7 @@ namespace Restaurant
 
         public void CashOutCustomer()
         {
-            int totalBill = 0;
+
             bool customerTransactionComplete = false;
             //Cash out Customer's total bill
 

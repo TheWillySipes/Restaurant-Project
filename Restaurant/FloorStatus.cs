@@ -16,23 +16,36 @@ namespace Restaurant
         public FloorStatus()
         {
             InitializeComponent();
-            pictureBox1.Paint += FloorStats;
-            pictureBox2.Paint += FloorStats;
-            pictureBox3.Paint += FloorStats;
-            pictureBox4.Paint += FloorStats;
-            pictureBox5.Paint += FloorStats;
-            pictureBox6.Paint += FloorStats;
-            pictureBox7.Paint += FloorStats;
-            pictureBox8.Paint += FloorStats;
-            pictureBox9.Paint += FloorStats;
-            pictureBox10.Paint += FloorStats;
-            
+
+            //Changing the colors of the tables with random number generator
+            //pictureBox1.Paint += FloorStats;
+            //pictureBox2.Paint += FloorStats;
+            //pictureBox3.Paint += FloorStats;
+            //pictureBox4.Paint += FloorStats;
+            //pictureBox5.Paint += FloorStats;
+            //pictureBox6.Paint += FloorStats;
+            //pictureBox7.Paint += FloorStats;
+            //pictureBox8.Paint += FloorStats;
+            //pictureBox9.Paint += FloorStats;
+            //pictureBox10.Paint += FloorStats;
+
+            //Manually changing the colors of the tables by clicking them
+            pictureBox1.Click += changeTableStatus;
+            pictureBox2.Click += changeTableStatus;
+            pictureBox3.Click += changeTableStatus;
+            pictureBox4.Click += changeTableStatus;
+            pictureBox5.Click += changeTableStatus;
+            pictureBox6.Click += changeTableStatus;
+            pictureBox7.Click += changeTableStatus;
+            pictureBox8.Click += changeTableStatus;
+            pictureBox9.Click += changeTableStatus;
+            pictureBox10.Click += changeTableStatus;
+
         }
 
-        //Setting table status to Dirty by default
-        TableStatus tblStat = TableStatus.Dirty;
-
+        TableStatus tblStat = TableStatus.Open;
         Random rng = new Random();
+        int checkStatus = 0;
         private void FloorStats(object sender, EventArgs e)
         {
 
@@ -76,6 +89,7 @@ namespace Restaurant
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Opening the waitstaff form
             WaitStaffForm waitForm = new WaitStaffForm();
             waitForm.checkclockin = true;
             waitForm.Show();
@@ -84,8 +98,38 @@ namespace Restaurant
 
         private void FloorStatus_Load(object sender, EventArgs e)
         {
-            
-            
+          //empty               
+        }
+
+        private void changeTableStatus(object sender, EventArgs e)
+        {
+            //Changing table colors maually
+            PictureBox picBox = (PictureBox) sender;
+           
+            if (checkStatus == 0)
+            {
+                //Open
+                picBox.BackColor = Color.Green;
+                tblStat = TableStatus.Open;
+                checkStatus = 1;
+                Console.WriteLine(checkStatus);
+            }
+            else if (checkStatus == 1)
+            {
+                //Occupied
+                picBox.BackColor = Color.Yellow;
+                tblStat = TableStatus.Occupied;
+                checkStatus = 2;
+                Console.WriteLine(checkStatus);
+            }
+            else if (checkStatus == 2)
+            {
+                //Dirty
+                picBox.BackColor = Color.Red;
+                tblStat = TableStatus.Dirty;
+                checkStatus = 0;
+                Console.WriteLine(checkStatus);
+            }
         }
     }
 }
