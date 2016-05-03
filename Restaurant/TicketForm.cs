@@ -21,8 +21,8 @@ namespace Restaurant
         public string ticketA = "";
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            //Adding items to the ticket
-            listBox2.Items.Add(listBox1.SelectedItem);
+            //Adds Drink item to ticket list , from dummy master list. 
+            listBox2.Items.Add("Drink 1");
         }
 
         private void btnRemoveSingleItem_Click(object sender, EventArgs e)
@@ -53,6 +53,36 @@ namespace Restaurant
             WaitStaffForm waitForm = new WaitStaffForm();
             waitForm.checkclockin = true;
             waitForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add("Side 1");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add("Menu Item 2");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add("Drink 2");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add("Side 2");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add("Menu Item 1");
+        }
+
+        private void TicketForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
