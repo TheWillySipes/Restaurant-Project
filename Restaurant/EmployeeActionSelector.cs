@@ -145,5 +145,12 @@ namespace Restaurant
                 time += sec;
             }
         }
+
+        private void btnClockOut_Click(object sender, EventArgs e)
+        {
+            stopwatch.Stop();
+            MessageBox.Show("you have been successfully logged out at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
+
+        }
     }
 }

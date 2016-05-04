@@ -105,6 +105,7 @@
             this.btnClockOut.TabIndex = 6;
             this.btnClockOut.Text = "Clock Out";
             this.btnClockOut.UseVisualStyleBackColor = true;
+            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
             // 
             // EmployeeActionSelector
             // 
