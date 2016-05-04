@@ -58,11 +58,11 @@
     <Compile Include="AddEmployeeSubForm.Designer.cs">
       <DependentUpon>AddEmployeeSubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddRemoveEmployeeForm.cs">
+    <Compile Include="ManagerRoleTasks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRemoveEmployeeForm.Designer.cs">
-      <DependentUpon>AddRemoveEmployeeForm.cs</DependentUpon>
+    <Compile Include="ManagerRoleTasks.Designer.cs">
+      <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
     </Compile>
     <Compile Include="BusStaff.cs" />
     <Compile Include="CashOutForm.cs">
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="AddEmployeeSubForm.resx">
       <DependentUpon>AddEmployeeSubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRemoveEmployeeForm.resx">
-      <DependentUpon>AddRemoveEmployeeForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManagerRoleTasks.resx">
+      <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CashOutForm.resx">
       <DependentUpon>CashOutForm.cs</DependentUpon>

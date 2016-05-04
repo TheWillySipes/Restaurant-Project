@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurant
 {
-    public partial class AddRemoveEmployeeForm : Form
+    public partial class ManagerRoleTasks : Form
     {
-        public AddRemoveEmployeeForm()
+        public ManagerRoleTasks()
         {
             InitializeComponent();
         }
@@ -28,6 +28,14 @@ namespace Restaurant
         {
             RemoveEmployeeSubForm removeEmployee = new RemoveEmployeeSubForm();
             removeEmployee.Show();
+            this.Hide();
+
+        }
+
+        private void btnModifyEmployee_Click(object sender, EventArgs e)
+        {
+            ModifyEmployeeSubForm modifyEmployee = new ModifyEmployeeSubForm();
+            modifyEmployee.Show();
             this.Hide();
 
         }

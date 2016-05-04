@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using BusinessLayer.ViewModels;
+using BusinessLayer.BusinessLogic;
 
 
 namespace Restaurant
@@ -31,7 +32,16 @@ namespace Restaurant
         public void btnGenEmployeeID_Click(object sender, EventArgs e)
         {
             //EmployeeLogic.AddEmployee is placeholder
-            EmployeeVM addNewEmployee = EmployeeLogic.AddEmployee(txtUsername.Text, txtFirstName.Text, txtLastName.Text);
+            bool successful = EmployeeLogic.Create(txtUsername.Text, txtFirstName.Text, txtLastName.Text, txtPassword.Text);
+            if (successful == true)
+            {
+                MessageBox.Show("Successfully added employee.");
+
+            }
+            else
+            {
+                MessageBox.Show("Employee Add failed.");
+            }
         }
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)

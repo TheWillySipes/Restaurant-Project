@@ -26,7 +26,10 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(Employee, Roles.Manager))
             {
-                MessageBox.Show("You are in the Manager role!");
+                ManagerRoleTasks managerTasks = new ManagerRoleTasks();
+                managerTasks.Show();
+                this.Hide();
+
             }
             else
             {

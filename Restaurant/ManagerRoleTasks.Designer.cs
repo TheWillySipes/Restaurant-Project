@@ -1,6 +1,6 @@
 ﻿namespace Restaurant
 {
-    partial class AddRemoveEmployeeForm
+    partial class ManagerRoleTasks
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.btnRemoveEmp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddEmp
@@ -45,7 +46,7 @@
             // 
             // btnRemoveEmp
             // 
-            this.btnRemoveEmp.Location = new System.Drawing.Point(16, 80);
+            this.btnRemoveEmp.Location = new System.Drawing.Point(16, 101);
             this.btnRemoveEmp.Name = "btnRemoveEmp";
             this.btnRemoveEmp.Size = new System.Drawing.Size(107, 23);
             this.btnRemoveEmp.TabIndex = 1;
@@ -62,15 +63,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Choose one of the following options:";
             // 
-            // AddRemoveEmployeeForm
+            // btnModifyEmployee
+            // 
+            this.btnModifyEmployee.Location = new System.Drawing.Point(16, 70);
+            this.btnModifyEmployee.Name = "btnModifyEmployee";
+            this.btnModifyEmployee.Size = new System.Drawing.Size(107, 23);
+            this.btnModifyEmployee.TabIndex = 3;
+            this.btnModifyEmployee.Text = "Modify Employee";
+            this.btnModifyEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
+            // 
+            // ManagerRoleTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRemoveEmp);
             this.Controls.Add(this.btnAddEmp);
-            this.Name = "AddRemoveEmployeeForm";
+            this.Name = "ManagerRoleTasks";
             this.Text = "AddRemoveEmployee";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.Button btnRemoveEmp;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnModifyEmployee;
     }
 }
