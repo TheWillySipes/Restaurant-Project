@@ -26,7 +26,7 @@ namespace Restaurant
 
         private void btnManager_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee, Roles.Manager))
+            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Manager))
             {
                 ManagerRoleTasks managerTasks = new ManagerRoleTasks();
                 managerTasks.Show();
@@ -41,7 +41,7 @@ namespace Restaurant
 
         private void btnWaiter_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee, Roles.WaitStaff))
+            if (EmployeeLogic.IsInRole(Employee.ID, Roles.WaitStaff))
             {
                 FloorStatus floor = new FloorStatus();
                 floor.Show();
@@ -55,7 +55,7 @@ namespace Restaurant
 
         private void btnCook_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee, Roles.Cook))
+            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Cook))
             {
                 MessageBox.Show("You are in the Cook role!");
             }
@@ -67,7 +67,7 @@ namespace Restaurant
 
         private void btnBusser_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee, Roles.BusBoy))
+            if (EmployeeLogic.IsInRole(Employee.ID, Roles.BusBoy))
             {
                 MessageBox.Show("You are in the Busser role!");
             }
@@ -79,7 +79,7 @@ namespace Restaurant
 
         private void btnHost_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee, Roles.Host))
+            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Host))
             {
                 MessageBox.Show("You are in the Host role!");
             }

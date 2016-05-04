@@ -14,44 +14,54 @@ namespace Restaurant
 {
     public partial class TicketForm : Form
     {
-        List<FoodTableVM> tables;
+        List<FoodTableVM> tables = FoodTableLogic.Get();
+        List<MenuItemVM> menuItems = MenuItemLogic.Read();
+
         public TicketForm()
         {
             InitializeComponent();
-            tables = FoodTableLogic.Get();
-            foreach(var table in tables)
+            foreach(FoodTableVM table in tables)
             {
-                cmboFoodTables.Items.Add(table.Info);
+                cmboFoodTables.Items.Add(table);
             }
-        }
-        public string ticket { get; set; }
-        public string ticketA = "";
-        private void btnAddItem_Click(object sender, EventArgs e)
-        {
-            //Adds Drink item to ticket list , from dummy master list. 
-            listBox2.Items.Add("Drink 1");
+            foreach(MenuItemVM menuItem in menuItems)
+            {
+                cmboMenuItems.Items.Add(menuItem);
+            }
+
+            cmboFoodTables.DisplayMember = "Info";
+            cmboFoodTables.ValueMember = "ID";
+
+            cmboMenuItems.DisplayMember = "Title";
+            cmboMenuItems.ValueMember = "ID";
+
+            listBoxMenuItems.DisplayMember = "Title";
+            listBoxMenuItems.ValueMember = "ID";
         }
 
         private void btnRemoveSingleItem_Click(object sender, EventArgs e)
         {
             //Removing a single item from the tickets
-            listBox2.Items.Remove(listBox2.SelectedItem);
+            listBoxMenuItems.Items.Remove(listBoxMenuItems.SelectedItem);
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             //Removing all items from the ticket
-            listBox2.Items.Clear();
+            listBoxMenuItems.Items.Clear();
         }
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
+            //TODO: Add logic to send order to business logic
             //Creating ticket to be sent to cooks
-            ticketA = listBox2.Text.ToString();
-            MessageBox.Show(ticketA+" \n SENT TO COOKS");
-            ticket = ticketA;
-            
+            MessageBox.Show("SENT TO COOKS");
+            //int ticketId = TicketLogic.Create((int)cmboFoodTables.SelectedValue);
+            //foreach(var item in listBoxMenuItems.Items.Cast<TicketsMenuItemVM>)
+            //{
 
+            //}
+            //TicketsMenuItemLogic.AddMenuItemsToTicket()
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -62,34 +72,22 @@ namespace Restaurant
             waitForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmboFoodTables_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox2.Items.Add("Side 1");
+            //listBox2.Items.Clear();
+            //TicketVM ticket = TicketLogic.Read(tables[cmboFoodTables.SelectedIndex].ID);
+            //List<TicketsMenuItemVM> ticketsMenuItems = TicketsMenuItemLogic.GetTicketsMenuItems(ticket.ID);
+            //foreach(TicketsMenuItemVM item in ticketsMenuItems)
+            //{
+            //    listBox2.Items.Add(item.MenuItemTitle);
+            //}
+            listBoxMenuItems.Items.Clear();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnAddItem_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Add("Menu Item 2");
+            listBoxMenuItems.Items.Add(menuItems[cmboMenuItems.SelectedIndex]);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            listBox2.Items.Add("Drink 2");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            listBox2.Items.Add("Side 2");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            listBox2.Items.Add("Menu Item 1");
-        }
-
-        private void TicketForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

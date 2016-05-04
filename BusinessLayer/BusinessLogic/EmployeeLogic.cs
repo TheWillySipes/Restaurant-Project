@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.BusinessLogic
 {
-    public class EmployeeLogic
+    public static class EmployeeLogic
     {
+        /// <summary>
+        /// Create a new employee
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static bool Create(string username, string firstname, string lastname, string password)
         {
             User newUser = new User();
@@ -21,14 +29,29 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
+        /// Get list roles that a user is currently in
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        public static List<Roles> GetUserRoles(int employeeId)
+        {
+            List<Roles> roles = new List<Roles>();
+            foreach(UsersRole role in UserData.GetUserRoles(employeeId))
+            {
+                roles.Add((Roles)role.RoleID);
+            }
+            return roles;
+        }
+
+        /// <summary>
         /// Check to see if a user is in a role
         /// </summary>
         /// <param name="employee">EmployeeVM Object</param>
         /// <param name="role">Role to check</param>
         /// <returns></returns>
-        public static bool IsInRole(EmployeeVM employee, Roles role)
+        public static bool IsInRole(int employeeId, Roles role)
         {
-            return UserData.IsInRole(employee.ID, (int)role);
+            return UserData.IsInRole(employeeId, (int)role);
         }
 
         /// <summary>
@@ -37,9 +60,9 @@ namespace BusinessLayer.BusinessLogic
         /// <param name="employee"></param>
         /// <param name="role"></param>
         /// <returns></returns>
-        public static bool AddUserToRole(EmployeeVM employee, Roles role)
+        public static bool AddUserToRole(int employeeId, Roles role)
         {
-            return UserData.AddUserToRole(employee.ID, (int)role);
+            return UserData.AddUserToRole(employeeId, (int)role);
         }
 
         /// <summary>
@@ -48,9 +71,9 @@ namespace BusinessLayer.BusinessLogic
         /// <param name="employee"></param>
         /// <param name="role"></param>
         /// <returns></returns>
-        public static bool RemoveUserFromRoles(EmployeeVM employee, Roles role)
+        public static bool RemoveUserFromRoles(int employeeId, Roles role)
         {
-            return UserData.RemoveUserFromRole(employee.ID, (int)role);
+            return UserData.RemoveUserFromRole(employeeId, (int)role);
         }
 
         /// <summary>
@@ -101,12 +124,12 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
-        /// Update employee's information
+        /// 
         /// </summary>
-        /// <param name="employee"></param>
-        public static void UpdateEmployee(EmployeeVM employee)
+        /// <param name="employeeVM"></param>
+        public static void UpdateEmployee(EmployeeVM employeeVM)
         {
-            UserData.Update(VMToDataModel(employee));
+            UserData.Update(VMToDataModel(employeeVM));
         }
 
         /// <summary>

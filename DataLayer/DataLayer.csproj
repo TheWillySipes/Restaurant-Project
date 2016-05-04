@@ -81,9 +81,11 @@
     <Compile Include="Ticket.cs">
       <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TicketData.cs" />
     <Compile Include="TicketsMenuItem.cs">
       <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TicketsMenuItemsData.cs" />
     <Compile Include="User.cs">
       <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>

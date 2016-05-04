@@ -50,6 +50,15 @@ namespace DataLayer
             }
         }
 
+        public static List<UsersRole> GetUserRoles(int employeeId)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                var roles = context.UsersRoles.Where(e => e.UserID == employeeId).ToList();
+                return roles;
+            }
+        }
+
         public static bool IsInRole(int employeeId, int role)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())

@@ -34,7 +34,7 @@ namespace RestaurantTests
 
             EmployeeLogic.Create("BobJones", "Bob", "Jones", "password");
             var employee = EmployeeLogic.GetEmployee("BobJones");
-            EmployeeLogic.AddUserToRole(employee, BusinessLayer.Roles.Manager);
+            EmployeeLogic.AddUserToRole(employee.ID, BusinessLayer.Roles.Manager);
         }
 
         public static void TestMenuItems()
@@ -86,7 +86,7 @@ namespace RestaurantTests
             MenuItemLogic.Delete(newBurger.ID);
             Console.WriteLine("---Burger deleted---");
             //Recreate burger
-            MenuItemLogic.Create(newBurger);
+            MenuItemLogic.Create("Hamburger", "Darn good burnter", 5.25m, true);
             Console.WriteLine("---Burger created---");
         }
     }

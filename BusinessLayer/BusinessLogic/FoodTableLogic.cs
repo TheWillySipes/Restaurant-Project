@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.BusinessLogic
 {
-    public class FoodTableLogic
+    public static class FoodTableLogic
     {
         /// <summary>
         /// Get all food tables

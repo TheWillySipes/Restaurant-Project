@@ -14,13 +14,18 @@ namespace DataLayer
         /// </summary>
         /// <param name="menuItem"></param>
         /// <returns></returns>
-        public static bool Create(MenuItem menuItem)
+        public static bool Create(string title, string description, decimal currentPrice, bool available)
         {
+            MenuItem newMenuItem = new MenuItem();
+            newMenuItem.Title = title;
+            newMenuItem.Description = description;
+            newMenuItem.CurrentPrice = currentPrice;
+            newMenuItem.Available = available;
             try
             {
                 using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
                 {
-                    context.MenuItems.Add(menuItem);
+                    context.MenuItems.Add(newMenuItem);
                     context.SaveChanges();
                 }
             }catch(Exception e)

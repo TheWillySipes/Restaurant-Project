@@ -11,7 +11,7 @@ namespace BusinessLayer.BusinessLogic
     /// <summary>
     /// All main MenuItem logic lives here
     /// </summary>
-    public class MenuItemLogic
+    public static class MenuItemLogic
     {
         /// <summary>
         /// Get all menu items
@@ -62,9 +62,9 @@ namespace BusinessLayer.BusinessLogic
         /// </summary>
         /// <param name="menuItem"></param>
         /// <returns></returns>
-        public static bool Create(MenuItemVM menuItem)
+        public static bool Create(string title, string description,  decimal currentPrice, bool available)
         {
-            return MenuItemData.Create(VMToDataModel(menuItem));
+            return MenuItemData.Create(title, description,  currentPrice, available);
         }
         
         /// <summary>
