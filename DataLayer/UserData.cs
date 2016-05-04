@@ -12,6 +12,22 @@ namespace DataLayer
     /// </summary>
     public class UserData
     {
+        public static bool AddUserToRole(int employeeId, int role)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                var usersRoles = context.UsersRoles.Where(e => e.UserID == employeeId && e.RoleID == role).FirstOrDefault();
+                if (usersRoles == null)
+                {
+                    var userRole = new UsersRole(){UserID = employeeId, RoleID = role};
+                    context.UsersRoles.Add(userRole);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
+
         public static bool IsInRole(int employeeId, int role)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())

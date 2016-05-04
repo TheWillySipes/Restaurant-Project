@@ -32,6 +32,17 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
+        /// Add a user to a roler
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
+        public static bool AddUserToRole(EmployeeVM employee, Roles role)
+        {
+            return UserData.AddUserToRole(employee.ID, (int)role);
+        }
+
+        /// <summary>
         /// Get all employees
         /// </summary>
         /// <returns></returns>

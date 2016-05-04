@@ -33,6 +33,8 @@ namespace RestaurantTests
             }
 
             EmployeeLogic.Create("BobJones", "Bob", "Jones", "password");
+            var employee = EmployeeLogic.GetEmployee("BobJones");
+            EmployeeLogic.AddUserToRole(employee, BusinessLayer.Roles.Manager);
         }
 
         public static void TestMenuItems()
