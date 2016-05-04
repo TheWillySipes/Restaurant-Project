@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,15 @@ namespace Restaurant
 {
     public partial class TicketForm : Form
     {
+        List<FoodTableVM> tables;
         public TicketForm()
         {
             InitializeComponent();
-
+            tables = FoodTableLogic.Get();
+            foreach(var table in tables)
+            {
+                cmboFoodTables.Items.Add(table.Info);
+            }
         }
         public string ticket { get; set; }
         public string ticketA = "";

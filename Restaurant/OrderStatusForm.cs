@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,11 @@ namespace Restaurant
         public OrderStatusForm()
         {
             InitializeComponent();
+            List<FoodTableVM> foodTables = FoodTableLogic.Get();
+            foreach(FoodTableVM foodTable in foodTables)
+            {
+                cmboFoodTable.Items.Add(foodTable.Info);
+            }
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -45,7 +52,7 @@ namespace Restaurant
 
 
             string output = "";
-            Object selectedItem = comboBox1.SelectedItem;
+            Object selectedItem = cmboFoodTable.SelectedItem;
 
             output += "Order : " + statusString + "\n";
             output += "Entered: " + (DateTime.Now); // need to figure out how to tweak this

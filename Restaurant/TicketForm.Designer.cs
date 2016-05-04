@@ -40,6 +40,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.cmboFoodTables = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -165,11 +167,30 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // cmboFoodTables
+            // 
+            this.cmboFoodTables.FormattingEnabled = true;
+            this.cmboFoodTables.Location = new System.Drawing.Point(270, 24);
+            this.cmboFoodTables.Name = "cmboFoodTables";
+            this.cmboFoodTables.Size = new System.Drawing.Size(121, 21);
+            this.cmboFoodTables.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(210, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Table";
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 457);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmboFoodTables);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -189,6 +210,7 @@
             this.Text = "TicketForm";
             this.Load += new System.EventHandler(this.TicketForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,5 +228,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox cmboFoodTables;
+        private System.Windows.Forms.Label label1;
     }
 }

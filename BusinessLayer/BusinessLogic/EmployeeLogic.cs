@@ -10,6 +10,16 @@ namespace BusinessLayer.BusinessLogic
 {
     public class EmployeeLogic
     {
+        public static bool Create(string username, string firstname, string lastname, string password)
+        {
+            User newUser = new User();
+            newUser.UserName = username;
+            newUser.FirstName = firstname;
+            newUser.LastName = lastname;
+            newUser.Password = password;
+            return UserData.Create(newUser);
+        }
+
         /// <summary>
         /// Check to see if a user is in a role
         /// </summary>
@@ -19,6 +29,17 @@ namespace BusinessLayer.BusinessLogic
         public static bool IsInRole(EmployeeVM employee, Roles role)
         {
             return UserData.IsInRole(employee.ID, (int)role);
+        }
+
+        /// <summary>
+        /// Add a user to a roler
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
+        public static bool AddUserToRole(EmployeeVM employee, Roles role)
+        {
+            return UserData.AddUserToRole(employee.ID, (int)role);
         }
 
         /// <summary>
