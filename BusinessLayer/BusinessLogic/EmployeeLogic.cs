@@ -32,7 +32,7 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
-        /// Add a user to a roler
+        /// Add a user to a role
         /// </summary>
         /// <param name="employee"></param>
         /// <param name="role"></param>
@@ -40,6 +40,17 @@ namespace BusinessLayer.BusinessLogic
         public static bool AddUserToRole(EmployeeVM employee, Roles role)
         {
             return UserData.AddUserToRole(employee.ID, (int)role);
+        }
+
+        /// <summary>
+        /// Remove user from role
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
+        public static bool RemoveUserFromRoles(EmployeeVM employee, Roles role)
+        {
+            return UserData.RemoveUserFromRole(employee.ID, (int)role);
         }
 
         /// <summary>

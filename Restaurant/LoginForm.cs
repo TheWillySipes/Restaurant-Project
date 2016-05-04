@@ -25,7 +25,6 @@ namespace Restaurant
             if(EmployeeLogic.AuthenticateEmployee(txtUserName.Text, txtPassword.Text))
             {
                 EmployeeVM employee = EmployeeLogic.GetEmployee(txtUserName.Text);
-                MessageBox.Show(txtUserName.Text + " Login Successful!");
                 EmployeeActionSelector employeeActionSelector = new EmployeeActionSelector(employee);
                 employeeActionSelector.Show();
                 this.Hide();
