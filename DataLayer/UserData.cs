@@ -57,8 +57,16 @@ namespace DataLayer
             {
                 using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
                 {
-                    context.Users.Add(user);
-                    context.SaveChanges();
+                    var checkExisting = context.Users.Where(e => e.UserName == user.UserName).FirstOrDefault();
+                    if(checkExisting == null)
+                    {
+                        context.Users.Add(user);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        return false; //username already exists in database
+                    }
                 }
             }catch(Exception e)
             {

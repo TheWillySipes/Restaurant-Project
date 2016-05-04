@@ -31,6 +31,8 @@ namespace RestaurantTests
                     Console.WriteLine("LastName: " + employeeVM.LastName);
                 }
             }
+
+            EmployeeLogic.Create("BobJones", "Bob", "Jones", "password");
         }
 
         public static void TestMenuItems()

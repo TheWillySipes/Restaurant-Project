@@ -10,9 +10,14 @@ namespace BusinessLayer.BusinessLogic
 {
     public class EmployeeLogic
     {
-        public static bool Create(EmployeeVM employee)
+        public static bool Create(string username, string firstname, string lastname, string password)
         {
-            return UserData.Create(VMToDataModel(employee));
+            User newUser = new User();
+            newUser.UserName = username;
+            newUser.FirstName = firstname;
+            newUser.LastName = lastname;
+            newUser.Password = password;
+            return UserData.Create(newUser);
         }
 
         /// <summary>
