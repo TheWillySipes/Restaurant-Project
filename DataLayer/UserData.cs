@@ -28,6 +28,28 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Remove a user from a role
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
+        public static bool RemoveUserFromRole(int employeeId, int role)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                var toDelete = context.UsersRoles.Where(e => e.UserID == employeeId && e.RoleID == role).FirstOrDefault();
+                if (toDelete != null)
+                {
+                    context.UsersRoles.Remove(toDelete);
+                    context.Entry(toDelete).State = EntityState.Deleted;
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
+
         public static bool IsInRole(int employeeId, int role)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
