@@ -28,175 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_FirstName = new System.Windows.Forms.Label();
+            this.lbl_LastName = new System.Windows.Forms.Label();
+            this.lbl_Username = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtUserID = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chkManager = new System.Windows.Forms.CheckBox();
-            this.chkWaiter = new System.Windows.Forms.CheckBox();
-            this.chkCook = new System.Windows.Forms.CheckBox();
-            this.chkBusser = new System.Windows.Forms.CheckBox();
-            this.chkHost = new System.Windows.Forms.CheckBox();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnCreateEmployeeID = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_FirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First Name";
+            this.lbl_FirstName.AutoSize = true;
+            this.lbl_FirstName.Location = new System.Drawing.Point(13, 62);
+            this.lbl_FirstName.Name = "lbl_FirstName";
+            this.lbl_FirstName.Size = new System.Drawing.Size(57, 13);
+            this.lbl_FirstName.TabIndex = 0;
+            this.lbl_FirstName.Text = "First Name";
             // 
-            // label2
+            // lbl_LastName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Last Name";
+            this.lbl_LastName.AutoSize = true;
+            this.lbl_LastName.Location = new System.Drawing.Point(13, 92);
+            this.lbl_LastName.Name = "lbl_LastName";
+            this.lbl_LastName.Size = new System.Drawing.Size(58, 13);
+            this.lbl_LastName.TabIndex = 1;
+            this.lbl_LastName.Text = "Last Name";
             // 
-            // label3
+            // lbl_Username
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "User ID";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Password";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Select Roles";
+            this.lbl_Username.AutoSize = true;
+            this.lbl_Username.Location = new System.Drawing.Point(12, 32);
+            this.lbl_Username.Name = "lbl_Username";
+            this.lbl_Username.Size = new System.Drawing.Size(55, 13);
+            this.lbl_Username.TabIndex = 2;
+            this.lbl_Username.Text = "Username";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(71, 73);
+            this.txtFirstName.Location = new System.Drawing.Point(72, 59);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(71, 99);
+            this.txtLastName.Location = new System.Drawing.Point(72, 89);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 6;
             // 
-            // txtUserID
+            // txtUsername
             // 
-            this.txtUserID.Location = new System.Drawing.Point(71, 125);
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(100, 20);
-            this.txtUserID.TabIndex = 7;
+            this.txtUsername.Location = new System.Drawing.Point(71, 29);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.TabIndex = 7;
             // 
-            // txtPassword
+            // btnCreateEmployeeID
             // 
-            this.txtPassword.Location = new System.Drawing.Point(71, 151);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 8;
+            this.btnCreateEmployeeID.Location = new System.Drawing.Point(12, 115);
+            this.btnCreateEmployeeID.Name = "btnCreateEmployeeID";
+            this.btnCreateEmployeeID.Size = new System.Drawing.Size(97, 23);
+            this.btnCreateEmployeeID.TabIndex = 14;
+            this.btnCreateEmployeeID.Text = "Create Employee";
+            this.btnCreateEmployeeID.UseVisualStyleBackColor = true;
+            this.btnCreateEmployeeID.Click += new System.EventHandler(this.btnGenEmployeeID_Click);
             // 
-            // chkManager
+            // btnExit
             // 
-            this.chkManager.AutoSize = true;
-            this.chkManager.Location = new System.Drawing.Point(12, 199);
-            this.chkManager.Name = "chkManager";
-            this.chkManager.Size = new System.Drawing.Size(68, 17);
-            this.chkManager.TabIndex = 9;
-            this.chkManager.Text = "Manager";
-            this.chkManager.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(12, 195);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(97, 23);
+            this.btnExit.TabIndex = 16;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // chkWaiter
+            // btnModifyEmployee
             // 
-            this.chkWaiter.AutoSize = true;
-            this.chkWaiter.Location = new System.Drawing.Point(12, 222);
-            this.chkWaiter.Name = "chkWaiter";
-            this.chkWaiter.Size = new System.Drawing.Size(57, 17);
-            this.chkWaiter.TabIndex = 10;
-            this.chkWaiter.Text = "Waiter";
-            this.chkWaiter.UseVisualStyleBackColor = true;
-            // 
-            // chkCook
-            // 
-            this.chkCook.AutoSize = true;
-            this.chkCook.Location = new System.Drawing.Point(12, 245);
-            this.chkCook.Name = "chkCook";
-            this.chkCook.Size = new System.Drawing.Size(51, 17);
-            this.chkCook.TabIndex = 11;
-            this.chkCook.Text = "Cook";
-            this.chkCook.UseVisualStyleBackColor = true;
-            // 
-            // chkBusser
-            // 
-            this.chkBusser.AutoSize = true;
-            this.chkBusser.Location = new System.Drawing.Point(12, 268);
-            this.chkBusser.Name = "chkBusser";
-            this.chkBusser.Size = new System.Drawing.Size(58, 17);
-            this.chkBusser.TabIndex = 12;
-            this.chkBusser.Text = "Busser";
-            this.chkBusser.UseVisualStyleBackColor = true;
-            // 
-            // chkHost
-            // 
-            this.chkHost.AutoSize = true;
-            this.chkHost.Location = new System.Drawing.Point(12, 291);
-            this.chkHost.Name = "chkHost";
-            this.chkHost.Size = new System.Drawing.Size(48, 17);
-            this.chkHost.TabIndex = 13;
-            this.chkHost.Text = "Host";
-            this.chkHost.UseVisualStyleBackColor = true;
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(12, 314);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(108, 23);
-            this.btnAddEmployee.TabIndex = 14;
-            this.btnAddEmployee.Text = "Add Employee";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.Location = new System.Drawing.Point(12, 156);
+            this.btnModifyEmployee.Name = "btnModifyEmployee";
+            this.btnModifyEmployee.Size = new System.Drawing.Size(97, 23);
+            this.btnModifyEmployee.TabIndex = 17;
+            this.btnModifyEmployee.Text = "Modify Employee";
+            this.btnModifyEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
             // AddEmployeeSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 349);
-            this.Controls.Add(this.btnAddEmployee);
-            this.Controls.Add(this.chkHost);
-            this.Controls.Add(this.chkBusser);
-            this.Controls.Add(this.chkCook);
-            this.Controls.Add(this.chkWaiter);
-            this.Controls.Add(this.chkManager);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserID);
+            this.ClientSize = new System.Drawing.Size(284, 246);
+            this.Controls.Add(this.btnModifyEmployee);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnCreateEmployeeID);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Username);
+            this.Controls.Add(this.lbl_LastName);
+            this.Controls.Add(this.lbl_FirstName);
             this.Name = "AddEmployeeSubForm";
             this.Text = "AddEmployeeSubForm";
             this.Load += new System.EventHandler(this.AddEmployeeSubForm_Load);
@@ -207,20 +141,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_FirstName;
+        private System.Windows.Forms.Label lbl_LastName;
+        private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtUserID;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox chkManager;
-        private System.Windows.Forms.CheckBox chkWaiter;
-        private System.Windows.Forms.CheckBox chkCook;
-        private System.Windows.Forms.CheckBox chkBusser;
-        private System.Windows.Forms.CheckBox chkHost;
-        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnCreateEmployeeID;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnModifyEmployee;
     }
 }

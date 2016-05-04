@@ -41,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -124,7 +123,6 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 20;
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // label5
             // 
@@ -162,15 +160,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "First Name";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(151, 13);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "Modified Employee Information";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(124, 274);
@@ -186,7 +175,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 423);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.chkHost);
             this.Controls.Add(this.chkBusser);
@@ -222,7 +210,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
     }
 }

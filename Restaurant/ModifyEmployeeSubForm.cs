@@ -17,19 +17,8 @@ namespace Restaurant
             InitializeComponent();
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
+        public void ModifyEmployeeSubForm_Load(object sender, )
 
-        }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
