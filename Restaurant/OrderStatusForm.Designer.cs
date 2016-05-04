@@ -28,30 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmboFoodTable = new System.Windows.Forms.ComboBox();
             this.lblSelectTable = new System.Windows.Forms.Label();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnCheckOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmboFoodTable
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Table 1",
-            "Table 2",
-            "Table 3",
-            "Table 4",
-            "Table 5",
-            "Table 6",
-            "Table 7",
-            "Table 8",
-            "Table 9",
-            "Table 10"});
-            this.comboBox1.Location = new System.Drawing.Point(68, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmboFoodTable.FormattingEnabled = true;
+            this.cmboFoodTable.Location = new System.Drawing.Point(68, 111);
+            this.cmboFoodTable.Name = "cmboFoodTable";
+            this.cmboFoodTable.Size = new System.Drawing.Size(156, 21);
+            this.cmboFoodTable.TabIndex = 0;
             // 
             // lblSelectTable
             // 
@@ -91,7 +80,7 @@
             this.Controls.Add(this.btnCheckOrder);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.lblSelectTable);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmboFoodTable);
             this.Name = "OrderStatusForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderStatusForm";
@@ -102,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmboFoodTable;
         private System.Windows.Forms.Label lblSelectTable;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnCheckOrder;

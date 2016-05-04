@@ -10,6 +10,11 @@ namespace BusinessLayer.BusinessLogic
 {
     public class EmployeeLogic
     {
+        public static bool Create(EmployeeVM employee)
+        {
+            return UserData.Create(VMToDataModel(employee));
+        }
+
         /// <summary>
         /// Check to see if a user is in a role
         /// </summary>
