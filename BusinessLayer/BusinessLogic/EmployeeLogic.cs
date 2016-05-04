@@ -110,7 +110,8 @@ namespace BusinessLayer.BusinessLogic
                 ID = employee.ID,
                 UserName = employee.UserName,
                 FirstName = employee.FirstName,
-                LastName = employee.LastName
+                LastName = employee.LastName,
+                Password = employee.Password
             };
         }
 
@@ -126,7 +127,8 @@ namespace BusinessLayer.BusinessLogic
                 ID = user.ID,
                 UserName = user.UserName,
                 FirstName = user.FirstName,
-                LastName = user.LastName
+                LastName = user.LastName,
+                Password = user.Password
             };
         }
 
