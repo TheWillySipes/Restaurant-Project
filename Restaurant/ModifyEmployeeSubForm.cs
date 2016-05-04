@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
 
 namespace Restaurant
 {
     public partial class ModifyEmployeeSubForm : Form
     {
+        List<EmployeeVM> employees = EmployeeLogic.GetEmployees();
+
         public ModifyEmployeeSubForm()
         {
             InitializeComponent();
-            var employees = EmployeeLogic.GetEmployees();
+
             foreach (var employee in employees)
             {
                 lstEmployeeList.Items.Add(employee.FirstName);
@@ -27,7 +30,12 @@ namespace Restaurant
 
         private void lstEmployeeList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            txtUsername.Text = employees[lstEmployeeList.SelectedIndex].UserName;
+            txtFirstName.Text = employees[lstEmployeeList.SelectedIndex].FirstName;
+            txtLastName.Text = employees[lstEmployeeList.SelectedIndex].LastName;
+            txtPassword.Text = employees[lstEmployeeList.SelectedIndex].Password;
+
+            //chkHost.Checked
         }
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)
@@ -35,14 +43,9 @@ namespace Restaurant
 
         }
 
-        private void chkboxRoles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
 
-        //public void ModifyEmployeeSubForm_Load(object sender, );
 
 
     }
