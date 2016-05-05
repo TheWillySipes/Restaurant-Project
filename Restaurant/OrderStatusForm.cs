@@ -15,14 +15,16 @@ namespace Restaurant
     public partial class OrderStatusForm : Form
     {
         WaitStaffForm waitStaff = new WaitStaffForm();
+        List<FoodTableVM> foodTables = FoodTableLogic.Get();
         public OrderStatusForm()
         {
             InitializeComponent();
-            List<FoodTableVM> foodTables = FoodTableLogic.Get();
+
             foreach(FoodTableVM foodTable in foodTables)
             {
-                cmboFoodTable.Items.Add(foodTable.Info);
+                cmboFoodTable.Items.Add(foodTable);
             }
+            cmboFoodTable.DisplayMember = "Info";
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -34,6 +36,9 @@ namespace Restaurant
 
         private void btnCheckOrder_Click(object sender, EventArgs e)
         {
+            //cmboFoodTables.SelectedItem as FoodTableVM
+            //TicketLogic.Read();
+
             //Another random number generated to simulate order status 
 
             Random rng = new Random();

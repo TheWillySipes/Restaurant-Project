@@ -11,19 +11,13 @@ namespace BusinessLayer.BusinessLogic
     public static class TicketLogic
     {
         /// <summary>
-        /// Get tickets for a specific table
+        /// Get open ticket for table
         /// </summary>
         /// <param name="tableId"></param>
-        /// <param name="onlyShowOpenTickets"></param>
         /// <returns></returns>
-        public static List<TicketVM> Read(int tableId, bool onlyShowOpenTickets)
+        public static TicketVM GetMostRecentTicket(int tableId)
         {
-            List<TicketVM> tickets = new List<TicketVM>();
-            foreach (DataLayer.Ticket ticket in TicketData.Read(tableId, onlyShowOpenTickets))
-            {
-                tickets.Add(DataModelToVM(ticket));
-            }
-            return tickets;
+            return DataModelToVM(TicketData.Read(tableId));
         }
 
         /// <summary>
