@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +14,19 @@ namespace Restaurant
 {
     public partial class CookStaffForm : Form
     {
+                List<FoodTableVM> tables = FoodTableLogic.Get();
 
         public CookStaffForm()
         {
             InitializeComponent();
+            foreach (FoodTableVM table in tables)
+            {
+                comboBox1.Items.Add(table);
+
+            }
+
         }
 
-        private void btnClockIn_Click(object sender, EventArgs e)
-        {
-
-           //Clocking in cook staff
-            DateTime clockedInTime = DateTime.Now;
-            MessageBox.Show("Cook Staff Clocked in: " + clockedInTime);
-            
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -35,15 +36,11 @@ namespace Restaurant
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void completeButton_Click(object sender, EventArgs e)
         {
-            //Clocking out cook staff
-            DateTime clockedOutTime = DateTime.Now;
-            MessageBox.Show("Cook Staff Clocked out: " + clockedOutTime);
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.Show();
 
         }
+
+
     }
 }
