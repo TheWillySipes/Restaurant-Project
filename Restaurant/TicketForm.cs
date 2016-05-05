@@ -14,29 +14,29 @@ namespace Restaurant
 {
     public partial class TicketForm : Form
     {
+        //Get list of food tables from database
         List<FoodTableVM> tables = FoodTableLogic.Get();
+        //Get list of menu items from database
         List<MenuItemVM> menuItems = MenuItemLogic.Read();
 
         public TicketForm()
         {
             InitializeComponent();
+            //populate food table combo box with tables initialized above
             foreach(FoodTableVM table in tables)
             {
                 cmboFoodTables.Items.Add(table);
             }
+            //populate menu items combo box with menuItems initialized above
             foreach(MenuItemVM menuItem in menuItems)
             {
                 cmboMenuItems.Items.Add(menuItem);
             }
-
+            //Set display member of FoodTableVM's Info property (see FoodTableVM class)
             cmboFoodTables.DisplayMember = "Info";
-            cmboFoodTables.ValueMember = "ID";
-
+            //same idea as line above
             cmboMenuItems.DisplayMember = "Title";
-            cmboMenuItems.ValueMember = "ID";
-
             listBoxMenuItems.DisplayMember = "Title";
-            listBoxMenuItems.ValueMember = "ID";
         }
 
         private void btnRemoveSingleItem_Click(object sender, EventArgs e)
@@ -53,15 +53,31 @@ namespace Restaurant
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            //TODO: Add logic to send order to business logic
-            //Creating ticket to be sent to cooks
-            MessageBox.Show("SENT TO COOKS");
-            //int ticketId = TicketLogic.Create((int)cmboFoodTables.SelectedValue);
-            //foreach(var item in listBoxMenuItems.Items.Cast<TicketsMenuItemVM>)
-            //{
+            ///Return and show message if no food items were selected
+            if (listBoxMenuItems.Items.Count < 1)
+            {
+                MessageBox.Show("Please add menu items to the order");
+                return;
+            }
+            //Return and show message if a food table is not selected from combo box
+            if(cmboFoodTables.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a table");
+                return;
+            }
+            //Get FoodTableVM object from the combo box's selected item
+            FoodTableVM selectedTable = cmboFoodTables.SelectedItem as FoodTableVM;
+            //Create a new ticket with the table's ID (returns a ticket ID of the item created)
+            int ticketId = TicketLogic.Create(selectedTable.ID);
 
-            //}
-            //TicketsMenuItemLogic.AddMenuItemsToTicket()
+            //Get list of menu items selected from the list box ( .OfType casts the MenuItemVM back
+            //  to a MenuItemVM object type
+            List<MenuItemVM> menuItems = listBoxMenuItems.Items.OfType<MenuItemVM>().ToList();
+            //Add menu items to the newly created ticket providing the ticket ID and the selected menu items
+            TicketsMenuItemLogic.AddMenuItemsToTicket(ticketId, menuItems);
+            //Clear out the listbox to create a second order if needed
+            listBoxMenuItems.Items.Clear();
+            MessageBox.Show("Order sent too cooks");
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -72,21 +88,10 @@ namespace Restaurant
             waitForm.Show();
         }
 
-        private void cmboFoodTables_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //listBox2.Items.Clear();
-            //TicketVM ticket = TicketLogic.Read(tables[cmboFoodTables.SelectedIndex].ID);
-            //List<TicketsMenuItemVM> ticketsMenuItems = TicketsMenuItemLogic.GetTicketsMenuItems(ticket.ID);
-            //foreach(TicketsMenuItemVM item in ticketsMenuItems)
-            //{
-            //    listBox2.Items.Add(item.MenuItemTitle);
-            //}
-            listBoxMenuItems.Items.Clear();
-        }
-
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            listBoxMenuItems.Items.Add(menuItems[cmboMenuItems.SelectedIndex]);
+            //Add selected item object to list box
+            listBoxMenuItems.Items.Add(cmboMenuItems.SelectedItem);
         }
 
     }

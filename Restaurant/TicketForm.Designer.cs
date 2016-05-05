@@ -89,12 +89,12 @@
             // 
             // cmboFoodTables
             // 
+            this.cmboFoodTables.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmboFoodTables.FormattingEnabled = true;
             this.cmboFoodTables.Location = new System.Drawing.Point(248, 39);
             this.cmboFoodTables.Name = "cmboFoodTables";
             this.cmboFoodTables.Size = new System.Drawing.Size(121, 21);
             this.cmboFoodTables.TabIndex = 12;
-            this.cmboFoodTables.SelectedIndexChanged += new System.EventHandler(this.cmboFoodTables_SelectedIndexChanged);
             // 
             // label1
             // 

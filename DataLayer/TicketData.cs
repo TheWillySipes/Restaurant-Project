@@ -21,23 +21,11 @@ namespace DataLayer
             }
         }
 
-        public static List<Ticket> Read(int tableId, bool onlyOpenTickets)
+        public static Ticket GetMostRecentTicket(int tableId, bool onlyOpenTickets)
         {
-            if(onlyOpenTickets)
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
-                using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
-                {
-                    List<Ticket> tickets = context.Tickets.Where(e => e.ID == tableId && e.TimeCompleted != null).ToList();
-                    return tickets;
-                }
-            }
-            else
-            {
-                using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
-                {
-                    List<Ticket> tickets = context.Tickets.Where(e => e.ID == tableId).ToList();
-                    return tickets;
-                }
+                return context.Tickets.Where(e => e.ID == tableId).OrderByDescending(e => e.TimePlaced).FirstOrDefault();
             }
         }
 
