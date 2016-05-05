@@ -31,7 +31,6 @@ namespace Restaurant
                 ManagerRoleTasks managerTasks = new ManagerRoleTasks();
                 managerTasks.Show();
                 this.Hide();
-
             }
             else
             {
@@ -43,8 +42,8 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(Employee.ID, Roles.WaitStaff))
             {
-                FloorStatus floor = new FloorStatus();
-                floor.Show();
+                WaitStaffForm waitStaffForm = new WaitStaffForm();
+                waitStaffForm.Show();
                 this.Hide();
             }
             else
@@ -57,7 +56,9 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(Employee.ID, Roles.Cook))
             {
-                MessageBox.Show("You are in the Cook role!");
+                CookStaffForm cookStaffForm = new CookStaffForm();
+                cookStaffForm.Show();
+                this.Hide();
             }
             else
             {
@@ -69,7 +70,9 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(Employee.ID, Roles.BusBoy))
             {
-                MessageBox.Show("You are in the Busser role!");
+                BusserForm busserForm = new BusserForm();
+                busserForm.Show();
+                this.Hide();
             }
             else
             {
@@ -81,7 +84,9 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(Employee.ID, Roles.Host))
             {
-                MessageBox.Show("You are in the Host role!");
+                HostForm hostForm = new HostForm();
+                hostForm.Show();
+                this.Hide();
             }
             else
             {

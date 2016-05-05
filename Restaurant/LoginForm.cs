@@ -38,8 +38,8 @@ namespace Restaurant
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //Closes the form
-            this.Close();
+            //Exits the application
+            Application.Exit();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)

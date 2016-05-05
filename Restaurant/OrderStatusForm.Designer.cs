@@ -36,6 +36,7 @@
             // 
             // cmboFoodTable
             // 
+            this.cmboFoodTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmboFoodTable.FormattingEnabled = true;
             this.cmboFoodTable.Location = new System.Drawing.Point(68, 111);
             this.cmboFoodTable.Name = "cmboFoodTable";

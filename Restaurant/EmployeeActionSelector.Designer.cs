@@ -39,9 +39,9 @@
             // 
             // btnManager
             // 
-            this.btnManager.Location = new System.Drawing.Point(83, 31);
+            this.btnManager.Location = new System.Drawing.Point(12, 128);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(75, 23);
+            this.btnManager.Size = new System.Drawing.Size(260, 23);
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // 
             // btnWaiter
             // 
-            this.btnWaiter.Location = new System.Drawing.Point(83, 60);
+            this.btnWaiter.Location = new System.Drawing.Point(12, 12);
             this.btnWaiter.Name = "btnWaiter";
-            this.btnWaiter.Size = new System.Drawing.Size(75, 23);
+            this.btnWaiter.Size = new System.Drawing.Size(124, 52);
             this.btnWaiter.TabIndex = 1;
             this.btnWaiter.Text = "Waiter";
             this.btnWaiter.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // btnCook
             // 
-            this.btnCook.Location = new System.Drawing.Point(83, 89);
+            this.btnCook.Location = new System.Drawing.Point(12, 70);
             this.btnCook.Name = "btnCook";
-            this.btnCook.Size = new System.Drawing.Size(75, 23);
+            this.btnCook.Size = new System.Drawing.Size(124, 52);
             this.btnCook.TabIndex = 2;
             this.btnCook.Text = "Cook";
             this.btnCook.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnBusser
             // 
-            this.btnBusser.Location = new System.Drawing.Point(83, 118);
+            this.btnBusser.Location = new System.Drawing.Point(148, 72);
             this.btnBusser.Name = "btnBusser";
-            this.btnBusser.Size = new System.Drawing.Size(75, 23);
+            this.btnBusser.Size = new System.Drawing.Size(124, 52);
             this.btnBusser.TabIndex = 3;
             this.btnBusser.Text = "Busser";
             this.btnBusser.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // 
             // btnHost
             // 
-            this.btnHost.Location = new System.Drawing.Point(83, 147);
+            this.btnHost.Location = new System.Drawing.Point(148, 12);
             this.btnHost.Name = "btnHost";
-            this.btnHost.Size = new System.Drawing.Size(75, 23);
+            this.btnHost.Size = new System.Drawing.Size(124, 52);
             this.btnHost.TabIndex = 4;
             this.btnHost.Text = "Host";
             this.btnHost.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             // btnClockIn
             // 
-            this.btnClockIn.Location = new System.Drawing.Point(27, 217);
+            this.btnClockIn.Location = new System.Drawing.Point(12, 227);
             this.btnClockIn.Name = "btnClockIn";
-            this.btnClockIn.Size = new System.Drawing.Size(75, 23);
+            this.btnClockIn.Size = new System.Drawing.Size(124, 23);
             this.btnClockIn.TabIndex = 5;
             this.btnClockIn.Text = "Clock In";
             this.btnClockIn.UseVisualStyleBackColor = true;
@@ -99,9 +99,9 @@
             // 
             // btnClockOut
             // 
-            this.btnClockOut.Location = new System.Drawing.Point(197, 217);
+            this.btnClockOut.Location = new System.Drawing.Point(148, 227);
             this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(75, 23);
+            this.btnClockOut.Size = new System.Drawing.Size(124, 23);
             this.btnClockOut.TabIndex = 6;
             this.btnClockOut.Text = "Clock Out";
             this.btnClockOut.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(292, 262);
             this.Controls.Add(this.btnClockOut);
             this.Controls.Add(this.btnClockIn);
             this.Controls.Add(this.btnHost);
@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnWaiter);
             this.Controls.Add(this.btnManager);
             this.Name = "EmployeeActionSelector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeActionSelector";
             this.ResumeLayout(false);
 

@@ -21,14 +21,22 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
-        /// Get tickets for a specific table
+        /// Get ticket for a specific table
         /// </summary>
         /// <param name="tableId"></param>
         /// <param name="onlyShowOpenTickets"></param>
         /// <returns></returns>
         public static TicketVM Read(int tableId)
         {
-            return DataModelToVM(TicketData.Read(tableId));
+            DataLayer.Ticket ticket = TicketData.Read(tableId);
+            if(ticket != null)
+            {
+                return DataModelToVM(ticket);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>

@@ -14,8 +14,9 @@ namespace Restaurant
 {
     public partial class OrderStatusForm : Form
     {
-        WaitStaffForm waitStaff = new WaitStaffForm();
+        //Get list of food tables on form initialization from the database
         List<FoodTableVM> foodTables = FoodTableLogic.Get();
+
         public OrderStatusForm()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Restaurant
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
+            WaitStaffForm waitStaff = new WaitStaffForm();
             waitStaff.checkclockin = true;
             waitStaff.Show();
             this.Hide();
@@ -36,33 +38,37 @@ namespace Restaurant
 
         private void btnCheckOrder_Click(object sender, EventArgs e)
         {
-            //cmboFoodTables.SelectedItem as FoodTableVM
-            //TicketLogic.Read();
-
-            //Another random number generated to simulate order status 
-
-            Random rng = new Random();
-            int number = rng.Next(0, 100);
-            string statusString = "";
-
-            if (number >= 50)
+            //Verify user selected a table, if not show error and return
+            if(cmboFoodTable.SelectedIndex == -1)
             {
-                statusString = "*IN PROGRESS*";
-                
+                MessageBox.Show("Please select a table");
+                return;
+            }
+            //Get selected table from combo box
+            FoodTableVM selectedTable = cmboFoodTable.SelectedItem as FoodTableVM;
+            //Get ticket from database
+            TicketVM ticket = TicketLogic.Read(selectedTable.ID);
+            //If ticket is null, there were no tickets
+            if(ticket != null)
+            {
+                if(ticket.TimeCompleted == null)
+                {
+                    //Order not completed yet, display what time order was placed
+                    MessageBox.Show("Ticket not completed, order placed at:\n" + 
+                        ticket.TimePlaced.ToShortTimeString());
+                }
+                else
+                {
+                    //Order was completed, display time completed
+                    MessageBox.Show("Ticket not completed, order completed at:\n" +
+                        ticket.TimeCompleted.Value.ToShortTimeString());
+                }
             }
             else
             {
-                statusString = "DELIVERED!";
+                //No order was found, display message
+                MessageBox.Show("No orders found");
             }
-
-
-            string output = "";
-            Object selectedItem = cmboFoodTable.SelectedItem;
-
-            output += "Order : " + statusString + "\n";
-            output += "Entered: " + (DateTime.Now); // need to figure out how to tweak this
-
-            MessageBox.Show(output);
         }
     }
 }

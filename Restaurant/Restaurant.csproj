@@ -58,6 +58,12 @@
     <Compile Include="AddEmployeeSubForm.Designer.cs">
       <DependentUpon>AddEmployeeSubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusserForm.Designer.cs">
+      <DependentUpon>BusserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerRoleTasks.cs">
       <SubType>Form</SubType>
     </Compile>
