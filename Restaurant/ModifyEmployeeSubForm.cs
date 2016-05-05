@@ -15,7 +15,7 @@ namespace Restaurant
 {
     public partial class ModifyEmployeeSubForm : Form
     {
-        List<EmployeeVM> employees = EmployeeLogic.GetEmployees();
+        List<EmployeeVM> employees = EmployeeLogic.Get();
 
         public ModifyEmployeeSubForm()
         {

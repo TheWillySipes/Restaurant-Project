@@ -33,6 +33,14 @@ namespace DataLayer
             }
         }
 
+        public static List<TicketsMenuItem> GetAllTicketMenuItems(int ticketId)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                return context.TicketsMenuItems.Where(e => e.TicketID == ticketId).ToList();
+            }
+        }
+
         public static List<TicketsMenuItem> Get(int ticketId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())

@@ -20,7 +20,7 @@ namespace RestaurantTests
         static void TestEmployees()
         {
             Console.WriteLine("\n---Testing Employees---");
-            List<EmployeeVM> employees = EmployeeLogic.GetEmployees();
+            List<EmployeeVM> employees = EmployeeLogic.Get();
             if (employees.Count > 0)
             {
                 foreach (EmployeeVM employeeVM in employees)
@@ -33,14 +33,14 @@ namespace RestaurantTests
             }
 
             EmployeeLogic.Create("BobJones", "Bob", "Jones", "password");
-            var employee = EmployeeLogic.GetEmployee("BobJones");
+            var employee = EmployeeLogic.Get("BobJones");
             EmployeeLogic.AddUserToRole(employee.ID, BusinessLayer.Roles.Manager);
         }
 
         public static void TestMenuItems()
         {
             Console.WriteLine("\n---Testing FoodItems---");
-            List<MenuItemVM> menuItems = MenuItemLogic.Read();
+            List<MenuItemVM> menuItems = MenuItemLogic.Get();
             if (menuItems.Count > 0)
             {
                 foreach (MenuItemVM menuItem in menuItems)
@@ -60,7 +60,7 @@ namespace RestaurantTests
             //Update burger in database
             MenuItemLogic.Update(burger);
             //Read new burger passing burger's ID in
-            var newBurger = MenuItemLogic.Read(burger.ID);
+            var newBurger = MenuItemLogic.Get(burger.ID);
             //Write out new data
             Console.WriteLine("---Burger is now unavailable---");
             Console.WriteLine("ID: " + newBurger.ID);
@@ -73,7 +73,7 @@ namespace RestaurantTests
             //Update burger in DB again
             MenuItemLogic.Update(burger);
             //Read burger from database again
-            newBurger = MenuItemLogic.Read(burger.ID);
+            newBurger = MenuItemLogic.Get(burger.ID);
             //Write out data again
             Console.WriteLine("---Burger is now available---");
             Console.WriteLine("ID: " + newBurger.ID);

@@ -123,7 +123,7 @@ namespace DataLayer
             return true;
         }
 
-        public static User Read(string employeeUserName)
+        public static User Get(string employeeUserName)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
@@ -139,7 +139,7 @@ namespace DataLayer
             }
         }
 
-        public static List<User> Read()
+        public static List<User> Get()
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {

@@ -41,7 +41,7 @@ namespace DataLayer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static MenuItem Read(int id)
+        public static MenuItem Get(int id)
         {
             MenuItem menuItem = null;
             try

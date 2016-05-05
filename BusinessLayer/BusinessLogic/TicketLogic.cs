@@ -11,24 +11,14 @@ namespace BusinessLayer.BusinessLogic
     public static class TicketLogic
     {
         /// <summary>
-        /// Get open ticket for table
-        /// </summary>
-        /// <param name="tableId"></param>
-        /// <returns></returns>
-        public static TicketVM GetMostRecentTicket(int tableId)
-        {
-            return DataModelToVM(TicketData.Read(tableId));
-        }
-
-        /// <summary>
         /// Get ticket for a specific table
         /// </summary>
         /// <param name="tableId"></param>
         /// <param name="onlyShowOpenTickets"></param>
         /// <returns></returns>
-        public static TicketVM Read(int tableId)
+        public static TicketVM Get(int tableId)
         {
-            DataLayer.Ticket ticket = TicketData.Read(tableId);
+            DataLayer.Ticket ticket = TicketData.Get(tableId);
             if(ticket != null)
             {
                 return DataModelToVM(ticket);
@@ -40,13 +30,50 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
+        /// Get ticket total
+        /// </summary>
+        /// <param name="ticketId"></param>
+        /// <returns></returns>
+        public static decimal GetTicketTotal(int ticketId)
+        {
+            List<TicketsMenuItem> ticketsMenuItems = TicketsMenuItemsData.GetAllTicketMenuItems(ticketId);
+            decimal total = 0m;
+            foreach(TicketsMenuItem menuItem in ticketsMenuItems)
+            {
+                total += menuItem.PricePaid;
+            }
+            return total;
+        }
+
+        /// <summary>
+        /// If ticket is not already closed, close ticket
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
+        public static bool CloseTableTicket(int tableId)
+        {
+            DataLayer.Ticket ticket = TicketData.Get(tableId);
+            if(ticket.TimeCompleted != null)
+            {
+                ticket.TimeCompleted = DateTime.Now;
+                return TicketData.Update(ticket);
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Create a new ticket for a table
         /// </summary>
         /// <param name="tableId"></param>
-        /// <returns>Returns ticket ID</returns>
-        public static int Create(int tableId)
+        /// <returns>Returns false if there is already an open ticket for a table</returns>
+        public static bool Create(int tableId)
         {
-            return TicketData.Create(tableId);
+            DataLayer.Ticket ticket = TicketData.Get(tableId);
+            if(ticket.TimeCompleted != null)
+            {
+                return TicketData.Create(tableId);
+            }
+            return false;
         }
 
         private static DataLayer.Ticket VMToDataModel(TicketVM ticketVM)

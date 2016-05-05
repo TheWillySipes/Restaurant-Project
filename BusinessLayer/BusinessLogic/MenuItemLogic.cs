@@ -17,7 +17,7 @@ namespace BusinessLayer.BusinessLogic
         /// Get all menu items
         /// </summary>
         /// <returns></returns>
-        public static List<MenuItemVM> Read()
+        public static List<MenuItemVM> Get()
         {
             List<MenuItemVM> menuItems = new List<MenuItemVM>();
             foreach(MenuItem menuItem in MenuItemData.Read())
@@ -32,9 +32,9 @@ namespace BusinessLayer.BusinessLogic
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static MenuItemVM Read(int id)
+        public static MenuItemVM Get(int id)
         {
-            return DataModelToVM(MenuItemData.Read(id));
+            return DataModelToVM(MenuItemData.Get(id));
         }
 
         /// <summary>

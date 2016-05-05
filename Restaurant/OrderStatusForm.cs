@@ -47,7 +47,7 @@ namespace Restaurant
             //Get selected table from combo box
             FoodTableVM selectedTable = cmboFoodTable.SelectedItem as FoodTableVM;
             //Get ticket from database
-            TicketVM ticket = TicketLogic.Read(selectedTable.ID);
+            TicketVM ticket = TicketLogic.Get(selectedTable.ID);
             //If ticket is null, there were no tickets
             if(ticket != null)
             {
