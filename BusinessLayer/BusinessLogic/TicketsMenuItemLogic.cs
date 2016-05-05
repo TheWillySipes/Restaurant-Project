@@ -15,11 +15,11 @@ namespace BusinessLayer.BusinessLogic
         /// </summary>
         /// <param name="ticketId">Ticket id</param>
         /// <param name="menuItemIds">List of menu item's id's</param>
-        public static void AddMenuItemsToTicket(int ticketId, List<int> menuItemIds)
+        public static void AddMenuItemsToTicket(int ticketId, List<MenuItemVM> menuItems)
         {
-            foreach(int menuItemId in menuItemIds)
+            foreach (MenuItemVM menuItem in menuItems)
             {
-                TicketsMenuItemsData.Create(ticketId, menuItemId);
+                TicketsMenuItemsData.Create(ticketId, menuItem.ID);
             }
         }
 
