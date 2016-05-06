@@ -46,10 +46,15 @@ namespace Restaurant
                 }
 
                 List<TicketsMenuItemVM> items = TicketsMenuItemLogic.GetTicketsMenuItems(ticket.ID);
+                string output = "";
+                decimal ticketValue = 0;
                 foreach (var item in items)
                 {
-
+                    output += "\n" + item.MenuItemTitle + "$" + item.PricePaid;
+                    ticketValue += item.PricePaid;
                 }
+                    output += "\n Total Cost: " + ticketValue.ToString();
+                    MessageBox.Show(output);
                 cbTableList.DisplayMember = "MenuItemTitle";
             }
             else
