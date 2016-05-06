@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +15,15 @@ namespace Restaurant
     public partial class CashOutForm : Form
     {
         WaitStaffForm waitStaff = new WaitStaffForm();
+        List<FoodTableVM> foodTables = FoodTableLogic.Get();
         public CashOutForm()
         {
             InitializeComponent();
+            foreach (FoodTableVM foodTable in foodTables)
+            {
+                cbTableList.Items.Add(foodTable);
+            }
+            cbTableList.DisplayMember = "Info";
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
@@ -28,17 +36,7 @@ namespace Restaurant
 
         private void btnCashOut_Click(object sender, EventArgs e)
         {
-            //random number set to simulate transaction 
-            Random rng = new Random();
-            decimal total = rng.Next(0,100);
-            Object selectedItem = cbTableList.SelectedItem;
-
-            string output = "";
-            output += " \n";
-            output += "Total: $" + total;
-            MessageBox.Show(selectedItem.ToString() + output);
-
-            waitStaff.Show();
+            
             this.Hide();
         }
     }
