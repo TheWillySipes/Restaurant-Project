@@ -105,8 +105,6 @@ namespace Restaurant
 
         }
 
-
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             ManagerRoleTasks managerTasks = new ManagerRoleTasks();
@@ -131,23 +129,14 @@ namespace Restaurant
             chkManager.Checked = false;
 
 
-<<<<<<< HEAD
             employees = EmployeeLogic.Get();
-=======
-            //employees = EmployeeLogic.GetEmployees();
->>>>>>> origin/master
             foreach (var employee in employees)
             {
                 lstEmployeeList.Items.Add(employee);
             }
 
             lstEmployeeList.DisplayMember = "FirstName";
-            
 
         }
-
-
-
-
     }
 }
