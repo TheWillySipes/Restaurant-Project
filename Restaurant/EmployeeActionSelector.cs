@@ -15,18 +15,16 @@ namespace Restaurant
 {
     public partial class EmployeeActionSelector : Form
     {
-        private EmployeeVM Employee { get; set; }
         //The following code of lines will track employee hours.
         Timer stopwatch = new Timer();
-        public EmployeeActionSelector(EmployeeVM employee)
+        public EmployeeActionSelector()
         {
             InitializeComponent();
-            Employee = employee;
         }
 
         private void btnManager_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Manager))
+            if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.Manager))
             {
                 ManagerRoleTasks managerTasks = new ManagerRoleTasks();
                 managerTasks.Show();
@@ -40,7 +38,7 @@ namespace Restaurant
 
         private void btnWaiter_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee.ID, Roles.WaitStaff))
+            if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.WaitStaff))
             {
                 WaitStaffForm waitStaffForm = new WaitStaffForm();
                 waitStaffForm.Show();
@@ -54,7 +52,7 @@ namespace Restaurant
 
         private void btnCook_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Cook))
+            if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.Cook))
             {
                 CookStaffForm cookStaffForm = new CookStaffForm();
                 cookStaffForm.Show();
@@ -68,7 +66,7 @@ namespace Restaurant
 
         private void btnBusser_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee.ID, Roles.BusBoy))
+            if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.BusBoy))
             {
                 BusserForm busserForm = new BusserForm();
                 busserForm.Show();
@@ -82,7 +80,7 @@ namespace Restaurant
 
         private void btnHost_Click(object sender, EventArgs e)
         {
-            if (EmployeeLogic.IsInRole(Employee.ID, Roles.Host))
+            if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.Host))
             {
                 HostForm hostForm = new HostForm();
                 hostForm.Show();
@@ -156,6 +154,13 @@ namespace Restaurant
             stopwatch.Stop();
             MessageBox.Show("you have been successfully logged out at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

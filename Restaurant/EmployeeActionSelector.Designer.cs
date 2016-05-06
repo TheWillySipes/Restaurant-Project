@@ -35,6 +35,7 @@
             this.btnHost = new System.Windows.Forms.Button();
             this.btnClockIn = new System.Windows.Forms.Button();
             this.btnClockOut = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManager
@@ -107,11 +108,22 @@
             this.btnClockOut.UseVisualStyleBackColor = true;
             this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(12, 198);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(260, 23);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // EmployeeActionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 262);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnClockOut);
             this.Controls.Add(this.btnClockIn);
             this.Controls.Add(this.btnHost);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button btnHost;
         private System.Windows.Forms.Button btnClockIn;
         private System.Windows.Forms.Button btnClockOut;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

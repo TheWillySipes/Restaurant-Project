@@ -31,6 +31,7 @@
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddEmp
@@ -62,11 +63,22 @@
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
             this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 227);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ManagerRoleTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddEmp);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnModifyEmployee;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="BusserForm.Designer.cs">
       <DependentUpon>BusserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="ManagerRoleTasks.cs">
       <SubType>Form</SubType>
     </Compile>

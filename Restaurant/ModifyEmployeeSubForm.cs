@@ -93,7 +93,11 @@ namespace Restaurant
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
         {
             EmployeeVM employee = lstEmployeeList.SelectedItem as EmployeeVM;
-
+            if(employee.ID == GlobalData.Instance.Employee.ID)
+            {
+                MessageBox.Show("You are not allowed to delete yourself...");
+                return;
+            }
             //EmployeeLogic.DeleteEmployee(employee.ID);
 
             MessageBox.Show("This option has been disabled for your user level.  Please contact the system administrator.");
@@ -127,7 +131,7 @@ namespace Restaurant
             chkManager.Checked = false;
 
 
-            employees = EmployeeLogic.GetEmployees();
+            employees = EmployeeLogic.Get();
             foreach (var employee in employees)
             {
                 lstEmployeeList.Items.Add(employee);
