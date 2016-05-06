@@ -36,7 +36,7 @@ namespace BusinessLayer.BusinessLogic
             {
                 ID = foodTable.ID,
                 Info = foodTable.Info,
-                Status = foodTable.Status
+                Status = (int)foodTable.Status
             };
         }
 
@@ -51,7 +51,7 @@ namespace BusinessLayer.BusinessLogic
             {
                 ID = foodTable.ID,
                 Info = foodTable.Info,
-                Status = foodTable.Status
+                Status = (TableStatus)foodTable.Status
             };
         }
     }

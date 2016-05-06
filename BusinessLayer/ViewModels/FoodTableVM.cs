@@ -9,7 +9,7 @@ namespace BusinessLayer.ViewModels
     public class FoodTableVM
     {
         public int ID { get; set; }
-        public int Status { get; set; }
+        public TableStatus Status { get; set; }
         public string Info { get; set; }
     }
 }
