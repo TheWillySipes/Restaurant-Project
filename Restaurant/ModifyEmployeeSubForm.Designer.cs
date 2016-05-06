@@ -45,6 +45,7 @@
             this.chkCook = new System.Windows.Forms.CheckBox();
             this.chkBusser = new System.Windows.Forms.CheckBox();
             this.chkManager = new System.Windows.Forms.CheckBox();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnModifyEmployee
@@ -78,12 +79,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(11, 345);
+            this.btnExit.Location = new System.Drawing.Point(138, 397);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(107, 23);
             this.btnExit.TabIndex = 50;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblPassword
             // 
@@ -199,11 +201,22 @@
             this.chkManager.Text = "Manager";
             this.chkManager.UseVisualStyleBackColor = true;
             // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(11, 333);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(108, 23);
+            this.btnDeleteEmployee.TabIndex = 64;
+            this.btnDeleteEmployee.Text = "Delete Employee";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
+            // 
             // ModifyEmployeeSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 380);
+            this.ClientSize = new System.Drawing.Size(257, 432);
+            this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.chkManager);
             this.Controls.Add(this.chkBusser);
             this.Controls.Add(this.chkCook);
@@ -247,5 +260,6 @@
         private System.Windows.Forms.CheckBox chkCook;
         private System.Windows.Forms.CheckBox chkBusser;
         private System.Windows.Forms.CheckBox chkManager;
+        private System.Windows.Forms.Button btnDeleteEmployee;
     }
 }

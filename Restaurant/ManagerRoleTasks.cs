@@ -24,13 +24,6 @@ namespace Restaurant
             this.Hide();
         }
 
-        private void btnRemoveEmp_Click(object sender, EventArgs e)
-        {
-            RemoveEmployeeSubForm removeEmployee = new RemoveEmployeeSubForm();
-            removeEmployee.Show();
-            this.Hide();
-
-        }
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)
         {

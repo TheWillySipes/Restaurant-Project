@@ -71,7 +71,7 @@ namespace BusinessLayer.BusinessLogic
         /// <param name="employee"></param>
         /// <param name="role"></param>
         /// <returns></returns>
-        public static bool RemoveUserFromRoles(int employeeId, Roles role)
+        public static bool RemoveUserFromRole(int employeeId, Roles role)
         {
             return UserData.RemoveUserFromRole(employeeId, (int)role);
         }
@@ -124,13 +124,23 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
-        /// 
+        /// Updates employee information using on-screen information
         /// </summary>
         /// <param name="employeeVM"></param>
         public static void UpdateEmployee(EmployeeVM employeeVM)
         {
             UserData.Update(VMToDataModel(employeeVM));
         }
+
+        /// <summary>
+        /// Deletes employee from the database
+        /// </summary>
+        /// <param name="employeeVM"></param>
+        public static void DeleteEmployee(int employeeId)
+        {
+            UserData.Delete(employeeId);
+        }
+
 
         /// <summary>
         /// Private employee helper (change view model to user data model object)

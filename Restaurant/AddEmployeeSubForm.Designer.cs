@@ -36,9 +36,9 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnCreateEmployeeID = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_FirstName
@@ -73,28 +73,28 @@
             this.txtFirstName.Location = new System.Drawing.Point(72, 59);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 5;
+            this.txtFirstName.TabIndex = 2;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(72, 89);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 6;
+            this.txtLastName.TabIndex = 3;
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(71, 29);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtUsername.TabIndex = 7;
+            this.txtUsername.TabIndex = 1;
             // 
             // btnCreateEmployeeID
             // 
             this.btnCreateEmployeeID.Location = new System.Drawing.Point(12, 143);
             this.btnCreateEmployeeID.Name = "btnCreateEmployeeID";
             this.btnCreateEmployeeID.Size = new System.Drawing.Size(97, 23);
-            this.btnCreateEmployeeID.TabIndex = 14;
+            this.btnCreateEmployeeID.TabIndex = 5;
             this.btnCreateEmployeeID.Text = "Create Employee";
             this.btnCreateEmployeeID.UseVisualStyleBackColor = true;
             this.btnCreateEmployeeID.Click += new System.EventHandler(this.btnGenEmployeeID_Click);
@@ -104,27 +104,17 @@
             this.btnExit.Location = new System.Drawing.Point(12, 223);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(97, 23);
-            this.btnExit.TabIndex = 16;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnModifyEmployee
-            // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(12, 184);
-            this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(97, 23);
-            this.btnModifyEmployee.TabIndex = 17;
-            this.btnModifyEmployee.Text = "Modify Employee";
-            this.btnModifyEmployee.UseVisualStyleBackColor = true;
-            this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(71, 116);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 4;
             // 
             // lblPassword
             // 
@@ -134,6 +124,16 @@
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 19;
             this.lblPassword.Text = "Password";
+            // 
+            // btnModifyEmployee
+            // 
+            this.btnModifyEmployee.Location = new System.Drawing.Point(12, 184);
+            this.btnModifyEmployee.Name = "btnModifyEmployee";
+            this.btnModifyEmployee.Size = new System.Drawing.Size(97, 23);
+            this.btnModifyEmployee.TabIndex = 6;
+            this.btnModifyEmployee.Text = "Modify Employee";
+            this.btnModifyEmployee.UseVisualStyleBackColor = true;
+            this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
             // AddEmployeeSubForm
             // 
@@ -169,8 +169,8 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnCreateEmployeeID;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnModifyEmployee;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Button btnModifyEmployee;
     }
 }

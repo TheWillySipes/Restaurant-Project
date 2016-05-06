@@ -22,7 +22,7 @@ namespace Restaurant
         }
 
 
-
+        //instruction message for this screen
         public void AddEmployeeSubForm_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Enter the employee's information and click Create Employee.  To modify an employee's information or assigned roles, click Modify Employee.");
@@ -33,6 +33,7 @@ namespace Restaurant
         {
             //EmployeeLogic.AddEmployee is placeholder
             bool successful = EmployeeLogic.Create(txtUsername.Text, txtFirstName.Text, txtLastName.Text, txtPassword.Text);
+
             if (successful == true)
             {
                 MessageBox.Show("Successfully added employee.");
@@ -44,6 +45,7 @@ namespace Restaurant
             }
         }
 
+        //launch the modify employee screen
         private void btnModifyEmployee_Click(object sender, EventArgs e)
         {
             ModifyEmployeeSubForm modifyEmployee = new ModifyEmployeeSubForm();
@@ -52,9 +54,13 @@ namespace Restaurant
 
         }
 
+        //return to previous screen
         private void btnExit_Click(object sender, EventArgs e)
         {
+            ManagerRoleTasks managerTasks = new ManagerRoleTasks();
+            managerTasks.Show();
             this.Close();
+            
 
         }
 

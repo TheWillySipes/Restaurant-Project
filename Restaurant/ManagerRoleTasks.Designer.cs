@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnAddEmp = new System.Windows.Forms.Button();
-            this.btnRemoveEmp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,16 +43,6 @@
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
-            // btnRemoveEmp
-            // 
-            this.btnRemoveEmp.Location = new System.Drawing.Point(16, 101);
-            this.btnRemoveEmp.Name = "btnRemoveEmp";
-            this.btnRemoveEmp.Size = new System.Drawing.Size(107, 23);
-            this.btnRemoveEmp.TabIndex = 1;
-            this.btnRemoveEmp.Text = "Remove Employee";
-            this.btnRemoveEmp.UseVisualStyleBackColor = true;
-            this.btnRemoveEmp.Click += new System.EventHandler(this.btnRemoveEmp_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -67,9 +56,9 @@
             // 
             this.btnModifyEmployee.Location = new System.Drawing.Point(16, 70);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(107, 23);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(107, 39);
             this.btnModifyEmployee.TabIndex = 3;
-            this.btnModifyEmployee.Text = "Modify Employee";
+            this.btnModifyEmployee.Text = "Modify or Delete Employee";
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
             this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
@@ -80,7 +69,6 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRemoveEmp);
             this.Controls.Add(this.btnAddEmp);
             this.Name = "ManagerRoleTasks";
             this.Text = "AddRemoveEmployee";
@@ -92,7 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddEmp;
-        private System.Windows.Forms.Button btnRemoveEmp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnModifyEmployee;
     }
