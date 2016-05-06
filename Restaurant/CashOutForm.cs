@@ -36,6 +36,26 @@ namespace Restaurant
 
         private void btnCashOut_Click(object sender, EventArgs e)
         {
+            FoodTableVM foodTable = cbTableList.SelectedItem as FoodTableVM;
+            if (foodTable != null)
+            {
+                TicketVM ticket = TicketLogic.Get(foodTable.ID);
+                if (ticket == null)
+                {
+                    return;
+                }
+
+                List<TicketsMenuItemVM> items = TicketsMenuItemLogic.GetTicketsMenuItems(ticket.ID);
+                foreach (var item in items)
+                {
+
+                }
+                cbTableList.DisplayMember = "MenuItemTitle";
+            }
+            else
+            {
+                MessageBox.Show("No ticket for this table!");
+            }
             
             this.Hide();
         }
