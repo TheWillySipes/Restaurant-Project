@@ -329,6 +329,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FloorStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FloorStatus";
             this.Load += new System.EventHandler(this.FloorStatus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
