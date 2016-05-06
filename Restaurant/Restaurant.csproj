@@ -147,6 +147,9 @@
     <EmbeddedResource Include="AddEmployeeSubForm.resx">
       <DependentUpon>AddEmployeeSubForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusserForm.resx">
+      <DependentUpon>BusserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerRoleTasks.resx">
       <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
     </EmbeddedResource>
