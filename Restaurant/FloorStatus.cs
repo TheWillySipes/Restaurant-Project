@@ -18,16 +18,17 @@ namespace Restaurant
             InitializeComponent();
 
             //Changing the colors of the tables with random number generator
-            //pictureBox1.Paint += FloorStats;
-            //pictureBox2.Paint += FloorStats;
-            //pictureBox3.Paint += FloorStats;
-            //pictureBox4.Paint += FloorStats;
-            //pictureBox5.Paint += FloorStats;
-            //pictureBox6.Paint += FloorStats;
-            //pictureBox7.Paint += FloorStats;
-            //pictureBox8.Paint += FloorStats;
-            //pictureBox9.Paint += FloorStats;
-            //pictureBox10.Paint += FloorStats;
+            //Used to simulate table activity
+            pictureBox1.Paint += FloorStats;
+            pictureBox2.Paint += FloorStats;
+            pictureBox3.Paint += FloorStats;
+            pictureBox4.Paint += FloorStats;
+            pictureBox5.Paint += FloorStats;
+            pictureBox6.Paint += FloorStats;
+            pictureBox7.Paint += FloorStats;
+            pictureBox8.Paint += FloorStats;
+            pictureBox9.Paint += FloorStats;
+            pictureBox10.Paint += FloorStats;
 
             //Manually changing the colors of the tables by clicking them
             pictureBox1.Click += changeTableStatus;
