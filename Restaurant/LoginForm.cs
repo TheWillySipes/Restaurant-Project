@@ -24,7 +24,7 @@ namespace Restaurant
 
             if(EmployeeLogic.AuthenticateEmployee(txtUserName.Text, txtPassword.Text))
             {
-                EmployeeVM employee = EmployeeLogic.GetEmployee(txtUserName.Text);
+                EmployeeVM employee = EmployeeLogic.Get(txtUserName.Text);
                 EmployeeActionSelector employeeActionSelector = new EmployeeActionSelector(employee);
                 employeeActionSelector.Show();
                 this.Hide();

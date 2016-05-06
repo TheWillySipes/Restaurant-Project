@@ -28,7 +28,7 @@ namespace BusinessLayer.BusinessLogic
             List<TicketsMenuItemVM> items = new List<TicketsMenuItemVM>();
             foreach(TicketsMenuItem ticketMenuItem in TicketsMenuItemsData.Get(ticketId))
             {
-                items.Add(DataModelToVM(ticketMenuItem, MenuItemData.Read(ticketMenuItem.MenuItemID)));
+                items.Add(DataModelToVM(ticketMenuItem, MenuItemData.Get(ticketMenuItem.MenuItemID)));
             }
             return items;
         }

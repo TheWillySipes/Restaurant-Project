@@ -17,7 +17,7 @@ namespace Restaurant
         //Get list of food tables from database
         List<FoodTableVM> tables = FoodTableLogic.Get();
         //Get list of menu items from database
-        List<MenuItemVM> menuItems = MenuItemLogic.Read();
+        List<MenuItemVM> menuItems = MenuItemLogic.Get();
 
         public TicketForm()
         {
@@ -68,13 +68,21 @@ namespace Restaurant
             //Get FoodTableVM object from the combo box's selected item
             FoodTableVM selectedTable = cmboFoodTables.SelectedItem as FoodTableVM;
             //Create a new ticket with the table's ID (returns a ticket ID of the item created)
-            int ticketId = TicketLogic.Create(selectedTable.ID);
-
+            TicketVM newTicket = null;
+            if(TicketLogic.Create(selectedTable.ID))
+            {
+                newTicket = TicketLogic.Get(selectedTable.ID);
+            }
+            else
+            {
+                MessageBox.Show("Unable to create ticket, there may already be an existing ticket. Please close out any existing tickets for this table.");
+                return;
+            }
             //Get list of menu items selected from the list box ( .OfType casts the MenuItemVM back
             //  to a MenuItemVM object type
             List<MenuItemVM> menuItems = listBoxMenuItems.Items.OfType<MenuItemVM>().ToList();
             //Add menu items to the newly created ticket providing the ticket ID and the selected menu items
-            TicketsMenuItemLogic.AddMenuItemsToTicket(ticketId, menuItems);
+            TicketsMenuItemLogic.AddMenuItemsToTicket(newTicket.ID, menuItems);
             //Clear out the listbox to create a second order if needed
             listBoxMenuItems.Items.Clear();
             MessageBox.Show("Order sent too cooks");

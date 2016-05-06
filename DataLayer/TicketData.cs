@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,20 +9,27 @@ namespace DataLayer
 {
     public class TicketData
     {
-        public static int Create(int tableId)
+        public static bool Create(int tableId)
         {
-            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            try
             {
-                Ticket newTicket = new Ticket();
-                newTicket.TableID = tableId;
-                newTicket.TimePlaced = DateTime.Now;
-                context.Tickets.Add(newTicket);
-                context.SaveChanges();
-                return newTicket.ID;
+                using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+                {
+                    Ticket newTicket = new Ticket();
+                    newTicket.TableID = tableId;
+                    newTicket.TimePlaced = DateTime.Now;
+                    context.Tickets.Add(newTicket);
+                    context.SaveChanges();
+                    return true;
+                }
+            }catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
             }
         }
 
-        public static Ticket GetMostRecentTicket(int tableId, bool onlyOpenTickets)
+        public static Ticket Get(int tableId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
@@ -29,11 +37,28 @@ namespace DataLayer
             }
         }
 
-        public static Ticket Read(int tableId)
+        //public static Ticket Get(int tableId)
+        //{
+        //    using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+        //    {
+        //        return context.Tickets.Where(e => e.TableID == tableId).FirstOrDefault();
+        //    }
+        //}
+
+        public static bool Update(Ticket ticket)
         {
-            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            try
             {
-                return context.Tickets.Where(e => e.ID == tableId).FirstOrDefault();
+                using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+                {
+                    context.Tickets.Attach(ticket);
+                    context.Entry(ticket).State = EntityState.Modified;
+                    context.SaveChanges();
+                    return true;
+                }
+            }catch(Exception)
+            {
+                return false;
             }
         }
 

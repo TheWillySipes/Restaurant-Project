@@ -80,10 +80,10 @@ namespace BusinessLayer.BusinessLogic
         /// Get all employees
         /// </summary>
         /// <returns></returns>
-        public static List<EmployeeVM> GetEmployees()
+        public static List<EmployeeVM> Get()
         {
             List<EmployeeVM> employees = new List<EmployeeVM>();
-            foreach(User u in UserData.Read())
+            foreach(User u in UserData.Get())
             {
                 employees.Add(DataModelToVM(u));
             }
@@ -117,9 +117,9 @@ namespace BusinessLayer.BusinessLogic
         /// </summary>
         /// <param name="employeeUserName">Employee's username</param>
         /// <returns></returns>
-        public static EmployeeVM GetEmployee(string employeeUserName)
+        public static EmployeeVM Get(string employeeUserName)
         {
-            var employee = UserData.Read(employeeUserName);
+            var employee = UserData.Get(employeeUserName);
             return DataModelToVM(employee);
         }
 

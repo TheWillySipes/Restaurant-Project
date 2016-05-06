@@ -16,14 +16,15 @@ namespace Restaurant
     {
                 List<FoodTableVM> tables = FoodTableLogic.Get();
 
+
         public CookStaffForm()
         {
             InitializeComponent();
             foreach (FoodTableVM table in tables)
             {
                 comboBox1.Items.Add(table);
-
             }
+            comboBox1.DisplayMember = "Info";
 
         }
 
@@ -38,7 +39,34 @@ namespace Restaurant
 
         private void completeButton_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+
+           FoodTableVM foodTable = comboBox1.SelectedItem as FoodTableVM;
+            if (foodTable !=  null)
+            {
+                TicketVM ticket = TicketLogic.Get(foodTable.ID);
+                if (ticket == null)
+                {
+                    return;
+                }
+
+                List<TicketsMenuItemVM> items = TicketsMenuItemLogic.GetTicketsMenuItems(ticket.ID);
+                foreach (var item in items)
+                {
+                    listBox1.Items.Add(item);
+                }
+                listBox1.DisplayMember = "MenuItemTitle";
+            }
+            else
+            {
+                MessageBox.Show("No ticket for this table!");
+            }
+          
         }
 
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,23 @@ namespace Restaurant
 {
     public partial class BusserForm : Form
     {
+        List<FoodTableVM> foodtables = FoodTableLogic.Get();  
         public BusserForm()
         {
             InitializeComponent();
+
+        }
+
+        private void btnFloorStatus_Click(object sender, EventArgs e)
+        {
+            FloorStatus floorstatus = new FloorStatus();
+            floorstatus.Show();
+            this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Restaurant
 {
     public partial class ModifyEmployeeSubForm : Form
     {
-        List<EmployeeVM> employees = EmployeeLogic.GetEmployees();
+        List<EmployeeVM> employees = EmployeeLogic.Get();
 
         //populate the dropdown with a list of all employees
         public ModifyEmployeeSubForm()

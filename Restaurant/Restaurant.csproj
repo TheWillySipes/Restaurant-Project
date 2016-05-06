@@ -70,21 +70,21 @@
     <Compile Include="ManagerRoleTasks.Designer.cs">
       <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusStaff.cs" />
+    <Compile Include="Deprecated\BusStaff.cs" />
     <Compile Include="CashOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CashOutForm.Designer.cs">
       <DependentUpon>CashOutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CookStaff.cs" />
+    <Compile Include="Deprecated\CookStaff.cs" />
     <Compile Include="CookStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CookStaffForm.Designer.cs">
       <DependentUpon>CookStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs" />
+    <Compile Include="Deprecated\Employee.cs" />
     <Compile Include="EmployeeActionSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,14 +97,14 @@
     <Compile Include="FloorStatus.Designer.cs">
       <DependentUpon>FloorStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="FoodTable.cs" />
+    <Compile Include="Deprecated\FoodTable.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HostForm.Designer.cs">
       <DependentUpon>HostForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HostStaff.cs" />
+    <Compile Include="Deprecated\HostStaff.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,13 +131,7 @@
     <Compile Include="TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TicketForm2.Designer.cs">
-      <DependentUpon>TicketForm2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WaitStaff.cs" />
+    <Compile Include="Deprecated\WaitStaff.cs" />
     <Compile Include="WaitStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="AddEmployeeSubForm.resx">
       <DependentUpon>AddEmployeeSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusserForm.resx">
+      <DependentUpon>BusserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerRoleTasks.resx">
       <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
@@ -186,13 +183,10 @@
     <EmbeddedResource Include="TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketForm2.resx">
-      <DependentUpon>TicketForm2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="WaitStaffForm.resx">
       <DependentUpon>WaitStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="Deprecated\ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
