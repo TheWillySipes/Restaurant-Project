@@ -53,7 +53,8 @@ namespace Restaurant
                     output += "\n" + item.MenuItemTitle + "$" + item.PricePaid;
                     ticketValue += item.PricePaid;
                 }
-                    output += "\n Total Cost: " + ticketValue.ToString();
+                    output += "\n\n" + DateTime.Now.ToString();
+                    output += "\nTotal Cost: $" + ticketValue.ToString();
                     MessageBox.Show(output);
                 cbTableList.DisplayMember = "MenuItemTitle";
             }
