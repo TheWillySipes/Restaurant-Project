@@ -131,7 +131,11 @@ namespace Restaurant
             chkManager.Checked = false;
 
 
+<<<<<<< HEAD
             employees = EmployeeLogic.Get();
+=======
+            //employees = EmployeeLogic.GetEmployees();
+>>>>>>> origin/master
             foreach (var employee in employees)
             {
                 lstEmployeeList.Items.Add(employee);
