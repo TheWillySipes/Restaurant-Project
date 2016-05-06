@@ -201,7 +201,7 @@
             // txttable1
             // 
             this.txttable1.AutoSize = true;
-            this.txttable1.Location = new System.Drawing.Point(72, 182);
+            this.txttable1.Location = new System.Drawing.Point(29, 178);
             this.txttable1.Name = "txttable1";
             this.txttable1.Size = new System.Drawing.Size(40, 13);
             this.txttable1.TabIndex = 3;
@@ -210,7 +210,7 @@
             // txttable2
             // 
             this.txttable2.AutoSize = true;
-            this.txttable2.Location = new System.Drawing.Point(171, 182);
+            this.txttable2.Location = new System.Drawing.Point(135, 178);
             this.txttable2.Name = "txttable2";
             this.txttable2.Size = new System.Drawing.Size(40, 13);
             this.txttable2.TabIndex = 3;
