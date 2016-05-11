@@ -94,15 +94,23 @@ namespace Restaurant
 
         private void btnClockIn_Click(object sender, EventArgs e)
         {
+            bool successClockIn = EmployeeTimeClockLogic.ClockIn(GlobalData.Instance.Employee.ID);
+            if (successClockIn == true)
+            {
 
-        stopwatch.Interval = 1000; //in millisecond
+                stopwatch.Interval = 1000; //in millisecond
 
-            stopwatch.Tick += new EventHandler(this.time_track);
+                stopwatch.Tick += new EventHandler(this.time_track);
 
-            //Starts time the employes clicks the "clockin" button
-            stopwatch.Start();
-            //This will be displayed when the employee clicks the "clockin" button
-            MessageBox.Show("you have been successfully logged in at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
+                //Starts time the employes clicks the "clockin" button
+                stopwatch.Start();
+                //This will be displayed when the employee clicks the "clockin" button
+                MessageBox.Show("you have been successfully logged in at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
+            }
+            else if (successClockIn == false)
+            {
+                MessageBox.Show("You are already clock in ");
+            }
          
 
         }
@@ -151,8 +159,19 @@ namespace Restaurant
 
         private void btnClockOut_Click(object sender, EventArgs e)
         {
-            stopwatch.Stop();
-            MessageBox.Show("you have been successfully logged out at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
+
+            bool successClockOut = EmployeeTimeClockLogic.ClockOut(GlobalData.Instance.Employee.ID);
+            if (successClockOut == true)
+            {
+
+
+                stopwatch.Stop();
+                MessageBox.Show("you have been successfully logged out at " + DateTime.Now.ToShortTimeString() + " " + DateTime.Now.ToShortDateString());
+            }
+            else if(successClockOut == false)
+            {
+                MessageBox.Show("You already clocked out");
+            }
 
         }
 
