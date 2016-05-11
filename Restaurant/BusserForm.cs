@@ -23,13 +23,15 @@ namespace Restaurant
 
         private void btnFloorStatus_Click(object sender, EventArgs e)
         {
-            FloorStatus floorstatus = new FloorStatus();
+            FloorStatus floorstatus = new FloorStatus(new BusserForm());
             floorstatus.Show();
             this.Hide();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
+            EmployeeActionSelector actionSelector = new EmployeeActionSelector();
+            actionSelector.Show();
             this.Close();
         }
     }

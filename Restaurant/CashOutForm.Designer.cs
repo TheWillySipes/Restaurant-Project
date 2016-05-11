@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblSelectTable = new System.Windows.Forms.Label();
-            this.btnPrev = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnCashOut = new System.Windows.Forms.Button();
             this.cbTableList = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -44,15 +44,15 @@
             this.lblSelectTable.TabIndex = 1;
             this.lblSelectTable.Text = "Select Table :";
             // 
-            // btnPrev
+            // btnBack
             // 
-            this.btnPrev.Location = new System.Drawing.Point(66, 178);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 23);
-            this.btnPrev.TabIndex = 2;
-            this.btnPrev.Text = "Previous <";
-            this.btnPrev.UseVisualStyleBackColor = true;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            this.btnBack.Location = new System.Drawing.Point(66, 178);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCashOut
             // 
@@ -74,12 +74,13 @@
             // 
             // CashOutForm
             // 
+            this.AcceptButton = this.btnCashOut;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 235);
             this.Controls.Add(this.cbTableList);
             this.Controls.Add(this.btnCashOut);
-            this.Controls.Add(this.btnPrev);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSelectTable);
             this.Name = "CashOutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -92,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblSelectTable;
-        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCashOut;
         private System.Windows.Forms.ComboBox cbTableList;
     }

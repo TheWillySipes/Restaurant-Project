@@ -15,10 +15,15 @@ namespace Restaurant
 {
     public partial class FloorStatus : Form
     {
-        List<FoodTableVM> foodtables = FoodTableLogic.Get();  
-        public FloorStatus()
+        List<FoodTableVM> foodtables = FoodTableLogic.Get();
+
+        Form PreviousForm { get; set; }
+
+
+        public FloorStatus(Form previousForm)
         {
             InitializeComponent();
+            PreviousForm = previousForm;
             List<PictureBox> pictureBoxes = new List<PictureBox>();
             pictureBoxes.Add(pictureBox1);
             pictureBoxes.Add(pictureBox2);
@@ -131,14 +136,25 @@ namespace Restaurant
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             //Opening the waitstaff form
-            WaitStaffForm waitForm = new WaitStaffForm();
-            waitForm.checkclockin = true;
-            waitForm.Show();
+            //WaitStaffForm waitForm = new WaitStaffForm();
+            //waitForm.checkclockin = true;
+            //waitForm.Show();
+            PreviousForm.Show();
             this.Hide();
         }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    //Opening the waitstaff form
+        //    WaitStaffForm waitForm = new WaitStaffForm();
+        //    waitForm.checkclockin = true;
+        //    waitForm.Show();
+        //    this.Hide();
+        //}
+
+
 
         private void FloorStatus_Load(object sender, EventArgs e)
         {
@@ -174,6 +190,11 @@ namespace Restaurant
                 checkStatus = 0;
                 Console.WriteLine(checkStatus);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

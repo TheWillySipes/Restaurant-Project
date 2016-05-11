@@ -65,6 +65,12 @@
       <DependentUpon>BusserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
+    <Compile Include="HostForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostForm2.Designer.cs">
+      <DependentUpon>HostForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerRoleTasks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BusserForm.resx">
       <DependentUpon>BusserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostForm2.resx">
+      <DependentUpon>HostForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerRoleTasks.resx">
       <DependentUpon>ManagerRoleTasks.cs</DependentUpon>

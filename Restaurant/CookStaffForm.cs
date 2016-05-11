@@ -29,12 +29,11 @@ namespace Restaurant
         }
 
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            //closing form
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
+            EmployeeActionSelector actionSelector = new EmployeeActionSelector();
+            actionSelector.Show();
+            this.Close();
         }
 
         private void completeButton_Click(object sender, EventArgs e)

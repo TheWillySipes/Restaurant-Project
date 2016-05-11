@@ -55,13 +55,12 @@ namespace Restaurant
         }
 
         //return to previous screen
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             ManagerRoleTasks managerTasks = new ManagerRoleTasks();
             managerTasks.Show();
             this.Close();
             
-
         }
 
 

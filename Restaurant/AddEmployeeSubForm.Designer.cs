@@ -35,7 +35,7 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnCreateEmployeeID = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
@@ -99,15 +99,15 @@
             this.btnCreateEmployeeID.UseVisualStyleBackColor = true;
             this.btnCreateEmployeeID.Click += new System.EventHandler(this.btnGenEmployeeID_Click);
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 223);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(97, 23);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.Location = new System.Drawing.Point(12, 223);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(97, 23);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtPassword
             // 
@@ -143,7 +143,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnModifyEmployee);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCreateEmployeeID);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtLastName);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnCreateEmployeeID;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnModifyEmployee;

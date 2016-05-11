@@ -42,8 +42,8 @@
             // 
             this.btnManager.Location = new System.Drawing.Point(12, 128);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(260, 23);
-            this.btnManager.TabIndex = 0;
+            this.btnManager.Size = new System.Drawing.Size(254, 23);
+            this.btnManager.TabIndex = 5;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = true;
             this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
@@ -63,57 +63,57 @@
             this.btnCook.Location = new System.Drawing.Point(12, 70);
             this.btnCook.Name = "btnCook";
             this.btnCook.Size = new System.Drawing.Size(124, 52);
-            this.btnCook.TabIndex = 2;
+            this.btnCook.TabIndex = 3;
             this.btnCook.Text = "Cook";
             this.btnCook.UseVisualStyleBackColor = true;
             this.btnCook.Click += new System.EventHandler(this.btnCook_Click);
             // 
             // btnBusser
             // 
-            this.btnBusser.Location = new System.Drawing.Point(148, 72);
+            this.btnBusser.Location = new System.Drawing.Point(142, 70);
             this.btnBusser.Name = "btnBusser";
             this.btnBusser.Size = new System.Drawing.Size(124, 52);
-            this.btnBusser.TabIndex = 3;
+            this.btnBusser.TabIndex = 4;
             this.btnBusser.Text = "Busser";
             this.btnBusser.UseVisualStyleBackColor = true;
             this.btnBusser.Click += new System.EventHandler(this.btnBusser_Click);
             // 
             // btnHost
             // 
-            this.btnHost.Location = new System.Drawing.Point(148, 12);
+            this.btnHost.Location = new System.Drawing.Point(142, 12);
             this.btnHost.Name = "btnHost";
             this.btnHost.Size = new System.Drawing.Size(124, 52);
-            this.btnHost.TabIndex = 4;
+            this.btnHost.TabIndex = 2;
             this.btnHost.Text = "Host";
             this.btnHost.UseVisualStyleBackColor = true;
             this.btnHost.Click += new System.EventHandler(this.btnHost_Click);
             // 
             // btnClockIn
             // 
-            this.btnClockIn.Location = new System.Drawing.Point(12, 227);
+            this.btnClockIn.Location = new System.Drawing.Point(12, 179);
             this.btnClockIn.Name = "btnClockIn";
             this.btnClockIn.Size = new System.Drawing.Size(124, 23);
-            this.btnClockIn.TabIndex = 5;
+            this.btnClockIn.TabIndex = 6;
             this.btnClockIn.Text = "Clock In";
             this.btnClockIn.UseVisualStyleBackColor = true;
             this.btnClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
             // 
             // btnClockOut
             // 
-            this.btnClockOut.Location = new System.Drawing.Point(148, 227);
+            this.btnClockOut.Location = new System.Drawing.Point(142, 179);
             this.btnClockOut.Name = "btnClockOut";
             this.btnClockOut.Size = new System.Drawing.Size(124, 23);
-            this.btnClockOut.TabIndex = 6;
+            this.btnClockOut.TabIndex = 7;
             this.btnClockOut.Text = "Clock Out";
             this.btnClockOut.UseVisualStyleBackColor = true;
             this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(12, 198);
+            this.btnLogout.Location = new System.Drawing.Point(12, 208);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(260, 23);
-            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Size = new System.Drawing.Size(254, 23);
+            this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 262);
+            this.ClientSize = new System.Drawing.Size(281, 249);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnClockOut);
             this.Controls.Add(this.btnClockIn);

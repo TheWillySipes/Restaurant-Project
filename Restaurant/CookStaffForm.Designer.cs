@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.completeButton = new System.Windows.Forms.Button();
@@ -45,15 +45,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cook Staff Form";
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.Location = new System.Drawing.Point(130, 296);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.Location = new System.Drawing.Point(12, 283);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(89, 36);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // listBox1
             // 
@@ -75,9 +75,9 @@
             // 
             // completeButton
             // 
-            this.completeButton.Location = new System.Drawing.Point(12, 296);
+            this.completeButton.Location = new System.Drawing.Point(117, 283);
             this.completeButton.Name = "completeButton";
-            this.completeButton.Size = new System.Drawing.Size(75, 23);
+            this.completeButton.Size = new System.Drawing.Size(88, 36);
             this.completeButton.TabIndex = 5;
             this.completeButton.Text = "Done";
             this.completeButton.UseVisualStyleBackColor = true;
@@ -85,13 +85,14 @@
             // 
             // CookStaffForm
             // 
+            this.AcceptButton = this.completeButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(228, 331);
             this.Controls.Add(this.completeButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Name = "CookStaffForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -104,7 +105,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button completeButton;

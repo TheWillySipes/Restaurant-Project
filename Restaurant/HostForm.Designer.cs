@@ -31,14 +31,15 @@
             this.submitCustomers = new System.Windows.Forms.Button();
             this.customerNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // submitCustomers
             // 
             this.submitCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.submitCustomers.Location = new System.Drawing.Point(74, 100);
+            this.submitCustomers.Location = new System.Drawing.Point(150, 100);
             this.submitCustomers.Name = "submitCustomers";
-            this.submitCustomers.Size = new System.Drawing.Size(142, 37);
+            this.submitCustomers.Size = new System.Drawing.Size(110, 30);
             this.submitCustomers.TabIndex = 0;
             this.submitCustomers.Text = "Submit";
             this.submitCustomers.UseVisualStyleBackColor = true;
@@ -61,11 +62,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "How many customers are you seating?";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(25, 100);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(110, 30);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // HostForm
             // 
+            this.AcceptButton = this.submitCustomers;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 159);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerNumber);
             this.Controls.Add(this.submitCustomers);
@@ -82,6 +95,7 @@
         private System.Windows.Forms.Button submitCustomers;
         private System.Windows.Forms.TextBox customerNumber;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
 

@@ -82,8 +82,8 @@ namespace Restaurant
         {
             if (EmployeeLogic.IsInRole(GlobalData.Instance.Employee.ID, Roles.Host))
             {
-                HostForm hostForm = new HostForm();
-                hostForm.Show();
+                HostForm2 hostForm2 = new HostForm2();
+                hostForm2.Show();
                 this.Hide();
             }
             else
