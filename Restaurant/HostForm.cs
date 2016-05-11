@@ -32,7 +32,18 @@ namespace Restaurant
             FoodTableVM selectedTable = comboBox1.SelectedItem as FoodTableVM;
             //Create a new ticket with the table's ID (returns a ticket ID of the item created)
             TicketVM newTicket = null;
-            FoodTableLogic.SetTableOccupied(selectedTable.ID);
+            if(FoodTableLogic.SetTableOccupied(selectedTable.ID))
+            {
+                MessageBox.Show("Table Assigned");
+                EmployeeActionSelector actionSelector = new EmployeeActionSelector();
+                actionSelector.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Table was not assigned.");
+                return;
+            }
             RefreshDD();
             //refresh drop down
             
