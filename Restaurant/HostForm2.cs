@@ -19,7 +19,7 @@ namespace Restaurant
 
         private void btnFloorStatus_Click(object sender, EventArgs e)
         {
-            FloorStatus floor = new FloorStatus();
+            FloorStatus floor = new FloorStatus(new HostForm2());
             floor.Show();
             this.Hide();
         }

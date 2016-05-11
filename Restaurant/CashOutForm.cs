@@ -26,7 +26,7 @@ namespace Restaurant
             cbTableList.DisplayMember = "Info";
         }
 
-        private void btnPrev_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
            // WaitStaffForm waitStaff = new WaitStaffForm();
             waitStaff.checkclockin = true;
