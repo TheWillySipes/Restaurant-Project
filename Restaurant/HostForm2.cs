@@ -31,11 +31,12 @@ namespace Restaurant
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             EmployeeActionSelector eaSelect = new EmployeeActionSelector();
             eaSelect.Show();
+            this.Close();
 
         }
     }

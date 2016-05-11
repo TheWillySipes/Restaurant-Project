@@ -30,7 +30,7 @@
         {
             this.cmboFoodTable = new System.Windows.Forms.ComboBox();
             this.lblSelectTable = new System.Windows.Forms.Label();
-            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnCheckOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,15 +53,15 @@
             this.lblSelectTable.TabIndex = 1;
             this.lblSelectTable.Text = "Select Table";
             // 
-            // btnPrevious
+            // btnBack
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(68, 170);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 2;
-            this.btnPrevious.Text = "Previous <";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            this.btnBack.Location = new System.Drawing.Point(68, 170);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCheckOrder
             // 
@@ -80,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 262);
             this.Controls.Add(this.btnCheckOrder);
-            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSelectTable);
             this.Controls.Add(this.cmboFoodTable);
             this.Name = "OrderStatusForm";
@@ -95,7 +95,7 @@
 
         private System.Windows.Forms.ComboBox cmboFoodTable;
         private System.Windows.Forms.Label lblSelectTable;
-        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCheckOrder;
     }
 }

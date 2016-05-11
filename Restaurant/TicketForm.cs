@@ -88,12 +88,12 @@ namespace Restaurant
             MessageBox.Show("Order sent too cooks");
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
             WaitStaffForm waitForm = new WaitStaffForm();
             waitForm.checkclockin = true;
             waitForm.Show();
+            this.Close();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)

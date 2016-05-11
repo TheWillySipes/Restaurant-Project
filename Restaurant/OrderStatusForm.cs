@@ -28,12 +28,12 @@ namespace Restaurant
             cmboFoodTable.DisplayMember = "Info";
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             WaitStaffForm waitStaff = new WaitStaffForm();
             waitStaff.checkclockin = true;
             waitStaff.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnCheckOrder_Click(object sender, EventArgs e)

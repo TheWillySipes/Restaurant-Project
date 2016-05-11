@@ -32,7 +32,7 @@
             this.btnRemoveSingleItem = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.cmboFoodTables = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmboMenuItems = new System.Windows.Forms.ComboBox();
@@ -77,15 +77,15 @@
             this.btnClearAll.UseVisualStyleBackColor = true;
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
-            // btnPrevious
+            // btnBack
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(12, 384);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 61);
-            this.btnPrevious.TabIndex = 6;
-            this.btnPrevious.Text = "< Previous";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            this.btnBack.Location = new System.Drawing.Point(12, 384);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 61);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cmboFoodTables
             // 
@@ -133,7 +133,7 @@
             this.Controls.Add(this.cmboMenuItems);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmboFoodTables);
-            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnPlaceOrder);
             this.Controls.Add(this.btnRemoveSingleItem);
@@ -154,7 +154,7 @@
         private System.Windows.Forms.Button btnRemoveSingleItem;
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Button btnClearAll;
-        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cmboFoodTables;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmboMenuItems;

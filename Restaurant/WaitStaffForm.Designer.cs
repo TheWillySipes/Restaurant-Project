@@ -33,7 +33,7 @@
             this.btnCheckOrder = new System.Windows.Forms.Button();
             this.btnCashOut = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnterOrder
@@ -86,15 +86,15 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Wait Staff Screen";
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.Location = new System.Drawing.Point(130, 292);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(105, 54);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.Location = new System.Drawing.Point(130, 292);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(105, 54);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // WaitStaffForm
             // 
@@ -102,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(368, 358);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCashOut);
             this.Controls.Add(this.btnCheckOrder);
@@ -124,6 +124,6 @@
         private System.Windows.Forms.Button btnCheckOrder;
         private System.Windows.Forms.Button btnCashOut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
     }
 }

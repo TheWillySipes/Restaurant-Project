@@ -53,7 +53,6 @@
             this.txttable9 = new System.Windows.Forms.Label();
             this.txttable10 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -298,15 +297,6 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(40, 363);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FloorStatus
             // 
@@ -314,7 +304,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 413);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txttable10);
             this.Controls.Add(this.txttable9);
             this.Controls.Add(this.txttable8);
@@ -385,6 +374,5 @@
         private System.Windows.Forms.Label txttable9;
         private System.Windows.Forms.Label txttable10;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnExit;
     }
 }

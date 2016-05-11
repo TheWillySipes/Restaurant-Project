@@ -93,13 +93,13 @@ namespace Restaurant
             
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             //Revert back to login screen while still clocked in
             clockedIn = true;
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
+            EmployeeActionSelector employeeAction = new EmployeeActionSelector();
+            employeeAction.Show();
+            this.Close();
         }
 
         private void btnFloorStatus_Click(object sender, EventArgs e)
