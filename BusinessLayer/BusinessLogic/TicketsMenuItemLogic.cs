@@ -26,7 +26,7 @@ namespace BusinessLayer.BusinessLogic
         public static List<TicketsMenuItemVM> GetTicketsMenuItems(int ticketId)
         {
             List<TicketsMenuItemVM> items = new List<TicketsMenuItemVM>();
-            foreach(TicketsMenuItem ticketMenuItem in TicketsMenuItemsData.Get(ticketId))
+            foreach(TicketsMenuItem ticketMenuItem in TicketsMenuItemsData.GetAllTicketMenuItems(ticketId))
             {
                 items.Add(DataModelToVM(ticketMenuItem, MenuItemData.Get(ticketMenuItem.MenuItemID)));
             }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ViewModels
 {
+    /// <summary>
+    /// TicketsMenuItem View Model
+    /// </summary>
     public class TicketsMenuItemVM
     {
         public int TicketID { get; set; }

@@ -22,22 +22,4 @@ namespace BusinessLayer
         Manager = 5
     }
 
-    public enum Ticket
-    {
-        TicketOpen = 0,
-        TicketClose = 1
-    }
-
-    public enum OrderStatus
-    {
-        //delivered to table
-        Delivered = 0,
-        //still being prepared
-        NotDelivered = 1,
-        //order received by CookStaff
-        CooksReceived = 2,
-        //order cooking complete, ready for delivery
-        CooksComplete = 3
-    }
 }
-

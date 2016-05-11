@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ViewModels
 {
+    /// <summary>
+    /// FoodTable View Model
+    /// </summary>
     public class FoodTableVM
     {
         public int ID { get; set; }

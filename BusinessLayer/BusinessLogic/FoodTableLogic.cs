@@ -41,6 +41,11 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Set a table to occupied (will allow if table is currently "Open")
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
         public static bool SetTableOccupied(int tableId)
         {
             var foodTable = FoodTableData.Get(tableId);
@@ -55,6 +60,10 @@ namespace BusinessLayer.BusinessLogic
             return false;
         }
 
+        /// <summary>
+        /// Retrieve tables that have a ticket open
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetTablesWithOpenTickets()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -72,6 +81,10 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Retrieve tables that are still waiting on cooks to finish
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetTablesWithUncookedTickets()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -89,6 +102,10 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Retrieve tables that food has been cooked for
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetTablesWithCookedTickets()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -106,6 +123,10 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Retrieve tables that do not have open tickets but are occupied
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetTablesWithoutOpenTickets()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -123,6 +144,10 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Retrieve dirty tables that need cleaning
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetDirtyTables()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -136,6 +161,10 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        /// <summary>
+        /// Get currently occupied tables
+        /// </summary>
+        /// <returns></returns>
         public static List<FoodTableVM> GetOccupiedTables()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();
@@ -150,7 +179,7 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
-        /// If a table is dirty, set table back to open
+        /// Set table back to open (Only allows if table status is currently "Dirty)
         /// </summary>
         /// <param name="tableId"></param>
         /// <returns></returns>

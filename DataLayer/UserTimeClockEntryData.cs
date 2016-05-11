@@ -9,6 +9,11 @@ namespace DataLayer
 {
     public class UserTimeClockEntryData
     {
+        /// <summary>
+        /// Get most recent time clock record
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public static UserTimeClockEntry GetMostRecentEntry(int userId)
         {
             try
@@ -29,6 +34,10 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Create a new time clock entry for a user
+        /// </summary>
+        /// <param name="userId"></param>
         public static void Create(int userId)
         {
             UserTimeClockEntry utce = new UserTimeClockEntry()
@@ -49,6 +58,10 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Update time clock entry
+        /// </summary>
+        /// <param name="updateEntry"></param>
         public static void Update(UserTimeClockEntry updateEntry)
         {
             try

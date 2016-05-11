@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ViewModels
 {
+    /// <summary>
+    /// Ticket View Model
+    /// </summary>
     public class TicketVM
     {
         public int ID { get; set; }

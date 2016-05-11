@@ -9,6 +9,11 @@ namespace DataLayer
 {
     public class TicketData
     {
+        /// <summary>
+        /// Create a new ticket for specified food table id
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
         public static bool Create(int tableId)
         {
             try
@@ -29,6 +34,11 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Get most recent ticket for a table
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
         public static Ticket Get(int tableId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -37,6 +47,11 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Get currently open ticket for a table
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
         public static Ticket GetOpenTicket(int tableId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -45,6 +60,11 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Update a ticket
+        /// </summary>
+        /// <param name="ticket"></param>
+        /// <returns></returns>
         public static bool Update(Ticket ticket)
         {
             try

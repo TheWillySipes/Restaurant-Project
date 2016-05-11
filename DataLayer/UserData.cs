@@ -12,6 +12,12 @@ namespace DataLayer
     /// </summary>
     public class UserData
     {
+        /// <summary>
+        /// Add user to a new role
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public static bool AddUserToRole(int employeeId, int role)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -50,6 +56,11 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Get all roles a user is in
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
         public static List<UsersRole> GetUserRoles(int employeeId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -59,6 +70,12 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// See if a user is in a specific role
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="role"></param>
+        /// <returns></returns>
         public static bool IsInRole(int employeeId, int role)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -72,11 +89,17 @@ namespace DataLayer
             }
         }
 
-        public static bool AuthenticateEmployee(int employeeId, string password)
+        /// <summary>
+        /// Authenticate user with userId and password
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static bool AuthenticateEmployee(int userId, string password)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
-                var user = context.Users.Where(e => e.ID == employeeId && e.Password == password).FirstOrDefault();
+                var user = context.Users.Where(e => e.ID == userId && e.Password == password).FirstOrDefault();
                 if (user == null)
                 {
                     return false;
@@ -85,6 +108,12 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Authenticate user with username and password
+        /// </summary>
+        /// <param name="employeeUserName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static bool AuthenticateEmployee(string employeeUserName, string password)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -98,6 +127,11 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Create new user
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static bool Create(User user)
         {
             try
@@ -123,6 +157,11 @@ namespace DataLayer
             return true;
         }
 
+        /// <summary>
+        /// Get user by username
+        /// </summary>
+        /// <param name="employeeUserName"></param>
+        /// <returns></returns>
         public static User Get(string employeeUserName)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -131,14 +170,23 @@ namespace DataLayer
             }
         }
 
-        public static User Read(int id)
+        /// <summary>
+        /// Get user by user id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public static User Get(int userId)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
             {
-                return context.Users.Where(e => e.ID == id).FirstOrDefault();
+                return context.Users.Where(e => e.ID == userId).FirstOrDefault();
             }
         }
 
+        /// <summary>
+        /// Get all users
+        /// </summary>
+        /// <returns></returns>
         public static List<User> Get()
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -147,6 +195,10 @@ namespace DataLayer
             }
         }
 
+        /// <summary>
+        /// Update a user
+        /// </summary>
+        /// <param name="employee"></param>
         public static void Update(User employee)
         {
             using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
@@ -157,13 +209,18 @@ namespace DataLayer
             }
         }
 
-        public static bool Delete(int id)
+        /// <summary>
+        /// Delete a user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public static bool Delete(int userId)
         {
             try
             {
                 using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
                 {
-                    var toDelete = context.Users.Where(e => e.ID == id).FirstOrDefault();
+                    var toDelete = context.Users.Where(e => e.ID == userId).FirstOrDefault();
                     context.Users.Remove(toDelete);
                     context.Entry(toDelete).State = EntityState.Deleted;
                     context.SaveChanges();
