@@ -136,6 +136,7 @@ namespace Restaurant
             }
         }
 
+<<<<<<< HEAD
         private void btnBack_Click(object sender, EventArgs e)
         {
             //Opening the waitstaff form
@@ -145,6 +146,16 @@ namespace Restaurant
             PreviousForm.Show();
             this.Hide();
         }
+=======
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    //Opening the waitstaff form
+        //    WaitStaffForm waitForm = new WaitStaffForm();
+        //    waitForm.checkclockin = true;
+        //    waitForm.Show();
+        //    this.Hide();
+        //}
+>>>>>>> origin/master
 
 
 
@@ -182,6 +193,11 @@ namespace Restaurant
                 checkStatus = 0;
                 Console.WriteLine(checkStatus);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
