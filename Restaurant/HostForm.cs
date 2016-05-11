@@ -23,18 +23,18 @@ namespace Restaurant
         {
             string customersRaw = customerNumber.Text;
             int currentCustomers = 0;
-            //currentCustomers = int.Parse(customerNumber.Text);
+            currentCustomers = int.Parse(customerNumber.Text);
 
-            if (int.TryParse(customersRaw, out currentCustomers))
-            {
-                //Parse Successful
-                hostStaff.SeatCustomers(currentCustomers);
-            }
-            else
-            {
-                //Parse Unsuccessful
-            }
-            this.Close();
+            //if (int.TryParse(customersRaw, out currentCustomers))
+            //{
+            //    //Parse Successful
+            //    hostStaff.SeatCustomers(currentCustomers);
+            //}
+            //else
+            //{
+            //    //Parse Unsuccessful
+            //}
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)

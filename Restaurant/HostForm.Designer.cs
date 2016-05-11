@@ -32,12 +32,14 @@
             this.customerNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // submitCustomers
             // 
             this.submitCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.submitCustomers.Location = new System.Drawing.Point(150, 100);
+            this.submitCustomers.Location = new System.Drawing.Point(150, 145);
             this.submitCustomers.Name = "submitCustomers";
             this.submitCustomers.Size = new System.Drawing.Size(110, 30);
             this.submitCustomers.TabIndex = 0;
@@ -64,7 +66,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(25, 100);
+            this.btnBack.Location = new System.Drawing.Point(25, 145);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(110, 30);
             this.btnBack.TabIndex = 3;
@@ -72,12 +74,31 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(85, 100);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(97, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Choose the table.";
+            // 
             // HostForm
             // 
             this.AcceptButton = this.submitCustomers;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 159);
+            this.ClientSize = new System.Drawing.Size(290, 211);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerNumber);
@@ -96,6 +117,8 @@
         private System.Windows.Forms.TextBox customerNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
