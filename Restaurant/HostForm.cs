@@ -28,6 +28,11 @@ namespace Restaurant
         
         private void submitCustomers_Click(object sender, EventArgs e)
         {
+            if(comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a table...");
+                return;
+            }
             //Get FoodTableVM object from the combo box's selected item
             FoodTableVM selectedTable = comboBox1.SelectedItem as FoodTableVM;
             //Create a new ticket with the table's ID (returns a ticket ID of the item created)

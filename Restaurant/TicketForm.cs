@@ -15,25 +15,21 @@ namespace Restaurant
     public partial class TicketForm : Form
     {
         //Get list of food tables from database
-        List<FoodTableVM> tables = FoodTableLogic.GetOccupiedTables();
+        List<FoodTableVM> tables;
         //Get list of menu items from database
         List<MenuItemVM> menuItems = MenuItemLogic.Get();
 
         public TicketForm()
         {
             InitializeComponent();
-            //populate food table combo box with tables initialized above
-            foreach(FoodTableVM table in tables)
-            {
-                cmboFoodTables.Items.Add(table);
-            }
+            refreshTables();
+
             //populate menu items combo box with menuItems initialized above
             foreach(MenuItemVM menuItem in menuItems)
             {
                 cmboMenuItems.Items.Add(menuItem);
             }
-            //Set display member of FoodTableVM's Info property (see FoodTableVM class)
-            cmboFoodTables.DisplayMember = "Info";
+
             //same idea as line above
             cmboMenuItems.DisplayMember = "Title";
             listBoxMenuItems.DisplayMember = "Title";
@@ -47,6 +43,11 @@ namespace Restaurant
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
+            if(listBoxMenuItems.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a menu item...");
+                return;
+            }
             //Removing all items from the ticket
             listBoxMenuItems.Items.Clear();
         }
@@ -76,6 +77,7 @@ namespace Restaurant
             else
             {
                 MessageBox.Show("Unable to create ticket, there may already be an existing ticket. Please close out any existing tickets for this table.");
+                refreshTables();
                 return;
             }
             //Get list of menu items selected from the list box ( .OfType casts the MenuItemVM back
@@ -85,7 +87,8 @@ namespace Restaurant
             TicketsMenuItemLogic.AddMenuItemsToTicket(newTicket.ID, menuItems);
             //Clear out the listbox to create a second order if needed
             listBoxMenuItems.Items.Clear();
-            MessageBox.Show("Order sent too cooks");
+            refreshTables();
+            MessageBox.Show("Order sent to cooks");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -102,5 +105,18 @@ namespace Restaurant
             listBoxMenuItems.Items.Add(cmboMenuItems.SelectedItem);
         }
 
+
+        private void refreshTables()
+        {
+            cmboFoodTables.Items.Clear();
+            tables = FoodTableLogic.GetTablesWithoutOpenTickets();
+            //populate food table combo box with tables initialized above
+            foreach (FoodTableVM table in tables)
+            {
+                cmboFoodTables.Items.Add(table);
+            }
+            //Set display member of FoodTableVM's Info property (see FoodTableVM class)
+            cmboFoodTables.DisplayMember = "Info";
+        }
     }
 }

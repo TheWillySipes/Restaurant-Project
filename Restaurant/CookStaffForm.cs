@@ -14,8 +14,7 @@ namespace Restaurant
 {
     public partial class CookStaffForm : Form
     {
-                List<FoodTableVM> tables = FoodTableLogic.Get();
-
+        List<FoodTableVM> tables = FoodTableLogic.GetTablesWithUncookedTickets();
 
         public CookStaffForm()
         {
@@ -28,7 +27,6 @@ namespace Restaurant
 
         }
 
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             EmployeeActionSelector actionSelector = new EmployeeActionSelector();
@@ -38,7 +36,20 @@ namespace Restaurant
 
         private void completeButton_Click(object sender, EventArgs e)
         {
-            
+            if(comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a table");
+                return;
+            }
+            FoodTableVM foodTable = comboBox1.SelectedItem as FoodTableVM;
+            if(TicketLogic.TicketIsCooked(foodTable.ID))
+            {
+                MessageBox.Show("Cooks will be notified!");
+            }
+            else
+            {
+                MessageBox.Show("Unable to mark ticket as completed.");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -51,7 +51,7 @@ namespace BusinessLayer.BusinessLogic
         /// <returns></returns>
         public static bool TicketIsCooked(int tableId)
         {
-            DataLayer.Ticket ticket = TicketData.Get(tableId);
+            DataLayer.Ticket ticket = TicketData.GetOpenTicket(tableId);
             if(ticket == null)
             {
                 return false;
@@ -78,10 +78,10 @@ namespace BusinessLayer.BusinessLogic
         /// <returns></returns>
         public static bool CloseTableTicket(int tableId)
         {
-            DataLayer.Ticket ticket = TicketData.Get(tableId);
-            if(ticket.TimeCompleted == null)
+            DataLayer.Ticket ticket = TicketData.GetOpenTicket(tableId);
+            if(ticket != null)
             {
-                ticket.TimeCompleted = DateTime.Now;
+                ticket.TicketClosed = true;
                 return TicketData.Update(ticket);
             }
             return false;

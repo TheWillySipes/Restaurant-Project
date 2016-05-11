@@ -15,7 +15,7 @@ namespace Restaurant
     public partial class OrderStatusForm : Form
     {
         //Get list of food tables on form initialization from the database
-        List<FoodTableVM> foodTables = FoodTableLogic.GetOccupiedTables();
+        List<FoodTableVM> foodTables = FoodTableLogic.GetTablesWithOpenTickets();
 
         public OrderStatusForm()
         {

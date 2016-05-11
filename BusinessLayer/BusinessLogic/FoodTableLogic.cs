@@ -55,6 +55,74 @@ namespace BusinessLayer.BusinessLogic
             return false;
         }
 
+        public static List<FoodTableVM> GetTablesWithOpenTickets()
+        {
+            List<FoodTableVM> tables = new List<FoodTableVM>();
+            foreach (FoodTable foodTable in FoodTableData.Get())
+            {
+                if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+                {
+                    var openTicket = TicketLogic.GetOpenTicket(foodTable.ID);
+                    if(openTicket != null)
+                    {
+                        tables.Add(DataModelToVM(foodTable));
+                    }
+                }
+            }
+            return tables;
+        }
+
+        public static List<FoodTableVM> GetTablesWithUncookedTickets()
+        {
+            List<FoodTableVM> tables = new List<FoodTableVM>();
+            foreach (FoodTable foodTable in FoodTableData.Get())
+            {
+                if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+                {
+                    var openTicket = TicketLogic.GetOpenTicket(foodTable.ID);
+                    if (openTicket != null && openTicket.TimeCompleted == null)
+                    {
+                        tables.Add(DataModelToVM(foodTable));
+                    }
+                }
+            }
+            return tables;
+        }
+
+        public static List<FoodTableVM> GetTablesWithCookedTickets()
+        {
+            List<FoodTableVM> tables = new List<FoodTableVM>();
+            foreach (FoodTable foodTable in FoodTableData.Get())
+            {
+                if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+                {
+                    var openTicket = TicketLogic.GetOpenTicket(foodTable.ID);
+                    if (openTicket != null && openTicket.TimeCompleted != null)
+                    {
+                        tables.Add(DataModelToVM(foodTable));
+                    }
+                }
+            }
+            return tables;
+        }
+
+        public static List<FoodTableVM> GetTablesWithoutOpenTickets()
+        {
+            List<FoodTableVM> tables = new List<FoodTableVM>();
+            foreach (FoodTable foodTable in FoodTableData.Get())
+            {
+                if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+                {
+                    var openTicket = TicketLogic.GetOpenTicket(foodTable.ID);
+                    if (openTicket == null)
+                    {
+                        tables.Add(DataModelToVM(foodTable));
+                    }
+                }
+            }
+            return tables;
+        }
+
         public static List<FoodTableVM> GetDirtyTables()
         {
             List<FoodTableVM> tables = new List<FoodTableVM>();

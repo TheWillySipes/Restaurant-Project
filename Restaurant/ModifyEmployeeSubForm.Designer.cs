@@ -235,6 +235,7 @@
             this.Controls.Add(this.lstEmployeeList);
             this.Controls.Add(this.btnModifyEmployee);
             this.Name = "ModifyEmployeeSubForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modify or Delete Employee";
             this.ResumeLayout(false);
             this.PerformLayout();

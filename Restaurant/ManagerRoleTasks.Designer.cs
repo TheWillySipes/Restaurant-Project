@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddEmp);
             this.Name = "ManagerRoleTasks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add or Remove Employee";
             this.ResumeLayout(false);
             this.PerformLayout();

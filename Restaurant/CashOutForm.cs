@@ -15,15 +15,11 @@ namespace Restaurant
     public partial class CashOutForm : Form
     {
         WaitStaffForm waitStaff = new WaitStaffForm();
-        List<FoodTableVM> foodTables = FoodTableLogic.GetOccupiedTables();
+        List<FoodTableVM> foodTables;
         public CashOutForm()
         {
             InitializeComponent();
-            foreach (FoodTableVM foodTable in foodTables)
-            {
-                cbTableList.Items.Add(foodTable);
-            }
-            cbTableList.DisplayMember = "Info";
+            UpdateDropDown();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -53,17 +49,29 @@ namespace Restaurant
                     output += "\n" + item.MenuItemTitle + "$" + item.PricePaid;
                     ticketValue += item.PricePaid;
                 }
-                    output += "\n\n" + DateTime.Now.ToString();
-                    output += "\nTotal Cost: $" + ticketValue.ToString();
-                    MessageBox.Show(output);
-                cbTableList.DisplayMember = "MenuItemTitle";
+                output += "\n\n" + DateTime.Now.ToString();
+                output += "\nTotal Cost: $" + ticketValue.ToString();
+                MessageBox.Show(output);
+
+                TicketLogic.CloseTableTicket(ticket.TableID);
+                UpdateDropDown();
             }
             else
             {
                 MessageBox.Show("No ticket for this table!");
             }
-            
-            this.Hide();
+        }
+
+        public void UpdateDropDown()
+        {
+            cbTableList.Items.Clear();
+            cbTableList.SelectedIndex = -1;
+            foodTables = FoodTableLogic.GetTablesWithCookedTickets();
+            foreach (FoodTableVM foodTable in foodTables)
+            {
+                cbTableList.Items.Add(foodTable);
+            }
+            cbTableList.DisplayMember = "Info";
         }
     }
 }

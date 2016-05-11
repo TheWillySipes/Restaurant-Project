@@ -152,6 +152,7 @@
             this.Controls.Add(this.lbl_LastName);
             this.Controls.Add(this.lbl_FirstName);
             this.Name = "AddEmployeeSubForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Employee";
             this.Load += new System.EventHandler(this.AddEmployeeSubForm_Load);
             this.ResumeLayout(false);
