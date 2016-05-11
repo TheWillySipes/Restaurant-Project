@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.BusinessLogic;
+using BusinessLayer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +15,36 @@ namespace Restaurant
     public partial class HostForm : Form
     {
         public static int currentCustomers { get; set; }
+        List<FoodTableVM> tables = FoodTableLogic.GetOpenTables();
         public HostForm()
         {
             InitializeComponent();
-            
+            RefreshDD();
+
+
+          
         }
         HostStaff hostStaff = new HostStaff();
+        
         private void submitCustomers_Click(object sender, EventArgs e)
         {
-            string customersRaw = customerNumber.Text;
-            int currentCustomers = 0;
-            currentCustomers = int.Parse(customerNumber.Text);
+            //Get FoodTableVM object from the combo box's selected item
+            FoodTableVM selectedTable = comboBox1.SelectedItem as FoodTableVM;
+            //Create a new ticket with the table's ID (returns a ticket ID of the item created)
+            TicketVM newTicket = null;
+            FoodTableLogic.SetTableOccupied(selectedTable.ID);
+            RefreshDD();
+            //refresh drop down
+            
+            
+            
+            
+            
+            
+            /////old code, replaced by Willy
+        //    string customersRaw = customerNumber.Text;
+        //    int currentCustomers = 0;
+//            currentCustomers = int.Parse(customerNumber.Text);
 
             //if (int.TryParse(customersRaw, out currentCustomers))
             //{
@@ -42,6 +63,18 @@ namespace Restaurant
             EmployeeActionSelector actionSelector = new EmployeeActionSelector();
             actionSelector.Show();
             this.Close();
+        }
+        private void RefreshDD()
+        {
+            //referesh list
+            tables = FoodTableLogic.GetOpenTables();
+            foreach (FoodTableVM table in tables)
+            {
+
+                comboBox1.Items.Add(table);
+            }
+            comboBox1.DisplayMember = "Info";
+
         }
     }
 }
