@@ -15,7 +15,7 @@ namespace Restaurant
     public partial class CashOutForm : Form
     {
         WaitStaffForm waitStaff = new WaitStaffForm();
-        List<FoodTableVM> foodTables = FoodTableLogic.Get();
+        List<FoodTableVM> foodTables = FoodTableLogic.GetOccupiedTables();
         public CashOutForm()
         {
             InitializeComponent();
