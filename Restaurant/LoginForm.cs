@@ -52,7 +52,16 @@ namespace Restaurant
             output += "PIN number is 4 characters in length\n";
             output += "Version 1.0 - Restaurant Project";
             MessageBox.Show(output);
-
         }
+
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
+        }
+
     }
 }

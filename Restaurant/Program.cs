@@ -16,11 +16,9 @@ namespace Restaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-
-          
-           
-           
+            LoginForm loginForm = new LoginForm();
+            GlobalData.Instance.SetLoginFormReference(loginForm);
+            Application.Run(loginForm);
         }
     }
 }

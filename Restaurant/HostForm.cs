@@ -16,15 +16,12 @@ namespace Restaurant
     {
         public static int currentCustomers { get; set; }
         List<FoodTableVM> tables = FoodTableLogic.GetOpenTables();
+
         public HostForm()
         {
             InitializeComponent();
             RefreshDD();
-
-
-          
         }
-        HostStaff hostStaff = new HostStaff();
         
         private void submitCustomers_Click(object sender, EventArgs e)
         {
@@ -36,7 +33,6 @@ namespace Restaurant
             //Get FoodTableVM object from the combo box's selected item
             FoodTableVM selectedTable = comboBox1.SelectedItem as FoodTableVM;
             //Create a new ticket with the table's ID (returns a ticket ID of the item created)
-            TicketVM newTicket = null;
             if(FoodTableLogic.SetTableOccupied(selectedTable.ID))
             {
                 MessageBox.Show("Table Assigned");
@@ -50,27 +46,6 @@ namespace Restaurant
                 return;
             }
             RefreshDD();
-            //refresh drop down
-            
-            
-            
-            
-            
-            
-            /////old code, replaced by Willy
-        //    string customersRaw = customerNumber.Text;
-        //    int currentCustomers = 0;
-//            currentCustomers = int.Parse(customerNumber.Text);
-
-            //if (int.TryParse(customersRaw, out currentCustomers))
-            //{
-            //    //Parse Successful
-            //    hostStaff.SeatCustomers(currentCustomers);
-            //}
-            //else
-            //{
-            //    //Parse Unsuccessful
-            //}
             
         }
 
@@ -83,14 +58,22 @@ namespace Restaurant
         private void RefreshDD()
         {
             //referesh list
+            comboBox1.Items.Clear();
             tables = FoodTableLogic.GetOpenTables();
             foreach (FoodTableVM table in tables)
             {
-
                 comboBox1.Items.Add(table);
             }
             comboBox1.DisplayMember = "Info";
+        }
 
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
         }
     }
 }

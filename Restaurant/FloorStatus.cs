@@ -138,27 +138,8 @@ namespace Restaurant
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //Opening the waitstaff form
-            //WaitStaffForm waitForm = new WaitStaffForm();
-            //waitForm.checkclockin = true;
-            //waitForm.Show();
             PreviousForm.Show();
             this.Hide();
-        }
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    //Opening the waitstaff form
-        //    WaitStaffForm waitForm = new WaitStaffForm();
-        //    waitForm.checkclockin = true;
-        //    waitForm.Show();
-        //    this.Hide();
-        //}
-
-
-
-        private void FloorStatus_Load(object sender, EventArgs e)
-        {
-          //empty               
         }
 
         private void changeTableStatus(object sender, EventArgs e)
@@ -190,6 +171,15 @@ namespace Restaurant
                 checkStatus = 0;
                 Console.WriteLine(checkStatus);
             }
+        }
+
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
         }
 
     }

@@ -14,7 +14,7 @@ namespace Restaurant
 {
     public partial class CashOutForm : Form
     {
-        WaitStaffForm waitStaff = new WaitStaffForm();
+
         List<FoodTableVM> foodTables;
         public CashOutForm()
         {
@@ -24,8 +24,7 @@ namespace Restaurant
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-           // WaitStaffForm waitStaff = new WaitStaffForm();
-            waitStaff.checkclockin = true;
+            WaitStaffForm waitStaff = new WaitStaffForm();
             waitStaff.Show();
             this.Hide();
         }
@@ -72,6 +71,15 @@ namespace Restaurant
                 cbTableList.Items.Add(foodTable);
             }
             cbTableList.DisplayMember = "Info";
+        }
+
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
         }
     }
 }

@@ -31,7 +31,6 @@ namespace Restaurant
         private void btnBack_Click(object sender, EventArgs e)
         {
             WaitStaffForm waitStaff = new WaitStaffForm();
-            waitStaff.checkclockin = true;
             waitStaff.Show();
             this.Close();
         }
@@ -69,6 +68,15 @@ namespace Restaurant
                 //No order was found, display message
                 MessageBox.Show("No orders found");
             }
+        }
+
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
         }
     }
 }

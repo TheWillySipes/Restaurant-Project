@@ -94,7 +94,6 @@ namespace Restaurant
         private void btnBack_Click(object sender, EventArgs e)
         {
             WaitStaffForm waitForm = new WaitStaffForm();
-            waitForm.checkclockin = true;
             waitForm.Show();
             this.Close();
         }
@@ -117,6 +116,15 @@ namespace Restaurant
             }
             //Set display member of FoodTableVM's Info property (see FoodTableVM class)
             cmboFoodTables.DisplayMember = "Info";
+        }
+
+        //Override when user tries to close window, open new instance of login form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            GlobalData.Instance.LoginForm.Show();
+            this.Hide();
+            this.Dispose();
         }
     }
 }
