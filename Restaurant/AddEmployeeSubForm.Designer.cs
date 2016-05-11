@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 268);
+            this.ClientSize = new System.Drawing.Size(237, 268);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnModifyEmployee);
@@ -152,7 +152,7 @@
             this.Controls.Add(this.lbl_LastName);
             this.Controls.Add(this.lbl_FirstName);
             this.Name = "AddEmployeeSubForm";
-            this.Text = "AddEmployeeSubForm";
+            this.Text = "Add New Employee";
             this.Load += new System.EventHandler(this.AddEmployeeSubForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -36,9 +36,9 @@
             // 
             // btnAddEmp
             // 
-            this.btnAddEmp.Location = new System.Drawing.Point(16, 40);
+            this.btnAddEmp.Location = new System.Drawing.Point(38, 37);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(107, 23);
+            this.btnAddEmp.Size = new System.Drawing.Size(175, 23);
             this.btnAddEmp.TabIndex = 0;
             this.btnAddEmp.Text = "Add Employee";
             this.btnAddEmp.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(35, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 13);
             this.label1.TabIndex = 2;
@@ -55,9 +55,9 @@
             // 
             // btnModifyEmployee
             // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(16, 70);
+            this.btnModifyEmployee.Location = new System.Drawing.Point(38, 66);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(107, 39);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(175, 39);
             this.btnModifyEmployee.TabIndex = 3;
             this.btnModifyEmployee.Text = "Modify or Delete Employee";
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(16, 175);
+            this.btnBack.Location = new System.Drawing.Point(38, 137);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(107, 23);
+            this.btnBack.Size = new System.Drawing.Size(175, 23);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -78,13 +78,13 @@
             this.AcceptButton = this.btnModifyEmployee;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 227);
+            this.ClientSize = new System.Drawing.Size(267, 227);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddEmp);
             this.Name = "ManagerRoleTasks";
-            this.Text = "AddRemoveEmployee";
+            this.Text = "Add or Remove Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 

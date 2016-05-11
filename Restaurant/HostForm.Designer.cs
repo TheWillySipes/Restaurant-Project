@@ -84,7 +84,7 @@
             this.Controls.Add(this.submitCustomers);
             this.Name = "HostForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Host";
             this.ResumeLayout(false);
             this.PerformLayout();
 

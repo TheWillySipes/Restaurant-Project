@@ -50,9 +50,9 @@
             // 
             // btnModifyEmployee
             // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(11, 303);
+            this.btnModifyEmployee.Location = new System.Drawing.Point(15, 294);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(108, 23);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(175, 41);
             this.btnModifyEmployee.TabIndex = 29;
             this.btnModifyEmployee.Text = "Modify Employee";
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
@@ -64,7 +64,7 @@
             this.lstEmployeeList.FormattingEnabled = true;
             this.lstEmployeeList.Location = new System.Drawing.Point(11, 28);
             this.lstEmployeeList.Name = "lstEmployeeList";
-            this.lstEmployeeList.Size = new System.Drawing.Size(158, 21);
+            this.lstEmployeeList.Size = new System.Drawing.Size(179, 21);
             this.lstEmployeeList.TabIndex = 47;
             this.lstEmployeeList.SelectedIndexChanged += new System.EventHandler(this.lstEmployeeList_SelectedIndexChanged);
             // 
@@ -79,9 +79,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(138, 397);
+            this.btnBack.Location = new System.Drawing.Point(16, 380);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(107, 23);
+            this.btnBack.Size = new System.Drawing.Size(174, 23);
             this.btnBack.TabIndex = 50;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(13, 157);
+            this.lblPassword.Location = new System.Drawing.Point(12, 145);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 58;
@@ -98,36 +98,36 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(77, 153);
+            this.txtPassword.Location = new System.Drawing.Point(76, 142);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(114, 20);
             this.txtPassword.TabIndex = 57;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(76, 67);
+            this.txtUsername.Location = new System.Drawing.Point(76, 64);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(114, 20);
             this.txtUsername.TabIndex = 56;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(77, 127);
+            this.txtLastName.Location = new System.Drawing.Point(76, 116);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.Size = new System.Drawing.Size(114, 20);
             this.txtLastName.TabIndex = 55;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(76, 97);
+            this.txtFirstName.Location = new System.Drawing.Point(76, 90);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(114, 20);
             this.txtFirstName.TabIndex = 54;
             // 
             // lbl_Username
             // 
             this.lbl_Username.AutoSize = true;
-            this.lbl_Username.Location = new System.Drawing.Point(12, 70);
+            this.lbl_Username.Location = new System.Drawing.Point(13, 67);
             this.lbl_Username.Name = "lbl_Username";
             this.lbl_Username.Size = new System.Drawing.Size(55, 13);
             this.lbl_Username.TabIndex = 53;
@@ -136,7 +136,7 @@
             // lbl_LastName
             // 
             this.lbl_LastName.AutoSize = true;
-            this.lbl_LastName.Location = new System.Drawing.Point(13, 130);
+            this.lbl_LastName.Location = new System.Drawing.Point(12, 119);
             this.lbl_LastName.Name = "lbl_LastName";
             this.lbl_LastName.Size = new System.Drawing.Size(58, 13);
             this.lbl_LastName.TabIndex = 52;
@@ -145,7 +145,7 @@
             // lbl_FirstName
             // 
             this.lbl_FirstName.AutoSize = true;
-            this.lbl_FirstName.Location = new System.Drawing.Point(13, 100);
+            this.lbl_FirstName.Location = new System.Drawing.Point(13, 93);
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(57, 13);
             this.lbl_FirstName.TabIndex = 51;
@@ -154,7 +154,7 @@
             // chkHost
             // 
             this.chkHost.AutoSize = true;
-            this.chkHost.Location = new System.Drawing.Point(15, 188);
+            this.chkHost.Location = new System.Drawing.Point(16, 179);
             this.chkHost.Name = "chkHost";
             this.chkHost.Size = new System.Drawing.Size(48, 17);
             this.chkHost.TabIndex = 59;
@@ -164,7 +164,7 @@
             // chkWaiter
             // 
             this.chkWaiter.AutoSize = true;
-            this.chkWaiter.Location = new System.Drawing.Point(15, 211);
+            this.chkWaiter.Location = new System.Drawing.Point(16, 202);
             this.chkWaiter.Name = "chkWaiter";
             this.chkWaiter.Size = new System.Drawing.Size(57, 17);
             this.chkWaiter.TabIndex = 60;
@@ -174,7 +174,7 @@
             // chkCook
             // 
             this.chkCook.AutoSize = true;
-            this.chkCook.Location = new System.Drawing.Point(15, 234);
+            this.chkCook.Location = new System.Drawing.Point(16, 225);
             this.chkCook.Name = "chkCook";
             this.chkCook.Size = new System.Drawing.Size(51, 17);
             this.chkCook.TabIndex = 61;
@@ -184,7 +184,7 @@
             // chkBusser
             // 
             this.chkBusser.AutoSize = true;
-            this.chkBusser.Location = new System.Drawing.Point(15, 257);
+            this.chkBusser.Location = new System.Drawing.Point(16, 248);
             this.chkBusser.Name = "chkBusser";
             this.chkBusser.Size = new System.Drawing.Size(58, 17);
             this.chkBusser.TabIndex = 62;
@@ -194,7 +194,7 @@
             // chkManager
             // 
             this.chkManager.AutoSize = true;
-            this.chkManager.Location = new System.Drawing.Point(15, 280);
+            this.chkManager.Location = new System.Drawing.Point(16, 271);
             this.chkManager.Name = "chkManager";
             this.chkManager.Size = new System.Drawing.Size(68, 17);
             this.chkManager.TabIndex = 63;
@@ -203,9 +203,9 @@
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(11, 333);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(15, 341);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(108, 23);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(175, 23);
             this.btnDeleteEmployee.TabIndex = 64;
             this.btnDeleteEmployee.Text = "Delete Employee";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 432);
+            this.ClientSize = new System.Drawing.Size(271, 432);
             this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.chkManager);
             this.Controls.Add(this.chkBusser);
@@ -235,7 +235,7 @@
             this.Controls.Add(this.lstEmployeeList);
             this.Controls.Add(this.btnModifyEmployee);
             this.Name = "ModifyEmployeeSubForm";
-            this.Text = "ModifyEmployeeSubForm";
+            this.Text = "Modify or Delete Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 

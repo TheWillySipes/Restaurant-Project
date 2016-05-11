@@ -142,7 +142,7 @@
             this.MinimizeBox = false;
             this.Name = "TicketForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TicketForm";
+            this.Text = "Modify Ticket";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -133,7 +133,7 @@
             this.Controls.Add(this.btnManager);
             this.Name = "EmployeeActionSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EmployeeActionSelector";
+            this.Text = "Action Selector";
             this.ResumeLayout(false);
 
         }
