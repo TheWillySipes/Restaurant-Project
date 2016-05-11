@@ -131,14 +131,14 @@ namespace Restaurant
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Opening the waitstaff form
-            WaitStaffForm waitForm = new WaitStaffForm();
-            waitForm.checkclockin = true;
-            waitForm.Show();
-            this.Hide();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    //Opening the waitstaff form
+        //    WaitStaffForm waitForm = new WaitStaffForm();
+        //    waitForm.checkclockin = true;
+        //    waitForm.Show();
+        //    this.Hide();
+        //}
 
         private void FloorStatus_Load(object sender, EventArgs e)
         {
@@ -174,6 +174,11 @@ namespace Restaurant
                 checkStatus = 0;
                 Console.WriteLine(checkStatus);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
