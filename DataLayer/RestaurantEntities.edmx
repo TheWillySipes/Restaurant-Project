@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RestaurantApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RestaurantApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="FoodTables">
           <Key>
             <PropertyRef Name="ID" />
@@ -89,6 +89,16 @@
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="RoleID" Type="int" Nullable="false" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTimeClockEntries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="ClockIn" Type="datetime" Nullable="false" />
+          <Property Name="ClockOut" Type="datetime" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'RestaurantApplication.dbo.v_TicketsMenuItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -227,6 +237,18 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UserTimeClockEntries_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="UserTimeClockEntries" Type="Self.UserTimeClockEntries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserTimeClockEntries">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RestaurantApplicationModelStoreContainer">
           <EntitySet Name="FoodTables" EntityType="Self.FoodTables" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MenuItems" EntityType="Self.MenuItems" Schema="dbo" store:Type="Tables" />
@@ -237,6 +259,7 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsersFoodTables" EntityType="Self.UsersFoodTables" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsersRoles" EntityType="Self.UsersRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTimeClockEntries" EntityType="Self.UserTimeClockEntries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="v_TicketsMenuItems" EntityType="Self.v_TicketsMenuItems" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [v_TicketsMenuItems].[TicketID] AS [TicketID], 
@@ -293,9 +316,12 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
             <End Role="Users" EntitySet="Users" />
             <End Role="UsersRoles" EntitySet="UsersRoles" />
           </AssociationSet>
+          <AssociationSet Name="FK_UserTimeClockEntries_Users" Association="Self.FK_UserTimeClockEntries_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserTimeClockEntries" EntitySet="UserTimeClockEntries" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RestaurantApplicationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -377,6 +403,7 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
           <NavigationProperty Name="TicketsMenuItems" Relationship="Self.FK_TicketsMenuItems_Users" FromRole="Users" ToRole="TicketsMenuItems" />
           <NavigationProperty Name="UsersFoodTables" Relationship="Self.FK_UsersFoodTables_Users" FromRole="Users" ToRole="UsersFoodTables" />
           <NavigationProperty Name="UsersRoles" Relationship="Self.FK_UsersRoles_Users" FromRole="Users" ToRole="UsersRoles" />
+          <NavigationProperty Name="UserTimeClockEntries" Relationship="RestaurantApplicationModel.FK_UserTimeClockEntries_Users" FromRole="User" ToRole="UserTimeClockEntry" />
         </EntityType>
         <EntityType Name="UsersFoodTable">
           <Key>
@@ -577,7 +604,35 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
             <End Role="Users" EntitySet="Users" />
             <End Role="UsersRoles" EntitySet="UsersRoles" />
           </AssociationSet>
+          <EntitySet Name="UserTimeClockEntries" EntityType="RestaurantApplicationModel.UserTimeClockEntry" />
+          <AssociationSet Name="FK_UserTimeClockEntries_Users" Association="RestaurantApplicationModel.FK_UserTimeClockEntries_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserTimeClockEntry" EntitySet="UserTimeClockEntries" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="UserTimeClockEntry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ClockIn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ClockOut" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="User" Relationship="RestaurantApplicationModel.FK_UserTimeClockEntries_Users" FromRole="UserTimeClockEntry" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_UserTimeClockEntries_Users">
+          <End Type="RestaurantApplicationModel.User" Role="User" Multiplicity="1" />
+          <End Type="RestaurantApplicationModel.UserTimeClockEntry" Role="UserTimeClockEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserTimeClockEntry">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -701,6 +756,17 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTimeClockEntries">
+            <EntityTypeMapping TypeName="RestaurantApplicationModel.UserTimeClockEntry">
+              <MappingFragment StoreEntitySet="UserTimeClockEntries">
+                <ScalarProperty Name="ClockOut" ColumnName="ClockOut" />
+                <ScalarProperty Name="ClockIn" ColumnName="ClockIn" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

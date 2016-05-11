@@ -19,6 +19,7 @@ namespace DataLayer
             this.TicketsMenuItems = new HashSet<TicketsMenuItem>();
             this.UsersFoodTables = new HashSet<UsersFoodTable>();
             this.UsersRoles = new HashSet<UsersRole>();
+            this.UserTimeClockEntries = new HashSet<UserTimeClockEntry>();
         }
     
         public int ID { get; set; }
@@ -30,5 +31,6 @@ namespace DataLayer
         public virtual ICollection<TicketsMenuItem> TicketsMenuItems { get; set; }
         public virtual ICollection<UsersFoodTable> UsersFoodTables { get; set; }
         public virtual ICollection<UsersRole> UsersRoles { get; set; }
+        public virtual ICollection<UserTimeClockEntry> UserTimeClockEntries { get; set; }
     }
 }

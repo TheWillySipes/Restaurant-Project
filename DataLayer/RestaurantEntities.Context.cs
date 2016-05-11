@@ -36,5 +36,6 @@ namespace DataLayer
         public virtual DbSet<UsersRole> UsersRoles { get; set; }
         public virtual DbSet<v_TicketsMenuItems> v_TicketsMenuItems { get; set; }
         public virtual DbSet<v_UsersRoles> v_UsersRoles { get; set; }
+        public virtual DbSet<UserTimeClockEntry> UserTimeClockEntries { get; set; }
     }
 }

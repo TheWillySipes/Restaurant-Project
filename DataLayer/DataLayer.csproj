@@ -96,6 +96,10 @@
     <Compile Include="UsersRole.cs">
       <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserTimeClockEntry.cs">
+      <DependentUpon>RestaurantEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserTimeClockEntryData.cs" />
     <Compile Include="v_TicketsMenuItems.cs">
       <DependentUpon>RestaurantEntities.tt</DependentUpon>
     </Compile>
