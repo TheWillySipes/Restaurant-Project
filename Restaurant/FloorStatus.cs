@@ -136,7 +136,6 @@ namespace Restaurant
             }
         }
 
-<<<<<<< HEAD
         private void btnBack_Click(object sender, EventArgs e)
         {
             //Opening the waitstaff form
@@ -146,7 +145,6 @@ namespace Restaurant
             PreviousForm.Show();
             this.Hide();
         }
-=======
         //private void button1_Click(object sender, EventArgs e)
         //{
         //    //Opening the waitstaff form
@@ -155,7 +153,6 @@ namespace Restaurant
         //    waitForm.Show();
         //    this.Hide();
         //}
->>>>>>> origin/master
 
 
 
