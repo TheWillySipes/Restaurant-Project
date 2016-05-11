@@ -46,6 +46,32 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
+        public static bool TicketIsCooked(int tableId)
+        {
+            DataLayer.Ticket ticket = TicketData.Get(tableId);
+            if(ticket == null)
+            {
+                return false;
+            }
+            else
+            {
+                if(ticket.TicketClosed == true || ticket.TimeCompleted != null)
+                {
+                    return false;
+                }
+                else
+                {
+                    ticket.TimeCompleted = DateTime.Now;
+                    TicketData.Update(ticket);
+                    return true;
+                }
+            }
+        }
+
+        /// <summary>
         /// If ticket is not already closed, close ticket
         /// </summary>
         /// <param name="tableId"></param>
@@ -53,7 +79,7 @@ namespace BusinessLayer.BusinessLogic
         public static bool CloseTableTicket(int tableId)
         {
             DataLayer.Ticket ticket = TicketData.Get(tableId);
-            if(ticket.TimeCompleted != null)
+            if(ticket.TimeCompleted == null)
             {
                 ticket.TimeCompleted = DateTime.Now;
                 return TicketData.Update(ticket);
@@ -83,7 +109,8 @@ namespace BusinessLayer.BusinessLogic
                 ID = ticketVM.ID,
                 TableID = ticketVM.TableID,
                 TimePlaced = ticketVM.TimePlaced,
-                TimeCompleted = ticketVM.TimeCompleted
+                TimeCompleted = ticketVM.TimeCompleted,
+                TicketClosed = ticketVM.TicketClosed
             };
         }
 
@@ -94,7 +121,8 @@ namespace BusinessLayer.BusinessLogic
                 ID = ticketDataModel.ID,
                 TableID = ticketDataModel.TableID,
                 TimePlaced = ticketDataModel.TimePlaced,
-                TimeCompleted = ticketDataModel.TimeCompleted
+                TimeCompleted = ticketDataModel.TimeCompleted,
+                TicketClosed = ticketDataModel.TicketClosed
             };
         }
     }

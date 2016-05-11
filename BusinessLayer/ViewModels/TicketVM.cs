@@ -12,5 +12,6 @@ namespace BusinessLayer.ViewModels
         public int TableID { get; set; }
         public System.DateTime TimePlaced { get; set; }
         public Nullable<System.DateTime> TimeCompleted { get; set; }
+        public bool TicketClosed { get; set; }
     }
 }
