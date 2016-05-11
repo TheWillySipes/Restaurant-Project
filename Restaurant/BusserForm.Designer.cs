@@ -35,7 +35,7 @@
             // 
             // btnFloorStatus
             // 
-            this.btnFloorStatus.Location = new System.Drawing.Point(73, 108);
+            this.btnFloorStatus.Location = new System.Drawing.Point(27, 83);
             this.btnFloorStatus.Name = "btnFloorStatus";
             this.btnFloorStatus.Size = new System.Drawing.Size(127, 49);
             this.btnFloorStatus.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(73, 203);
+            this.btnBack.Location = new System.Drawing.Point(27, 178);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(127, 49);
             this.btnBack.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.lblBusStaff.AutoSize = true;
             this.lblBusStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusStaff.Location = new System.Drawing.Point(75, 34);
+            this.lblBusStaff.Location = new System.Drawing.Point(29, 9);
             this.lblBusStaff.Name = "lblBusStaff";
             this.lblBusStaff.Size = new System.Drawing.Size(125, 31);
             this.lblBusStaff.TabIndex = 1;
@@ -68,13 +68,13 @@
             this.AcceptButton = this.btnFloorStatus;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 283);
+            this.ClientSize = new System.Drawing.Size(180, 249);
             this.Controls.Add(this.lblBusStaff);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFloorStatus);
             this.Name = "BusserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BusserForm";
+            this.Text = "Busser";
             this.ResumeLayout(false);
             this.PerformLayout();
 

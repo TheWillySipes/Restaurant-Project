@@ -96,7 +96,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CookStaffForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CookStaffForm";
+            this.Text = "Cook";
             this.ResumeLayout(false);
             this.PerformLayout();
 
