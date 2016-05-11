@@ -37,6 +37,14 @@ namespace DataLayer
             }
         }
 
+        public static Ticket GetOpenTicket(int tableId)
+        {
+            using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
+            {
+                return context.Tickets.Where(e => e.TableID == tableId && e.TicketClosed == false).OrderByDescending(e => e.ID).FirstOrDefault();
+            }
+        }
+
         public static bool Update(Ticket ticket)
         {
             try

@@ -16,9 +16,9 @@ namespace BusinessLayer.BusinessLogic
         /// <param name="tableId"></param>
         /// <param name="onlyShowOpenTickets"></param>
         /// <returns></returns>
-        public static TicketVM Get(int tableId)
+        public static TicketVM GetOpenTicket(int tableId)
         {
-            DataLayer.Ticket ticket = TicketData.Get(tableId);
+            DataLayer.Ticket ticket = TicketData.GetOpenTicket(tableId);
             if(ticket != null)
             {
                 return DataModelToVM(ticket);
@@ -94,12 +94,15 @@ namespace BusinessLayer.BusinessLogic
         /// <returns>Returns false if there is already an open ticket for a table</returns>
         public static bool Create(int tableId)
         {
-            DataLayer.Ticket ticket = TicketData.Get(tableId);
-            if(ticket.TimeCompleted != null)
+            DataLayer.Ticket ticket = TicketData.GetOpenTicket(tableId);
+            if(ticket == null)
             {
                 return TicketData.Create(tableId);
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         private static DataLayer.Ticket VMToDataModel(TicketVM ticketVM)
