@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\EmployeeLogic.cs" />
+    <Compile Include="BusinessLogic\EmployeeTimeClockLogic.cs" />
     <Compile Include="BusinessLogic\FoodTableLogic.cs" />
     <Compile Include="BusinessLogic\MenuItemLogic.cs" />
     <Compile Include="BusinessLogic\TicketLogic.cs" />

@@ -12,9 +12,18 @@ namespace RestaurantTests
     {
         static void Main(string[] args)
         {
-            TestEmployees();
-            TestMenuItems();
+            //TestEmployees();
+            //TestMenuItems();
+            TestClockEmployeeInOut();
             Console.ReadKey();
+        }
+
+        static void  TestClockEmployeeInOut()
+        {
+            bool a = EmployeeTimeClockLogic.ClockIn(1);
+            bool b = EmployeeTimeClockLogic.ClockIn(1);
+            bool c = EmployeeTimeClockLogic.ClockOut(1);
+            bool d = EmployeeTimeClockLogic.ClockOut(1);
         }
 
         static void TestEmployees()

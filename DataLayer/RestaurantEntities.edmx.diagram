@@ -24,6 +24,8 @@
         <AssociationConnector Association="RestaurantApplicationModel.FK_TicketsMenuItems_Users" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantApplicationModel.FK_UsersFoodTables_Users" ManuallyRouted="false" />
         <AssociationConnector Association="RestaurantApplicationModel.FK_UsersRoles_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RestaurantApplicationModel.UserTimeClockEntry" Width="1.5" PointX="3" PointY="14.5" />
+        <AssociationConnector Association="RestaurantApplicationModel.FK_UserTimeClockEntries_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
