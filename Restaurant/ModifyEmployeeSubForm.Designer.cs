@@ -31,7 +31,7 @@
             this.btnModifyEmployee = new System.Windows.Forms.Button();
             this.lstEmployeeList = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -77,15 +77,15 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Select an Employee from the list";
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.Location = new System.Drawing.Point(138, 397);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(107, 23);
-            this.btnExit.TabIndex = 50;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.Location = new System.Drawing.Point(138, 397);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(107, 23);
+            this.btnBack.TabIndex = 50;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblPassword
             // 
@@ -230,7 +230,7 @@
             this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.lbl_LastName);
             this.Controls.Add(this.lbl_FirstName);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstEmployeeList);
             this.Controls.Add(this.btnModifyEmployee);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Button btnModifyEmployee;
         private System.Windows.Forms.ComboBox lstEmployeeList;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
