@@ -105,7 +105,7 @@ namespace Restaurant
         private void btnFloorStatus_Click(object sender, EventArgs e)
         {
             
-            FloorStatus floorForm = new FloorStatus();
+            FloorStatus floorForm = new FloorStatus(new WaitStaffForm());
             floorForm.Show();
             this.Hide();
         }

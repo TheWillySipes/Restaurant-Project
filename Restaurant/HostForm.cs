@@ -36,5 +36,12 @@ namespace Restaurant
             }
             this.Close();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            EmployeeActionSelector actionSelector = new EmployeeActionSelector();
+            actionSelector.Show();
+            this.Close();
+        }
     }
 }

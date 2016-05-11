@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnFloorStatus = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblBusStaff = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,15 +43,15 @@
             this.btnFloorStatus.UseVisualStyleBackColor = true;
             this.btnFloorStatus.Click += new System.EventHandler(this.btnFloorStatus_Click);
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.Location = new System.Drawing.Point(73, 203);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 49);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.Location = new System.Drawing.Point(73, 203);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(127, 49);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblBusStaff
             // 
@@ -65,11 +65,12 @@
             // 
             // BusserForm
             // 
+            this.AcceptButton = this.btnFloorStatus;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(273, 283);
             this.Controls.Add(this.lblBusStaff);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFloorStatus);
             this.Name = "BusserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -82,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnFloorStatus;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblBusStaff;
     }
 }

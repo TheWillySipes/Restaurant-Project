@@ -65,9 +65,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 227);
+            this.btnBack.Location = new System.Drawing.Point(16, 175);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(107, 23);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -75,9 +75,10 @@
             // 
             // ManagerRoleTasks
             // 
+            this.AcceptButton = this.btnModifyEmployee;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(250, 227);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.label1);
