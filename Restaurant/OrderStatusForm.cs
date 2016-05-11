@@ -15,7 +15,7 @@ namespace Restaurant
     public partial class OrderStatusForm : Form
     {
         //Get list of food tables on form initialization from the database
-        List<FoodTableVM> foodTables = FoodTableLogic.Get();
+        List<FoodTableVM> foodTables = FoodTableLogic.GetOccupiedTables();
 
         public OrderStatusForm()
         {
@@ -47,7 +47,7 @@ namespace Restaurant
             //Get selected table from combo box
             FoodTableVM selectedTable = cmboFoodTable.SelectedItem as FoodTableVM;
             //Get ticket from database
-            TicketVM ticket = TicketLogic.Get(selectedTable.ID);
+            TicketVM ticket = TicketLogic.GetOpenTicket(selectedTable.ID);
             //If ticket is null, there were no tickets
             if(ticket != null)
             {

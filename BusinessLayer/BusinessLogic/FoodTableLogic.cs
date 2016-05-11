@@ -68,6 +68,19 @@ namespace BusinessLayer.BusinessLogic
             return tables;
         }
 
+        public static List<FoodTableVM> GetOccupiedTables()
+        {
+            List<FoodTableVM> tables = new List<FoodTableVM>();
+            foreach (FoodTable foodTable in FoodTableData.Get())
+            {
+                if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+                {
+                    tables.Add(DataModelToVM(foodTable));
+                }
+            }
+            return tables;
+        }
+
         /// <summary>
         /// If a table is dirty, set table back to open
         /// </summary>

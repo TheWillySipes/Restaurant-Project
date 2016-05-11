@@ -39,7 +39,7 @@ namespace Restaurant
             FoodTableVM foodTable = cbTableList.SelectedItem as FoodTableVM;
             if (foodTable != null)
             {
-                TicketVM ticket = TicketLogic.Get(foodTable.ID);
+                TicketVM ticket = TicketLogic.GetOpenTicket(foodTable.ID);
                 if (ticket == null)
                 {
                     return;

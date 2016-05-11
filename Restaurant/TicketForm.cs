@@ -15,7 +15,7 @@ namespace Restaurant
     public partial class TicketForm : Form
     {
         //Get list of food tables from database
-        List<FoodTableVM> tables = FoodTableLogic.Get();
+        List<FoodTableVM> tables = FoodTableLogic.GetOccupiedTables();
         //Get list of menu items from database
         List<MenuItemVM> menuItems = MenuItemLogic.Get();
 
@@ -71,7 +71,7 @@ namespace Restaurant
             TicketVM newTicket = null;
             if(TicketLogic.Create(selectedTable.ID))
             {
-                newTicket = TicketLogic.Get(selectedTable.ID);
+                newTicket = TicketLogic.GetOpenTicket(selectedTable.ID);
             }
             else
             {
