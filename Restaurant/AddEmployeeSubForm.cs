@@ -25,7 +25,7 @@ namespace Restaurant
         //instruction message for this screen
         public void AddEmployeeSubForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Enter the employee's information and click Create Employee.  To modify an employee's information or assigned roles, click Modify Employee.");
+            //MessageBox.Show("Enter the employee's information and click Create Employee.  To modify an employee's information or assigned roles, click Modify Employee.");
         }
 
         //create new employee record in the database using text box input

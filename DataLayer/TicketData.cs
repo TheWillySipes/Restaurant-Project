@@ -37,14 +37,6 @@ namespace DataLayer
             }
         }
 
-        //public static Ticket Get(int tableId)
-        //{
-        //    using (RestaurantApplicationEntities context = new RestaurantApplicationEntities())
-        //    {
-        //        return context.Tickets.Where(e => e.TableID == tableId).FirstOrDefault();
-        //    }
-        //}
-
         public static bool Update(Ticket ticket)
         {
             try
@@ -61,19 +53,6 @@ namespace DataLayer
                 return false;
             }
         }
-
-        //public static bool AddMenuItemToTicket(int ticketId, List<MenuItem> menuItems)
-        //{
-        //    using(RestaurantApplicationEntities context = new RestaurantApplicationEntities())
-        //    {
-        //        foreach(MenuItem menuItem in menuItems)
-        //        {
-        //            TicketsMenuItem toAdd = new TicketsMenuItem();
-        //            toAdd.
-        //            context.TicketsMenuItems.Add()
-        //        }
-        //    }
-        //}
 
     }
 }

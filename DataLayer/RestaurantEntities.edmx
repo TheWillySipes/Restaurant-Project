@@ -48,6 +48,7 @@
           <Property Name="TableID" Type="int" Nullable="false" />
           <Property Name="TimePlaced" Type="datetime" Nullable="false" />
           <Property Name="TimeCompleted" Type="datetime" />
+          <Property Name="TicketClosed" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="TicketsMenuItems">
           <Key>
@@ -374,6 +375,7 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
           <Property Name="TimeCompleted" Type="DateTime" Precision="3" />
           <NavigationProperty Name="FoodTable" Relationship="Self.FK_Tickets_FoodTables" FromRole="Tickets" ToRole="FoodTables" />
           <NavigationProperty Name="TicketsMenuItems" Relationship="Self.FK_TicketsMenuItems_Tickets" FromRole="Tickets" ToRole="TicketsMenuItems" />
+          <Property Name="TicketClosed" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="TicketsMenuItem">
           <Key>
@@ -681,6 +683,7 @@ warning 6002: The table/view 'RestaurantApplication.dbo.v_UsersRoles' does not h
           <EntitySetMapping Name="Tickets">
             <EntityTypeMapping TypeName="RestaurantApplicationModel.Ticket">
               <MappingFragment StoreEntitySet="Tickets">
+                <ScalarProperty Name="TicketClosed" ColumnName="TicketClosed" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TableID" ColumnName="TableID" />
                 <ScalarProperty Name="TimePlaced" ColumnName="TimePlaced" />

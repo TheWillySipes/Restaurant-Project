@@ -85,7 +85,7 @@
             this.Controls.Add(this.cmboFoodTable);
             this.Name = "OrderStatusForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderStatusForm";
+            this.Text = "Order Status";
             this.ResumeLayout(false);
             this.PerformLayout();
 

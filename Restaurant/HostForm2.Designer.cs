@@ -85,7 +85,7 @@
             this.Controls.Add(this.lblHost);
             this.Name = "HostForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HostForm2";
+            this.Text = "Host";
             this.ResumeLayout(false);
             this.PerformLayout();
 
