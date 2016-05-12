@@ -24,7 +24,8 @@ namespace BusinessLayer.BusinessLogic
             {
                 menuItems.Add(DataModelToVM(menuItem));
             }
-            return menuItems;
+            List<MenuItemVM> sortedMenuItems = menuItems.OrderBy(e => e.Description).ToList();
+            return sortedMenuItems;
         }
 
         /// <summary>

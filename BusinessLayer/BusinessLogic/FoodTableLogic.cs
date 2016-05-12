@@ -61,6 +61,25 @@ namespace BusinessLayer.BusinessLogic
         }
 
         /// <summary>
+        /// Set a table to dirty (will allow if table is currently "Occupied")
+        /// </summary>
+        /// <param name="tableId"></param>
+        /// <returns></returns>
+        public static bool SetTableDirty(int tableId)
+        {
+            var foodTable = FoodTableData.Get(tableId);
+            if (foodTable == null)
+                return false;
+            if ((TableStatus)foodTable.Status == TableStatus.Occupied)
+            {
+                foodTable.Status = (int)TableStatus.Dirty;
+                FoodTableData.Update(foodTable);
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Retrieve tables that have a ticket open
         /// </summary>
         /// <returns></returns>

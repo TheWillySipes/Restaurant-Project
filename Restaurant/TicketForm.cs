@@ -101,6 +101,11 @@ namespace Restaurant
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             //Add selected item object to list box
+            if (cmboMenuItems.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a menu item");
+                return;
+            }
             listBoxMenuItems.Items.Add(cmboMenuItems.SelectedItem);
         }
 

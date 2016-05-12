@@ -31,13 +31,15 @@
             this.btnFloorStatus = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblBusStaff = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFloorStatus
             // 
-            this.btnFloorStatus.Location = new System.Drawing.Point(27, 83);
+            this.btnFloorStatus.Location = new System.Drawing.Point(149, 254);
             this.btnFloorStatus.Name = "btnFloorStatus";
-            this.btnFloorStatus.Size = new System.Drawing.Size(127, 49);
+            this.btnFloorStatus.Size = new System.Drawing.Size(119, 49);
             this.btnFloorStatus.TabIndex = 0;
             this.btnFloorStatus.Text = "Check Floor Status";
             this.btnFloorStatus.UseVisualStyleBackColor = true;
@@ -45,9 +47,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(27, 178);
+            this.btnBack.Location = new System.Drawing.Point(12, 254);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(127, 49);
+            this.btnBack.Size = new System.Drawing.Size(115, 49);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -63,12 +65,33 @@
             this.lblBusStaff.TabIndex = 1;
             this.lblBusStaff.Text = "Bus Staff";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(63, 77);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(148, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(63, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 45);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Table Cleaned";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BusserForm
             // 
             this.AcceptButton = this.btnFloorStatus;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(180, 249);
+            this.ClientSize = new System.Drawing.Size(280, 315);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblBusStaff);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFloorStatus);
@@ -85,5 +108,7 @@
         private System.Windows.Forms.Button btnFloorStatus;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblBusStaff;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

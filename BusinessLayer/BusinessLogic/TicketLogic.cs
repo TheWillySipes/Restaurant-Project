@@ -82,7 +82,10 @@ namespace BusinessLayer.BusinessLogic
             if(ticket != null)
             {
                 ticket.TicketClosed = true;
-                return TicketData.Update(ticket);
+                if(FoodTableLogic.SetTableDirty(tableId) && TicketData.Update(ticket))
+                {
+                    return true;
+                }
             }
             return false;
         }

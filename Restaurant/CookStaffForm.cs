@@ -14,17 +14,12 @@ namespace Restaurant
 {
     public partial class CookStaffForm : Form
     {
-        List<FoodTableVM> tables = FoodTableLogic.GetTablesWithUncookedTickets();
+        List<FoodTableVM> tables;
 
         public CookStaffForm()
         {
             InitializeComponent();
-            foreach (FoodTableVM table in tables)
-            {
-                comboBox1.Items.Add(table);
-            }
-            comboBox1.DisplayMember = "Info";
-
+            RefreshComboBox();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,12 +39,13 @@ namespace Restaurant
             FoodTableVM foodTable = comboBox1.SelectedItem as FoodTableVM;
             if(TicketLogic.TicketIsCooked(foodTable.ID))
             {
-                MessageBox.Show("Cooks will be notified!");
+                MessageBox.Show("Wait staff will now see order is complete.");
             }
             else
             {
                 MessageBox.Show("Unable to mark ticket as completed.");
             }
+            RefreshComboBox();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +72,20 @@ namespace Restaurant
             {
                 MessageBox.Show("No ticket for this table!");
             }
-          
+
+        }
+
+        public void RefreshComboBox()
+        {
+            comboBox1.Items.Clear();
+            listBox1.Items.Clear();
+            tables = FoodTableLogic.GetTablesWithUncookedTickets();
+            foreach (FoodTableVM table in tables)
+            {
+                comboBox1.Items.Add(table);
+            }
+            comboBox1.DisplayMember = "Info";
+
         }
 
         //Override when user tries to close window, open new instance of login form
