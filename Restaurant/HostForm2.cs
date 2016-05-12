@@ -36,7 +36,7 @@ namespace Restaurant
             this.Hide();
             EmployeeActionSelector eaSelect = new EmployeeActionSelector();
             eaSelect.Show();
-            this.Close();
+            this.Hide();
 
         }
 

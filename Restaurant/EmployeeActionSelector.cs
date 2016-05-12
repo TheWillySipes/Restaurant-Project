@@ -178,7 +178,7 @@ namespace Restaurant
         private void btnLogout_Click(object sender, EventArgs e)
         {
             GlobalData.Instance.LoginForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         //Override when user tries to close window, open new instance of login form

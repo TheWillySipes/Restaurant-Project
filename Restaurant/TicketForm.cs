@@ -95,7 +95,7 @@ namespace Restaurant
         {
             WaitStaffForm waitForm = new WaitStaffForm();
             waitForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace Restaurant
         {
             EmployeeActionSelector employeeAction = new EmployeeActionSelector();
             employeeAction.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnFloorStatus_Click(object sender, EventArgs e)

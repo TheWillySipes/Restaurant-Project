@@ -32,7 +32,7 @@ namespace Restaurant
         {
             EmployeeActionSelector actionSelector = new EmployeeActionSelector();
             actionSelector.Show();
-            this.Close();
+            this.Hide();
         }
 
         //Override when user tries to close window, open new instance of login form

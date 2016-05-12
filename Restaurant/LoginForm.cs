@@ -27,6 +27,8 @@ namespace Restaurant
                 EmployeeVM employee = EmployeeLogic.Get(txtUserName.Text);
                 GlobalData.Instance.SetLoggedInEmployee(employee);
                 EmployeeActionSelector employeeActionSelector = new EmployeeActionSelector();
+                txtPassword.Text = "";
+                txtUserName.Text = "";
                 employeeActionSelector.Show();
                 this.Hide();
             }

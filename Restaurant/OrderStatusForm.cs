@@ -32,7 +32,7 @@ namespace Restaurant
         {
             WaitStaffForm waitStaff = new WaitStaffForm();
             waitStaff.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnCheckOrder_Click(object sender, EventArgs e)

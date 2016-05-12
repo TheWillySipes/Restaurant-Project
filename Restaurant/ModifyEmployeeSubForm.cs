@@ -109,7 +109,7 @@ namespace Restaurant
         {
             ManagerRoleTasks managerTasks = new ManagerRoleTasks();
             managerTasks.Show();
-            this.Close();
+            this.Hide();
 
         }
 

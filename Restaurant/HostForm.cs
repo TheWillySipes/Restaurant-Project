@@ -53,7 +53,7 @@ namespace Restaurant
         {
             EmployeeActionSelector actionSelector = new EmployeeActionSelector();
             actionSelector.Show();
-            this.Close();
+            this.Hide();
         }
         private void RefreshDD()
         {
