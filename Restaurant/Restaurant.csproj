@@ -77,21 +77,18 @@
     <Compile Include="ManagerRoleTasks.Designer.cs">
       <DependentUpon>ManagerRoleTasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\BusStaff.cs" />
     <Compile Include="CashOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CashOutForm.Designer.cs">
       <DependentUpon>CashOutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\CookStaff.cs" />
     <Compile Include="CookStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CookStaffForm.Designer.cs">
       <DependentUpon>CookStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\Employee.cs" />
     <Compile Include="EmployeeActionSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,14 +101,12 @@
     <Compile Include="FloorStatus.Designer.cs">
       <DependentUpon>FloorStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\FoodTable.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HostForm.Designer.cs">
       <DependentUpon>HostForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\HostStaff.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,7 +133,6 @@
     <Compile Include="TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deprecated\WaitStaff.cs" />
     <Compile Include="WaitStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,7 +190,6 @@
     <EmbeddedResource Include="WaitStaffForm.resx">
       <DependentUpon>WaitStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Deprecated\ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
