@@ -44,6 +44,11 @@ namespace Restaurant
         //click button to update database with current information
         private void btnModifyEmployee_Click(object sender, EventArgs e)
         {
+            if(lstEmployeeList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an employee to edit");
+                return;
+            }
             EmployeeVM employee = lstEmployeeList.SelectedItem as EmployeeVM;
             employee.UserName = txtUsername.Text;
             employee.FirstName = txtFirstName.Text;

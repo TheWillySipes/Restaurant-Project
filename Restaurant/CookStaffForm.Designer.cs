@@ -79,7 +79,7 @@
             this.completeButton.Name = "completeButton";
             this.completeButton.Size = new System.Drawing.Size(88, 36);
             this.completeButton.TabIndex = 5;
-            this.completeButton.Text = "Done";
+            this.completeButton.Text = "Food Cooked";
             this.completeButton.UseVisualStyleBackColor = true;
             this.completeButton.Click += new System.EventHandler(this.completeButton_Click);
             // 

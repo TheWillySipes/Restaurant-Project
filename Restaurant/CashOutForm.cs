@@ -31,6 +31,12 @@ namespace Restaurant
 
         private void btnCashOut_Click(object sender, EventArgs e)
         {
+            if(cbTableList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a table");
+                UpdateDropDown();
+                return;
+            }
             FoodTableVM foodTable = cbTableList.SelectedItem as FoodTableVM;
             if (foodTable != null)
             {
@@ -45,7 +51,7 @@ namespace Restaurant
                 decimal ticketValue = 0;
                 foreach (var item in items)
                 {
-                    output += "\n" + item.MenuItemTitle + "$" + item.PricePaid;
+                    output += "\n" + item.MenuItemTitle + " $" + item.PricePaid;
                     ticketValue += item.PricePaid;
                 }
                 output += "\n\n" + DateTime.Now.ToString();

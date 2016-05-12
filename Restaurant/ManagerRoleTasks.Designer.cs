@@ -36,9 +36,9 @@
             // 
             // btnAddEmp
             // 
-            this.btnAddEmp.Location = new System.Drawing.Point(38, 37);
+            this.btnAddEmp.Location = new System.Drawing.Point(12, 48);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(175, 23);
+            this.btnAddEmp.Size = new System.Drawing.Size(243, 38);
             this.btnAddEmp.TabIndex = 0;
             this.btnAddEmp.Text = "Add Employee";
             this.btnAddEmp.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // btnModifyEmployee
             // 
-            this.btnModifyEmployee.Location = new System.Drawing.Point(38, 66);
+            this.btnModifyEmployee.Location = new System.Drawing.Point(12, 92);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
-            this.btnModifyEmployee.Size = new System.Drawing.Size(175, 39);
+            this.btnModifyEmployee.Size = new System.Drawing.Size(243, 39);
             this.btnModifyEmployee.TabIndex = 3;
             this.btnModifyEmployee.Text = "Modify or Delete Employee";
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(38, 137);
+            this.btnBack.Location = new System.Drawing.Point(12, 137);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(175, 23);
+            this.btnBack.Size = new System.Drawing.Size(243, 34);
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;

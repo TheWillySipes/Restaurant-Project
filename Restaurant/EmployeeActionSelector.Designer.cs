@@ -42,7 +42,7 @@
             // 
             this.btnManager.Location = new System.Drawing.Point(12, 128);
             this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(254, 23);
+            this.btnManager.Size = new System.Drawing.Size(254, 45);
             this.btnManager.TabIndex = 5;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = true;

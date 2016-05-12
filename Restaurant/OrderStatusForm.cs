@@ -53,13 +53,13 @@ namespace Restaurant
                 if(ticket.TimeCompleted == null)
                 {
                     //Order not completed yet, display what time order was placed
-                    MessageBox.Show("Ticket not completed, order placed at:\n" + 
+                    MessageBox.Show("Food is not ready, order was placed at:\n" + 
                         ticket.TimePlaced.ToShortTimeString());
                 }
                 else
                 {
                     //Order was completed, display time completed
-                    MessageBox.Show("Ticket not completed, order completed at:\n" +
+                    MessageBox.Show("Food is ready, food was finished at at:\n" +
                         ticket.TimeCompleted.Value.ToShortTimeString());
                 }
             }

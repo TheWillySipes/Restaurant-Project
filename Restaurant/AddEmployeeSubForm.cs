@@ -32,6 +32,14 @@ namespace Restaurant
         public void btnGenEmployeeID_Click(object sender, EventArgs e)
         {
             //EmployeeLogic.AddEmployee is placeholder
+            if(txtFirstName.Text.Trim() == ""
+                || txtLastName.Text.Trim() == ""
+                || txtPassword.Text.Trim() == ""
+                || txtUsername.Text.Trim() == "")
+            {
+                MessageBox.Show("Please fill out all fields");
+                return;
+            }
             bool successful = EmployeeLogic.Create(txtUsername.Text, txtFirstName.Text, txtLastName.Text, txtPassword.Text);
 
             if (successful == true)

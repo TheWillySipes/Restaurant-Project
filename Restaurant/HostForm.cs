@@ -36,7 +36,7 @@ namespace Restaurant
             if(FoodTableLogic.SetTableOccupied(selectedTable.ID))
             {
                 MessageBox.Show("Table Assigned");
-                EmployeeActionSelector actionSelector = new EmployeeActionSelector();
+                HostForm2 actionSelector = new HostForm2();
                 actionSelector.Show();
                 this.Hide();
             }

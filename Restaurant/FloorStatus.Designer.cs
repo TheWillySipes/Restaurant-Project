@@ -219,7 +219,7 @@
             // txttable3
             // 
             this.txttable3.AutoSize = true;
-            this.txttable3.Location = new System.Drawing.Point(277, 182);
+            this.txttable3.Location = new System.Drawing.Point(241, 178);
             this.txttable3.Name = "txttable3";
             this.txttable3.Size = new System.Drawing.Size(40, 13);
             this.txttable3.TabIndex = 3;
@@ -228,7 +228,7 @@
             // txttable4
             // 
             this.txttable4.AutoSize = true;
-            this.txttable4.Location = new System.Drawing.Point(377, 182);
+            this.txttable4.Location = new System.Drawing.Point(347, 178);
             this.txttable4.Name = "txttable4";
             this.txttable4.Size = new System.Drawing.Size(43, 13);
             this.txttable4.TabIndex = 3;
@@ -237,7 +237,7 @@
             // txttable5
             // 
             this.txttable5.AutoSize = true;
-            this.txttable5.Location = new System.Drawing.Point(473, 182);
+            this.txttable5.Location = new System.Drawing.Point(453, 178);
             this.txttable5.Name = "txttable5";
             this.txttable5.Size = new System.Drawing.Size(43, 13);
             this.txttable5.TabIndex = 3;
@@ -246,7 +246,7 @@
             // txttable6
             // 
             this.txttable6.AutoSize = true;
-            this.txttable6.Location = new System.Drawing.Point(72, 329);
+            this.txttable6.Location = new System.Drawing.Point(29, 329);
             this.txttable6.Name = "txttable6";
             this.txttable6.Size = new System.Drawing.Size(43, 13);
             this.txttable6.TabIndex = 3;
@@ -255,7 +255,7 @@
             // txttable7
             // 
             this.txttable7.AutoSize = true;
-            this.txttable7.Location = new System.Drawing.Point(171, 329);
+            this.txttable7.Location = new System.Drawing.Point(138, 329);
             this.txttable7.Name = "txttable7";
             this.txttable7.Size = new System.Drawing.Size(43, 13);
             this.txttable7.TabIndex = 3;
@@ -264,7 +264,7 @@
             // txttable8
             // 
             this.txttable8.AutoSize = true;
-            this.txttable8.Location = new System.Drawing.Point(277, 329);
+            this.txttable8.Location = new System.Drawing.Point(241, 329);
             this.txttable8.Name = "txttable8";
             this.txttable8.Size = new System.Drawing.Size(43, 13);
             this.txttable8.TabIndex = 3;
@@ -273,7 +273,7 @@
             // txttable9
             // 
             this.txttable9.AutoSize = true;
-            this.txttable9.Location = new System.Drawing.Point(377, 329);
+            this.txttable9.Location = new System.Drawing.Point(347, 329);
             this.txttable9.Name = "txttable9";
             this.txttable9.Size = new System.Drawing.Size(43, 13);
             this.txttable9.TabIndex = 3;
@@ -282,7 +282,7 @@
             // txttable10
             // 
             this.txttable10.AutoSize = true;
-            this.txttable10.Location = new System.Drawing.Point(473, 329);
+            this.txttable10.Location = new System.Drawing.Point(453, 329);
             this.txttable10.Name = "txttable10";
             this.txttable10.Size = new System.Drawing.Size(49, 13);
             this.txttable10.TabIndex = 3;
